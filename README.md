@@ -56,6 +56,18 @@
 * Dictionary
 * Exception Handling
 
-### :apple: [20210222]
-### :apple: [20210223]
-### :apple: [20210224]
+### :apple: [20210222](https://www.notion.so/0222-c11420d48c05460d907376a344b44551)
+* 화면 디자인 
+* 작업 단위
+* 시작 화면 디자인 
+* Event Handling
+* SwiftUI
+* UIViewController
+
+### :apple: [20210223](https://www.notion.so/0223-Swift-5bb65697f7d34e6aae51784e7865696f)
+* iOS 이벤트 처리 방식
+* Motion Event 
+* Menu Event
+* UIView 
+
+### :apple: [20210224](https://www.notion.so/0224-Swift-285324d306d8463f893c6676a8553b22)
