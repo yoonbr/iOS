@@ -71,3 +71,21 @@
 * UIView 
 
 ### :apple: [20210224](https://www.notion.so/0224-Swift-285324d306d8463f893c6676a8553b22)
+* 키패드 문제 해결
+* Views
+* Gesture
+
+### :apple: [20210225](https://www.notion.so/0225-Swift-f07c058fb8a7455ea3aca6297c0416db)
+* MVC Pattern 
+* PickerView
+* UserNotification
+* 화면 전환
+
+### :apple: [20210226](https://www.notion.so/0226-Swift-cd3818dece0145b4962f7d2d675dc886)
+* 출력, 데이터 전송
+* 세그웨이
+* TabbarController
+* NavigationController
+* TableView
+
+
