@@ -3,6 +3,8 @@
 
 ## 날짜별 공부 내용
 
+<details>
+<summary> 1Week (0210 ~ 0219) </summary>
 ### :apple: [20210210](https://www.notion.so/0210-Swift-dda1886f8cb843309a20205c3f2e641f)
 * Swift 특징, 기본 문법
   * 작성 규칙 
@@ -55,7 +57,10 @@
 * Tuple
 * Dictionary
 * Exception Handling
+</details>
 
+<details>
+<summary> 2Week (0222 ~ 0226) </summary>
 ### :apple: [20210222](https://www.notion.so/0222-c11420d48c05460d907376a344b44551)
 * 화면 디자인 
 * 작업 단위
@@ -88,6 +93,10 @@
 * NavigationController
 * TableView
 
+</details>
+
+<details>
+<summary> 3Week (0302 ~ 0305) </summary>
 ### :apple: [20210302](https://www.notion.so/0302-Swift-a31a467891464b68952831f04185e50c)
 * Cell 
   * Style
@@ -97,3 +106,4 @@
 * Move
 * Section
 
+</details>
