@@ -4,30 +4,40 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BasicTable.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>CellCustom.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>ControlTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
 		</dict>
 		<key>GestureTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>2</integer>
 		</dict>
 		<key>ImageSwipe.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>3</integer>
 		</dict>
 		<key>ImageViewAnimation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>1</integer>
 		</dict>
 		<key>MotionAndMenu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>13</integer>
 		</dict>
 		<key>MotionAndView.xcscheme_^#shared#^_</key>
 		<dict>
@@ -37,12 +47,12 @@
 		<key>NotificationSample.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>5</integer>
 		</dict>
 		<key>PickerSample.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>4</integer>
 		</dict>
 		<key>StudyProject copy.xcscheme_^#shared#^_</key>
 		<dict>
@@ -52,37 +62,67 @@
 		<key>StudyProject.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>14</integer>
 		</dict>
 		<key>SwiftUIDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>10</integer>
+		</dict>
+		<key>TableCellStyle.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+		<key>TableViewClassification.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>TableViewUpdate.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
 		</dict>
 		<key>TouchEventHandling.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>9</integer>
 		</dict>
 		<key>ViewControllerSwitching.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>7</integer>
 		</dict>
 		<key>ViewSwitching.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>55BC073025EDD774009BFBAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55BC080425EDFEE4009BFBAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55D8922E25EA8EB3009EDE24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>55D8933A25EA95D7009EDE24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55D8963025EA9B83009EDE24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
