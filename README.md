@@ -116,4 +116,11 @@
 * Data List 
 * CollectionView
 
+### :apple: [20210304](https://www.notion.so/0304-Swift-a80ea00c4da74910b76e663d886c914d)
+
+* Network
+    * Low level, High level
+    * Sync Download
+    * XML Parsing
+    
 </details>
