@@ -1,0 +1,6 @@
+framework module Pods_TableCellStyle {
+  umbrella header "Pods-TableCellStyle-umbrella.h"
+
+  export *
+  module * { export * }
+}

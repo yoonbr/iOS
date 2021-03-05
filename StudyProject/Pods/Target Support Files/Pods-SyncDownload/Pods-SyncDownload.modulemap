@@ -1,0 +1,6 @@
+framework module Pods_SyncDownload {
+  umbrella header "Pods-SyncDownload-umbrella.h"
+
+  export *
+  module * { export * }
+}

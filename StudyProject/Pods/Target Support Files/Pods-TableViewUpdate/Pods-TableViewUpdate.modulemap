@@ -1,0 +1,6 @@
+framework module Pods_TableViewUpdate {
+  umbrella header "Pods-TableViewUpdate-umbrella.h"
+
+  export *
+  module * { export * }
+}

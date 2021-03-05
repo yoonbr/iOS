@@ -1,0 +1,188 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'BasicTable' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for BasicTable
+
+end
+
+target 'CellCustom' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CellCustom
+
+end
+
+target 'ControlTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ControlTest
+
+end
+
+target 'GestureTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for GestureTest
+
+end
+
+target 'ImageSwipe' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ImageSwipe
+
+end
+
+target 'ImageViewAnimation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ImageViewAnimation
+
+end
+
+target 'MotionAndMenu' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MotionAndMenu
+
+end
+
+target 'MovieInformation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MovieInformation
+  pod 'Alamofire'
+  pod 'Nuke'
+
+end
+
+target 'NaviWeb' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NaviWeb
+
+end
+
+target 'NotificationSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NotificationSample
+
+end
+
+target 'PickerSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PickerSample
+
+end
+
+target 'StudyProject' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for StudyProject
+
+end
+
+target 'SwiftUIDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwiftUIDemo
+
+end
+
+target 'SyncDownload' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SyncDownload
+
+end
+
+target 'TableCellStyle' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TableCellStyle
+
+end
+
+target 'TableViewClassification' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TableViewClassification
+
+end
+
+target 'TableViewUpdate' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TableViewUpdate
+
+end
+
+target 'TCPCommunication' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TCPCommunication
+
+end
+
+target 'TouchEventHandling' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TouchEventHandling
+
+end
+
+target 'ViewControllerSwitching' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ViewControllerSwitching
+
+end
+
+target 'ViewSwitching' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ViewSwitching
+
+end
+
+target 'WineCollection' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WineCollection
+
+end
+
+target 'XMLParsing' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for XMLParsing
+
+end

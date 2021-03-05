@@ -39,7 +39,7 @@ class MasterViewController: UITableViewController {
         refreshControl.endRefreshing()
         
         // 삽입하는 애니메이션을 추가
-        let ar = [IndexPath(row: 0, section: 0), IndexPath(row: 1, section: 0)]
+        let ar = [IndexPath(row: 0, section: 0),IndexPath(row: 1, section: 0)]
         tableView.beginUpdates()
         tableView.insertRows(at: ar, with: .top)
         tableView.endUpdates()
@@ -52,7 +52,7 @@ class MasterViewController: UITableViewController {
         // 데이터 초기화
         attractionImgs = ["wineBar.png", "wineShop.png"]
         attractionNames = ["와인바 검색", "와인샵 검색"]
-        webAddresses = ["http://kko.to/pLchULeDM", "http://kko.to/E4SIURADo"]
+        webAddresses = ["http://localhost:9300/map", "http://kko.to/E4SIURADo"]
         
         self.title = "search"
         
