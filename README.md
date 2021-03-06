@@ -123,4 +123,12 @@
     * Sync Download
     * XML Parsing
     
+### :apple: [20210305](https://www.notion.so/0305-Swift-98ba341dc6e84791a0e1f6ea991ad8bd)
+
+* JSON Parsing
+* Synchronized
+* Asyncronized
+    * Thread
+* cocoapods
+
 </details>
