@@ -75,6 +75,16 @@ target 'NaviWeb' do
 
 end
 
+target 'NoteList' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NoteList
+  pod 'Alamofire'
+  pod 'Nuke'
+
+end
+
 target 'NotificationSample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!

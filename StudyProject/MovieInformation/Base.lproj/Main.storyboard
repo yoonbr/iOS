@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="Lg7-xW-5Ip" customClass="MovieCell" customModule="MovieInformation" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" id="Lg7-xW-5Ip" customClass="MovieCell" customModule="MovieInformation" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lg7-xW-5Ip" id="jwc-KX-osL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7A-9d-BOb">
@@ -42,7 +43,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-KE-TVj">
-                                            <rect key="frame" x="287" y="48" width="43" height="21"/>
+                                            <rect key="frame" x="266" y="48" width="43" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -51,9 +52,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="lblScore" destination="Mnx-KE-TVj" id="kDB-cF-hHB"/>
-                                    <outlet property="lblStory" destination="qJY-8p-Kww" id="WRC-qu-HlH"/>
-                                    <outlet property="lblTitle" destination="PRr-Jr-ACd" id="jpH-I8-WB3"/>
+                                    <outlet property="lblGenre" destination="qJY-8p-Kww" id="CAM-pv-ePC"/>
+                                    <outlet property="lblRating" destination="Mnx-KE-TVj" id="v8c-sE-WYm"/>
+                                    <outlet property="lblTitle" destination="PRr-Jr-ACd" id="wD9-pE-lHf"/>
                                     <outlet property="thumbnail" destination="K7A-9d-BOb" id="mhS-d4-236"/>
                                 </connections>
                             </tableViewCell>
@@ -64,10 +65,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kTr-V9-ziy"/>
+                    <connections>
+                        <segue destination="3Pq-7O-9Pb" kind="push" id="hSx-f3-Gb9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsy-if-GJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563.768115942029" y="-7.3660714285714279"/>
+            <point key="canvasLocation" x="422" y="-7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Xo-s1-0wZ">
@@ -86,6 +90,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBY-u1-blg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-346.37681159420293" y="-7.3660714285714279"/>
+        </scene>
+        <!--Movie DetailVC-->
+        <scene sceneID="EP2-00-pKY">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailVC" id="3Pq-7O-9Pb" customClass="MovieDetailVC" customModule="MovieInformation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2TS-Vx-ts7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSE-tz-yAS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nau-fo-Dev"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hz9-1y-je7"/>
+                    <connections>
+                        <outlet property="webView" destination="NSE-tz-yAS" id="K2a-nj-3te"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ei6-An-t6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.7971014492755" y="-7.3660714285714279"/>
         </scene>
     </scenes>
     <resources>
