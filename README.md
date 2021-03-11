@@ -141,4 +141,11 @@
 * Alamofire
 * Nuke
 
+### :apple: [20210311](https://www.notion.so/nodeiOS-ec1174851c4a409fa5a376b10f079a57)
+
+* Data
+    * List 
+    * Detail 
+    * Search
+
 </details>
