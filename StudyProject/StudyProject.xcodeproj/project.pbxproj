@@ -87,17 +87,21 @@
 		55A3AEFC25F5149E00000B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AEFB25F5149E00000B42 /* Assets.xcassets */; };
 		55A3AEFF25F5149E00000B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AEFD25F5149E00000B42 /* LaunchScreen.storyboard */; };
 		55A3AF1D25F514E800000B42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AF1C25F514E800000B42 /* LoginViewController.swift */; };
-		55A3AF8625F5AA9700000B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AF8525F5AA9700000B42 /* AppDelegate.swift */; };
-		55A3AF8825F5AA9700000B42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AF8725F5AA9700000B42 /* SceneDelegate.swift */; };
-		55A3AF8A25F5AA9700000B42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AF8925F5AA9700000B42 /* ViewController.swift */; };
-		55A3AF8D25F5AA9700000B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AF8B25F5AA9700000B42 /* Main.storyboard */; };
-		55A3AF9025F5AA9700000B42 /* NoteList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AF8E25F5AA9700000B42 /* NoteList.xcdatamodeld */; };
-		55A3AF9225F5AA9900000B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AF9125F5AA9900000B42 /* Assets.xcassets */; };
-		55A3AF9525F5AA9900000B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AF9325F5AA9900000B42 /* LaunchScreen.storyboard */; };
-		55A3AFB425F5ABBF00000B42 /* NoteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AFB325F5ABBF00000B42 /* NoteListVC.swift */; };
-		55A3AFCF25F5ABD100000B42 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AFCE25F5ABD100000B42 /* NoteCell.swift */; };
-		55A3AFEA25F5B0A300000B42 /* NoteVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AFE925F5B0A300000B42 /* NoteVO.swift */; };
 		55A3B06B25F5F94000000B42 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3B06A25F5F94000000B42 /* MovieDetailVC.swift */; };
+		55A9939B26007DF700280DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9939A26007DF700280DAB /* AppDelegate.swift */; };
+		55A9939D26007DF700280DAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9939C26007DF700280DAB /* SceneDelegate.swift */; };
+		55A9939F26007DF700280DAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9939E26007DF700280DAB /* ViewController.swift */; };
+		55A993A226007DF800280DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A993A026007DF700280DAB /* Main.storyboard */; };
+		55A993A526007DF800280DAB /* PhoneBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55A993A326007DF800280DAB /* PhoneBook.xcdatamodeld */; };
+		55A993A726007DF900280DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A993A626007DF900280DAB /* Assets.xcassets */; };
+		55A993AA26007DF900280DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A993A826007DF900280DAB /* LaunchScreen.storyboard */; };
+		55A993D8260084FE00280DAB /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A993CD260084FE00280DAB /* FMDatabaseAdditions.m */; };
+		55A993D9260084FE00280DAB /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A993D1260084FE00280DAB /* FMDatabasePool.m */; };
+		55A993DA260084FE00280DAB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A993D4260084FE00280DAB /* FMResultSet.m */; };
+		55A993DB260084FE00280DAB /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A993D5260084FE00280DAB /* FMDatabaseQueue.m */; };
+		55A993DC260084FE00280DAB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A993D7260084FE00280DAB /* FMDatabase.m */; };
+		55A9942E2600899400280DAB /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9942D2600899400280DAB /* ListVC.swift */; };
+		55A994802600933100280DAB /* PhoneBookDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9947F2600933100280DAB /* PhoneBookDAO.swift */; };
 		55BC06B925EDC089009BFBAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC06B825EDC089009BFBAE /* AppDelegate.swift */; };
 		55BC06BB25EDC089009BFBAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC06BA25EDC089009BFBAE /* SceneDelegate.swift */; };
 		55BC06BD25EDC089009BFBAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC06BC25EDC089009BFBAE /* ViewController.swift */; };
@@ -332,18 +336,30 @@
 		55A3AF0025F5149E00000B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55A3AF1C25F514E800000B42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55A3AF8325F5AA9700000B42 /* NoteList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55A3AF8525F5AA9700000B42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55A3AF8725F5AA9700000B42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55A3AF8925F5AA9700000B42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		55A3AF8C25F5AA9700000B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		55A3AF8F25F5AA9700000B42 /* NoteList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteList.xcdatamodel; sourceTree = "<group>"; };
-		55A3AF9125F5AA9900000B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		55A3AF9425F5AA9900000B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		55A3AF9625F5AA9900000B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55A3AFB325F5ABBF00000B42 /* NoteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListVC.swift; sourceTree = "<group>"; };
-		55A3AFCE25F5ABD100000B42 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
-		55A3AFE925F5B0A300000B42 /* NoteVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVO.swift; sourceTree = "<group>"; };
 		55A3B06A25F5F94000000B42 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		55A9939826007DF700280DAB /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A9939A26007DF700280DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55A9939C26007DF700280DAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55A9939E26007DF700280DAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55A993A126007DF800280DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55A993A426007DF800280DAB /* PhoneBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhoneBook.xcdatamodel; sourceTree = "<group>"; };
+		55A993A626007DF900280DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55A993A926007DF900280DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55A993AB26007DF900280DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55A993CC260084FD00280DAB /* PhoneBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		55A993CD260084FE00280DAB /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		55A993CE260084FE00280DAB /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		55A993CF260084FE00280DAB /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		55A993D0260084FE00280DAB /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		55A993D1260084FE00280DAB /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		55A993D2260084FE00280DAB /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		55A993D3260084FE00280DAB /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		55A993D4260084FE00280DAB /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		55A993D5260084FE00280DAB /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		55A993D6260084FE00280DAB /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		55A993D7260084FE00280DAB /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		55A9942D2600899400280DAB /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		55A9947F2600933100280DAB /* PhoneBookDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookDAO.swift; sourceTree = "<group>"; };
 		55BC06B625EDC089009BFBAE /* TableCellStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableCellStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BC06B825EDC089009BFBAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BC06BA25EDC089009BFBAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -591,6 +607,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAC6C940A9937F98EEB0EB9 /* Pods_NoteList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A9939526007DF700280DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,7 +869,7 @@
 				551FF8BE25F0C29700FC2B32 /* XMLParsing */,
 				551FF93225F1C06600FC2B32 /* MovieInformation */,
 				55A3AEF125F5149D00000B42 /* caseRootPage */,
-				55A3AF8425F5AA9700000B42 /* NoteList */,
+				55A9939926007DF700280DAB /* PhoneBook */,
 				5588CD4525E3A9020094601D /* Products */,
 				AAAE6D339C4E1E4EEE21706A /* Pods */,
 				DE23C77A36836BE8FA331A41 /* Frameworks */,
@@ -881,6 +904,7 @@
 				551FF93125F1C06600FC2B32 /* MovieInformation.app */,
 				55A3AEF025F5149D00000B42 /* caseRootPage.app */,
 				55A3AF8325F5AA9700000B42 /* NoteList.app */,
+				55A9939826007DF700280DAB /* PhoneBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -950,22 +974,41 @@
 			path = caseRootPage;
 			sourceTree = "<group>";
 		};
-		55A3AF8425F5AA9700000B42 /* NoteList */ = {
+		55A9939926007DF700280DAB /* PhoneBook */ = {
 			isa = PBXGroup;
 			children = (
-				55A3AF8525F5AA9700000B42 /* AppDelegate.swift */,
-				55A3AF8725F5AA9700000B42 /* SceneDelegate.swift */,
-				55A3AF8925F5AA9700000B42 /* ViewController.swift */,
-				55A3AF8B25F5AA9700000B42 /* Main.storyboard */,
-				55A3AF9125F5AA9900000B42 /* Assets.xcassets */,
-				55A3AF9325F5AA9900000B42 /* LaunchScreen.storyboard */,
-				55A3AF9625F5AA9900000B42 /* Info.plist */,
-				55A3AF8E25F5AA9700000B42 /* NoteList.xcdatamodeld */,
-				55A3AFB325F5ABBF00000B42 /* NoteListVC.swift */,
-				55A3AFCE25F5ABD100000B42 /* NoteCell.swift */,
-				55A3AFE925F5B0A300000B42 /* NoteVO.swift */,
+				55A993CB260084DD00280DAB /* fmdb */,
+				55A9939A26007DF700280DAB /* AppDelegate.swift */,
+				55A9939C26007DF700280DAB /* SceneDelegate.swift */,
+				55A9939E26007DF700280DAB /* ViewController.swift */,
+				55A993A026007DF700280DAB /* Main.storyboard */,
+				55A993A626007DF900280DAB /* Assets.xcassets */,
+				55A993A826007DF900280DAB /* LaunchScreen.storyboard */,
+				55A993AB26007DF900280DAB /* Info.plist */,
+				55A993A326007DF800280DAB /* PhoneBook.xcdatamodeld */,
+				55A9942D2600899400280DAB /* ListVC.swift */,
+				55A9947F2600933100280DAB /* PhoneBookDAO.swift */,
 			);
-			path = NoteList;
+			path = PhoneBook;
+			sourceTree = "<group>";
+		};
+		55A993CB260084DD00280DAB /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				55A993D6260084FE00280DAB /* FMDatabase.h */,
+				55A993D7260084FE00280DAB /* FMDatabase.m */,
+				55A993CF260084FE00280DAB /* FMDatabaseAdditions.h */,
+				55A993CD260084FE00280DAB /* FMDatabaseAdditions.m */,
+				55A993CE260084FE00280DAB /* FMDatabasePool.h */,
+				55A993D1260084FE00280DAB /* FMDatabasePool.m */,
+				55A993D0260084FE00280DAB /* FMDatabaseQueue.h */,
+				55A993D5260084FE00280DAB /* FMDatabaseQueue.m */,
+				55A993D2260084FE00280DAB /* FMDB.h */,
+				55A993D3260084FE00280DAB /* FMResultSet.h */,
+				55A993D4260084FE00280DAB /* FMResultSet.m */,
+				55A993CC260084FD00280DAB /* PhoneBook-Bridging-Header.h */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		55BC06B725EDC089009BFBAE /* TableCellStyle */ = {
@@ -1459,6 +1502,23 @@
 			productReference = 55A3AF8325F5AA9700000B42 /* NoteList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55A9939726007DF700280DAB /* PhoneBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55A993AE26007DF900280DAB /* Build configuration list for PBXNativeTarget "PhoneBook" */;
+			buildPhases = (
+				55A9939426007DF700280DAB /* Sources */,
+				55A9939526007DF700280DAB /* Frameworks */,
+				55A9939626007DF700280DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneBook;
+			productName = PhoneBook;
+			productReference = 55A9939826007DF700280DAB /* PhoneBook.app */;
+			productType = "com.apple.product-type.application";
+		};
 		55BC06B525EDC089009BFBAE /* TableCellStyle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55BC06C925EDC08B009BFBAE /* Build configuration list for PBXNativeTarget "TableCellStyle" */;
@@ -1753,6 +1813,10 @@
 					55A3AF8225F5AA9700000B42 = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					55A9939726007DF700280DAB = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
 					55BC06B525EDC089009BFBAE = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -1808,6 +1872,7 @@
 				551FF93025F1C06600FC2B32 /* MovieInformation */,
 				55A3AEEF25F5149D00000B42 /* caseRootPage */,
 				55A3AF8225F5AA9700000B42 /* NoteList */,
+				55A9939726007DF700280DAB /* PhoneBook */,
 			);
 		};
 /* End PBXProject section */
@@ -1917,9 +1982,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A3AF9525F5AA9900000B42 /* LaunchScreen.storyboard in Resources */,
-				55A3AF9225F5AA9900000B42 /* Assets.xcassets in Resources */,
-				55A3AF8D25F5AA9700000B42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A9939626007DF700280DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A993AA26007DF900280DAB /* LaunchScreen.storyboard in Resources */,
+				55A993A726007DF900280DAB /* Assets.xcassets in Resources */,
+				55A993A226007DF800280DAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2749,13 +2821,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A3AF8A25F5AA9700000B42 /* ViewController.swift in Sources */,
-				55A3AF8625F5AA9700000B42 /* AppDelegate.swift in Sources */,
-				55A3AF8825F5AA9700000B42 /* SceneDelegate.swift in Sources */,
-				55A3AFCF25F5ABD100000B42 /* NoteCell.swift in Sources */,
-				55A3AFB425F5ABBF00000B42 /* NoteListVC.swift in Sources */,
-				55A3AFEA25F5B0A300000B42 /* NoteVO.swift in Sources */,
-				55A3AF9025F5AA9700000B42 /* NoteList.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55A9939426007DF700280DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55A9939F26007DF700280DAB /* ViewController.swift in Sources */,
+				55A993DB260084FE00280DAB /* FMDatabaseQueue.m in Sources */,
+				55A993D9260084FE00280DAB /* FMDatabasePool.m in Sources */,
+				55A993DC260084FE00280DAB /* FMDatabase.m in Sources */,
+				55A993DA260084FE00280DAB /* FMResultSet.m in Sources */,
+				55A9939B26007DF700280DAB /* AppDelegate.swift in Sources */,
+				55A9942E2600899400280DAB /* ListVC.swift in Sources */,
+				55A994802600933100280DAB /* PhoneBookDAO.swift in Sources */,
+				55A9939D26007DF700280DAB /* SceneDelegate.swift in Sources */,
+				55A993A526007DF800280DAB /* PhoneBook.xcdatamodeld in Sources */,
+				55A993D8260084FE00280DAB /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3056,18 +3139,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		55A3AF8B25F5AA9700000B42 /* Main.storyboard */ = {
+		55A993A026007DF700280DAB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				55A3AF8C25F5AA9700000B42 /* Base */,
+				55A993A126007DF800280DAB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		55A3AF9325F5AA9900000B42 /* LaunchScreen.storyboard */ = {
+		55A993A826007DF900280DAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				55A3AF9425F5AA9900000B42 /* Base */,
+				55A993A926007DF900280DAB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3835,6 +3918,47 @@
 			};
 			name = Release;
 		};
+		55A993AC26007DF900280DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PhoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.PhoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/fmdb/PhoneBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55A993AD26007DF900280DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PhoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.PhoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/fmdb/PhoneBook-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		55BC06C725EDC08B009BFBAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA4F80B15127FC6B4F352FCB /* Pods-TableCellStyle.debug.xcconfig */;
@@ -4478,6 +4602,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		55A993AE26007DF900280DAB /* Build configuration list for PBXNativeTarget "PhoneBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55A993AC26007DF900280DAB /* Debug */,
+				55A993AD26007DF900280DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55BC06C925EDC08B009BFBAE /* Build configuration list for PBXNativeTarget "TableCellStyle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -4617,13 +4750,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		55A3AF8E25F5AA9700000B42 /* NoteList.xcdatamodeld */ = {
+		55A993A326007DF800280DAB /* PhoneBook.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				55A3AF8F25F5AA9700000B42 /* NoteList.xcdatamodel */,
+				55A993A426007DF800280DAB /* PhoneBook.xcdatamodel */,
 			);
-			currentVersion = 55A3AF8F25F5AA9700000B42 /* NoteList.xcdatamodel */;
-			path = NoteList.xcdatamodeld;
+			currentVersion = 55A993A426007DF800280DAB /* PhoneBook.xcdatamodel */;
+			path = PhoneBook.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
