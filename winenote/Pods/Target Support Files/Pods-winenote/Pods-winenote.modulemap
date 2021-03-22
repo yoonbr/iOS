@@ -1,0 +1,6 @@
+framework module Pods_winenote {
+  umbrella header "Pods-winenote-umbrella.h"
+
+  export *
+  module * { export * }
+}
