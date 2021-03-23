@@ -89,18 +89,10 @@ class WineViewController: UIViewController, UICollectionViewDelegate,UICollectio
                 //서버의 업데이트 시간이 같은 경우
                 //현재 데이터만 다시 출력
                 if appDelegate.updatedate == result{
-//                        let alert = UIAlertController(title: "데이터 가져오기", message: "서버의 데이터와 가지고 있는 데이터가 같아서 다운로드 하지 않습니다.", preferredStyle: .alert)
-//                        alert.addAction(UIAlertAction(title: "확인", style: .default))
-//                        self.present(alert, animated: true)
                     //self..reloadData()
                 }
                 //서버의 데이터를 다시 읽어서 출력
                 else{
-                    //데이터 가져와서 출력하기
-//                        let alert = UIAlertController(title: "데이터 목록보기", message: "데이터가 변경되서 데이터를 다운로드 합니다.", preferredStyle: .alert)
-//
-//                        alert.addAction(UIAlertAction(title:"확인", style: .default){
-//                            (_) -> Void in
                         //get 방식으로 데이터 가져오기
                         let request = AF.request(listUrl, method:.get, encoding:JSONEncoding.default, headers: [:])
                         request.responseJSON{
