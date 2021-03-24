@@ -53,7 +53,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfa-a7-ifu">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="86" height="151"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -105,12 +105,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="collectionView" destination="nVb-dB-KKv" id="ggR-Hf-2d0"/>
                         <segue destination="h4k-I0-gMO" kind="push" id="SSm-Qj-JgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-810"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="-810.26785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="72s-su-nqD">
