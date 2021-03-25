@@ -22,11 +22,8 @@ class WineListVC: UITableViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
             //데이터를 가져올 URL
-             let listUrl = "http://192.168.0.8/wine/all"
-             let updateUrl = "http://192.168.0.8/item/updatedate"
-            
-//             let listUrl = "http://172.20.10.3/wine/all"
-//             let updateUrl = "http://192.168.219.119/wine/updatedate"
+             let listUrl = "http://172.30.1.27/wine/all"
+             let updateUrl = "http://172.30.1.27/item/updatedate"
             
             if appDelegate.updatedate == nil{
                 //get 방식으로 데이터 가져오기

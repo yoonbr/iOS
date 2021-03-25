@@ -26,8 +26,8 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // 데이터를 가져올 URL
-        let listUrl = "http://192.168.0.8/wine/all"
-        let updateUrl = "http://192.168.0.8/item/updatedate"
+        let listUrl = "http://172.30.1.27/wine/all"
+        let updateUrl = "http://172.30.1.27/item/updatedate"
         
         if appDelegate.updatedate == nil {
             // get 방식으로 데이터 가져오기
@@ -53,7 +53,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                         wine.updatedate = wineDict["updatedate"] as? String
                         
                         // 이미지 가져오기
-                        let imageurl = URL(string: "http://192.168.0.8/img/\(wine.wineimg!)")
+                        let imageurl = URL(string: "http://172.30.1.27/img/\(wine.wineimg!)")
                         let imageData = try!Data(contentsOf: imageurl!)
                         wine.image = UIImage(data: imageData)
                         self.wineListCV.append(wine)
@@ -114,7 +114,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     wine.updatedate = wineDict["updatedate"] as? String
                                 
                                     // 이미지 가져오기
-                                    let imageurl = URL(string: "http://192.168.0.8/img/\(wine.wineimg!)")
+                                    let imageurl = URL(string: "http://172.30.1.27/img/\(wine.wineimg!)")
                                     let imageData = try!Data(contentsOf: imageurl!)
                                     wine.image = UIImage(data: imageData)
                                     self.wineListCV.append(wine)
@@ -177,8 +177,15 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as! WineCVC
+        return cell
+
+        // 하나의 데이터 가져오기
+        let wine = wineListCV[indexPath.row]
         
         // 데이터 출력
+        cell.imageView.image = wine.image
+        cell.lblWineName.text = wine.winename
+        
         return cell
     }
 }
