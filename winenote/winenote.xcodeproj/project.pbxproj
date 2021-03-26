@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55571C3E260C67B1009E60BE /* WineListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55571C3D260C67B1009E60BE /* WineListDetailVC.swift */; };
 		5591D11A25FFB24B007A6701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D11925FFB24B007A6701 /* AppDelegate.swift */; };
 		5591D11C25FFB24B007A6701 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D11B25FFB24B007A6701 /* SceneDelegate.swift */; };
 		5591D11E25FFB24B007A6701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591D11D25FFB24B007A6701 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		077FCCC2617A0146EF6FDB81 /* Pods_winenote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_winenote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55571C3D260C67B1009E60BE /* WineListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineListDetailVC.swift; sourceTree = "<group>"; };
 		5591D11625FFB24B007A6701 /* winenote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winenote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5591D11925FFB24B007A6701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5591D11B25FFB24B007A6701 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				55A9938625FFD43900280DAB /* WineListVC.swift */,
 				5591D12A25FFB24C007A6701 /* Info.plist */,
 				5591D12225FFB24B007A6701 /* winenote.xcdatamodeld */,
+				55571C3D260C67B1009E60BE /* WineListDetailVC.swift */,
 			);
 			path = winenote;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55571C3E260C67B1009E60BE /* WineListDetailVC.swift in Sources */,
 				5591D11E25FFB24B007A6701 /* ViewController.swift in Sources */,
 				55A9938725FFD43900280DAB /* WineListVC.swift in Sources */,
 				55A9938025FFCC0C00280DAB /* AttractionTVC.swift in Sources */,

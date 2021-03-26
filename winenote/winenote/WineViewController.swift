@@ -147,7 +147,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // self.title = "logo"
+        self.title = "sampleMain"
         
         // collectionview에 delegate, datasource 설정
         self.collectionView.delegate = self
@@ -174,50 +174,17 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     //셀의 모양을 설정하는 메소드
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as! WineCVC
-        return cell
+    
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as? WineCVC
+    
+            let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
+    
+            cell?.imageView.image = img
 
-        // 하나의 데이터 가져오기
-        let wine = wineListCV[indexPath.row]
-        
-        // 데이터 출력
-        cell.imageView.image = wine.image
-        cell.lblWineName.text = wine.winename
-        
-        return cell
-    }
+            return cell!
+        }
 }
-
-    /*
-    //셀의 크기를 설정하는 메소드
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        //가로로 3개 배치
-        let collectionViewCellWidth =
-            collectionView.frame.width / 3 - 1
-        
-        //가로와 세로 크기 설정
-        return CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth)
-    }
-    
-    //상하좌우 여백을 설정하는 메소드 - Margin
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-    //패딩
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-    
-    //셀을 선택했을 때 호출되는 메소드
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderColor = UIColor.cyan.cgColor
-        cell?.layer.borderWidth = 3.0
-    }
- */
 
 
 
