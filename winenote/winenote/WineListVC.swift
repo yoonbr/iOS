@@ -14,6 +14,13 @@ class WineListVC: UITableViewController {
     // 다운 받은 데이터를 저장할 프로퍼티 생성 - Array
     var wineList = Array<Wine>()
     
+    // 페이징 프로퍼티
+    var pageno = 1
+    var count = 15
+    
+    // 업데이트를 위한 프로퍼티
+    var flag = false
+    
     //뷰가 화면에 보여질 때 호출되는 메소드
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
@@ -169,8 +176,14 @@ class WineListVC: UITableViewController {
         
         // 섹션 별 행의 개수를 설정하는 메소드 - 필수
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // #warning Incomplete implementation, return the number of rows
-            return wineList.count
+            // 페이지 단위로 개수 수정
+            if pageno * count >= wineList.count {
+                return wineList.count
+            } else {
+                return pageno * count
+            }
+            
+            // return wineList.count
         }
     
         // cell의 높이(100)를 설정하는 메소드
@@ -196,6 +209,17 @@ class WineListVC: UITableViewController {
             cell!.imageView!.image = wine.image
             
             return cell!
+        }
+    
+        // 셀이 보여질 때 호출되는 메소드
+        // 마지막 실이 보여질 때 업데이트를 수행
+        override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if(flag == false && indexPath.row == self.pageno * count - 1) {
+                    flag = true
+                } else if(flag == true && indexPath.row == self.pageno * count - 1) {
+                    pageno = pageno + 1
+                    tableView.reloadData()
+                }
         }
 
 }
