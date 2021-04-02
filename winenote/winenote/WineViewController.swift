@@ -12,9 +12,6 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    var wine : Wine!
-//    var images : [String] = []
-    
     // 다운로드 받은 데이터를 저장할 프로퍼티 - wineListCV
     var wineListCV = Array<Wine>()
     
@@ -153,13 +150,6 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.reloadData()
-        
-        
-        // 배열 초기화
-//        for i in 1...6{
-//            let imageName = String(format: "wine%02i.png", i)
-//            images.append(imageName)
-//        }
          
     }
 
