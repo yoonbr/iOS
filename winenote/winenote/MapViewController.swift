@@ -21,9 +21,9 @@ class MapViewController: UITableViewController {
         // 데이터 초기화
         attractionImgs = ["wineBar.png", "wineShop.png"]
         attractionNames = ["와인바 검색", "와인샵 검색"]
-        webAddresses = ["http://kko.to/pLchULeDM", "http://kko.to/E4SIURADo"]
+        // webAddresses = ["http://kko.to/pLchULeDM", "http://kko.to/E4SIURADo"]
         
-        self.title = "MAP"
+        self.title = "wine map"
         
     }
 
@@ -48,7 +48,7 @@ class MapViewController: UITableViewController {
         return attractionNames.count
     }
 
-    // 각 행에 해당하는 셀을 만들어주는 메소드
+        // 각 행에 해당하는 셀을 만들어주는 메소드
         // IndexPath - 각 셀의 섹션 번호와 행 번호를 가지고 있음
         // 섹션이나 행에 따라 다르게 출력하고자 할 때 이용 (데이터를 찾아올 때도 이용)
         
