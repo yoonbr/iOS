@@ -165,15 +165,15 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     //셀의 모양을 설정하는 메소드
     
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as? WineCVC
-    
-            let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
-    
-            cell?.imageView.image = img
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as? WineCVC
 
-            return cell!
-        }
+        let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
+
+        cell?.imageView.image = img
+
+        return cell!
+    }
 }
 
 
