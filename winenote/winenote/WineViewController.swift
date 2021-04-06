@@ -150,6 +150,9 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.reloadData()
+        
+        // 네비게이션 바의 왼쪽에 삭제 버튼을 추가
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
          
     }
 
