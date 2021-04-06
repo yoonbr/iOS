@@ -11,6 +11,33 @@ import Alamofire
 
 class WineListVC: UITableViewController {
     
+    // 검색바 관련 프로퍼티와 메소드
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    // 검색 결과를 저장할 리스트 생성
+    var filteredWines = [Wine]()
+    
+    // 검색란이 비어있는지 확인하는 메소드
+    // searchbar가 비어있으면 true를 리턴
+    func searchBarIsEmpty() -> Bool {
+        return
+            searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    // 검색 입력 란에 내용을 입력하면 호출되는 메소드
+    // 검색 입력 란의 내용이 winename에 존재하는 데이터만 filteredWines에 추가
+    func filterContentForSearchText(_ searchText:String, scope:String="All") {
+        filteredWines = wineList.filter({(wine:Wine) -> Bool in
+            return wine.winename!.lowercased()
+                .contains(searchText.lowercased())})
+        tableView.reloadData()
+    }
+    
+    // 검색 입력 란의 상태를 리턴하는 메소드
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
     // 다운 받은 데이터를 저장할 프로퍼티 생성 - Array
     var wineList = Array<Wine>()
     
@@ -161,7 +188,12 @@ class WineListVC: UITableViewController {
         
         self.title = "와인리스트"
         
-        
+        // 검색 컨트롤러 배치
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "검색어를 입력하세요"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    
     }
 
     // MARK: - Table view data source
@@ -176,14 +208,18 @@ class WineListVC: UITableViewController {
         
         // 섹션 별 행의 개수를 설정하는 메소드 - 필수
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // 페이지 단위로 개수 수정
+            // 페이지 단위로 개수를 수정
+            // 검색바에 무엇인가를 입력했다면
+            if isFiltering() {
+                // 검색된 내용을 출력
+                return filteredWines.count
+            }
+            // 검색바가 비활성화 되어있으면 전체를 출력
             if pageno * count >= wineList.count {
                 return wineList.count
             } else {
                 return pageno * count
             }
-            
-            // return wineList.count
         }
     
         // cell의 높이(100)를 설정하는 메소드
@@ -222,4 +258,10 @@ class WineListVC: UITableViewController {
                 }
         }
 
+}
+// extension 생성 할 때는 클래스 밖으로 나감
+extension WineListVC : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }

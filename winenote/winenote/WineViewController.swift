@@ -168,9 +168,9 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as? WineCVC
 
-        let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
+        // let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
 
-        cell?.imageView.image = img
+        // cell?.imageView.image = img
 
         return cell!
     }
