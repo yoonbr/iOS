@@ -1,5 +1,5 @@
 # Swift
-:iphone: Swift Study :iphone:
+:iphone: iOS Study :iphone:
 
 ## 날짜별 공부 내용
 
