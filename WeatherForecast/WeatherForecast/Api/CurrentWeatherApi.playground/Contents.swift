@@ -64,7 +64,7 @@ func fetchCurrentWeather(cityName: String){
             
             weather.weather.first?.description
             
-            // 현재 기온 표시 
+            // 현재 기온 표시
             weather.main.temp
         } catch {
             print(error)
@@ -75,4 +75,4 @@ func fetchCurrentWeather(cityName: String){
     task.resume()
 }
 
-fetchCurrentWeather(cityName: "seoul")
+fetchCurrentWeather(cityName: "cheongju")
