@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 // 1. JSON과 동일한 구조를 가진 구조체 생성 - JSON decoder
 // 해당 구조체 안에 구조체를 생성할 때는 apikety와 동일한 key 값으로 설정해주는 것이 좋음
@@ -33,7 +34,8 @@ struct CurrentWeather: Codable {
     let main: Main
 }
 
-// error 형식 선언
+// 4. error 형식 선언
+// swift에서 error형식을 선언할 때는 대부분 error protocol을 채용한 열거형으로 선언
 enum ApiError: Error {
     case unknown
     case invalidUrl(String)
@@ -42,6 +44,9 @@ enum ApiError: Error {
     case emptyData
 }
 
+// 3. guard에서 resume 까지는 공통적으로 사용되기 때문에 별도의 함수로 추출
+// 이 함수를 다른 type에도 사용할 수 있도록 generic으로 수정 - type parameter는 parsingtype, codable을 채용
+// closure를 전달하는 parameter도 추가, 결과를 받을 때는 Result type
 func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<ParsingType, Error>) -> ()) {
     
     // 오류가 발생하면 여기서 코드가 멈추고 메시지가 출력
@@ -94,18 +99,11 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
         do {
             let decoder = JSONDecoder()
             // 데이터의 타입을 파라미터로 전달, 바인딩 된 데이터를 그대로 전달
-            let weather = try decoder.decode(ParsingType.self, from: data)
+            // ParsingType으로 바꾸고 상수의 이름도 일반적인 이름으로 수정
+            let data = try decoder.decode(ParsingType.self, from: data)
             
-            completion(.success(weather))
-            
-            /*
-            // 인스턴스의이름.weather키 접근.첫번째요소 접근.description에 접근
-            weather.weather.first?.description
-            
-            // 현재 기온 표시
-            // 인스턴스이름.mainkey접근.tempkey접근
-            weather.main.temp
-            */
+            // 성공시 파싱된 데이터를 전달
+            completion(.success(data))
             
         } catch {
             completion(.failure(error))
@@ -118,9 +116,11 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
 }
 
 // 2. API URL 복사 후 새로운 함수 추가후 key의 value를 parameter로 대체
+// completion 파라미터 추가
 func fetchCurrentWeather(cityName: String, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
     let urlStr = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=9b9cc574b4b3db755c117eb100c67f56&units=metric&lang=kr"
     
+    // fetch 함수 호출
     fetch(urlStr: urlStr, completion: completion)
     
 }
@@ -128,16 +128,39 @@ func fetchCurrentWeather(cityName: String, completion: @escaping (Result<Current
 func fetchCurrentWeather(cityId: Int, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
     let urlStr = "https://api.openweathermap.org/data/2.5/weather?id=\(cityId)&appid=9b9cc574b4b3db755c117eb100c67f56&units=metric&lang=kr"
     
+    // fetch 함수 호출
     fetch(urlStr: urlStr, completion: completion)
+    
 }
 
-fetchCurrentWeather(cityName: "seoul") { _ in }
+func fetchCurrentWeather(location: CLLocation, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
+    let urlStr = "https://api.openweathermap.org/data/2.5/weather?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&appid=9b9cc574b4b3db755c117eb100c67f56&units=metric&lang=kr"
+    
+    // fetch 함수 호출
+    fetch(urlStr: urlStr, completion: completion)
+    
+}
 
-fetchCurrentWeather(cityId: 1835847) { (result) in
-    switch result {
-    case .success(let weather):
-        dump(weather)
-    case .failure(let error):
-        print(error)
+let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+fetchCurrentWeather(location: location) { (result) in
+        switch result {
+        case .success(let weather):
+            dump(weather)
+        case .failure(let error):
+            print(error)
+        }
     }
-}
+
+// 빈 closure 생성
+//fetchCurrentWeather(cityName: "seoul") { _ in }
+//
+//fetchCurrentWeather(cityId: 1835847) { (result) in
+//    switch result {
+//    case .success(let weather):
+//        dump(weather)
+//    case .failure(let error):
+//        print(error)
+//    }
+//}
+
+
