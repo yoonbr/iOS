@@ -22,7 +22,14 @@ class SummaryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // 셀의 background color 변경
+        backgroundColor = .clear
+        
+        statusLabel.textColor = .white
+        // 나머지 레이블에도 statusLabel.textColor 그대로 저장
+        minMaxLabel.textColor = statusLabel.textColor
+        currentTemperatureLabel.textColor = statusLabel.textColor
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

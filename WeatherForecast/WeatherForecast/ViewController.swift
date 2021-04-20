@@ -44,6 +44,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 테이블 뷰의 background 색 변경
+        listTableView.backgroundColor = .clear
+        // separator 표시 안함
+        listTableView.separatorStyle = .none
+        // 스크롤바 표시 안함
+        listTableView.showsVerticalScrollIndicator = false
+        
         // fetch 메소드 호출 (강남역 좌표)
         let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
         WeatherDataSource.shared.fetch(location: location) {
