@@ -21,6 +21,7 @@
 		553B9E37262DC16F00CB0B84 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B9E36262DC16F00CB0B84 /* Forecast.swift */; };
 		553B9E3B262DC1E800CB0B84 /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B9E3A262DC1E800CB0B84 /* WeatherDataSource.swift */; };
 		55EF4C5A262F077D00734C21 /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF4C59262F077D00734C21 /* Double+Formatter.swift */; };
+		55EF4C5E262F0B3800734C21 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF4C5D262F0B3800734C21 /* Date+Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		553B9E36262DC16F00CB0B84 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		553B9E3A262DC1E800CB0B84 /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		55EF4C59262F077D00734C21 /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
+		55EF4C5D262F0B3800734C21 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				55EF4C59262F077D00734C21 /* Double+Formatter.swift */,
+				55EF4C5D262F0B3800734C21 /* Date+Formatter.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				550CEE012625E38A00B05547 /* ForecastTableViewCell.swift in Sources */,
 				553B9E34262DC12900CB0B84 /* CurrentWeather.swift in Sources */,
 				55EF4C5A262F077D00734C21 /* Double+Formatter.swift in Sources */,
+				55EF4C5E262F0B3800734C21 /* Date+Formatter.swift in Sources */,
 				5518ADA3261DAA9200BD723D /* Common.swift in Sources */,
 				553B9E37262DC16F00CB0B84 /* Forecast.swift in Sources */,
 				5518AD91261DA96D00BD723D /* ViewController.swift in Sources */,

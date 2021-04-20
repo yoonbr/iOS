@@ -35,3 +35,11 @@ struct Forecast: Codable {
     // List가 배열이므로 속성을 추가하고 type을 배열로 선언
     let list: [ListItem]
 }
+
+// 셀에 쉽게 표시할 수 있도록 새로운 구조체로 생성
+struct ForecastData {
+    let date: Date
+    let icon: String
+    let weather: String
+    let temperature: Double
+}

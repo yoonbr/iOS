@@ -16,7 +16,7 @@ class WeatherDataSource {
     
     // 4. 클래스 선언 부분에 필요한 속성 추가
     var summary: CurrentWeather?
-    var forecast: Forecast?
+    var forecastList = [ForecastData]()
     
     // api를 요청할 때 사용할 dispatchQueue
     let apiQueue = DispatchQueue(label: "ApiQueue", attributes: .concurrent)
@@ -48,9 +48,16 @@ class WeatherDataSource {
             self.fetchForecast(location: location) { (result) in
                 switch result {
                 case .success(let data):
-                    self.forecast = data
+                    self.forecastList = data.list.map {
+                        let dt = Date(timeIntervalSince1970: TimeInterval($0.dt))
+                        let icon = $0.weather.first?.icon ?? ""
+                        let weather = $0.weather.first?.description ?? "알 수 없음"
+                        let temperature = $0.main.temp
+                        
+                        return ForecastData(date: dt, icon: icon, weather: weather, temperature: temperature)
+                    }
                 default:
-                    self.forecast = nil
+                    self.forecastList = []
                 }
                 
                 self.group.leave()
