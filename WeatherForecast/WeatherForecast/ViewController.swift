@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // fetch 메소드 호출 (강남역 좌표)
+        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+        WeatherDataSource.shared.fetch(location: location) {
+            self.listTableView.reloadData()
+        }
     }
 }
 
@@ -37,6 +43,14 @@ extension ViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryTableViewCell", for: indexPath) as! SummaryTableViewCell
             
+            // 첫번째 섹션의 표시되는 셀의 현재 날씨를 표시
+            if let weather = WeatherDataSource.shared.summary?.weather.first, let main = WeatherDataSource.shared.summary?.main {
+                cell.weatherImageView.image = UIImage(named: weather.icon)
+                cell.statusLabel.text = weather.description
+                cell.minMaxLabel.text = "최고 \(main.temp_max.temperatureString)  최소 \(main.temp_min.temperatureString)"
+                cell.currentTemperatureLabel.text = "\(main.temp.temperatureString)"
+                
+            }
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell", for: indexPath) as! ForecastTableViewCell
