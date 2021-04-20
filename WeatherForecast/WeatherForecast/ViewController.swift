@@ -12,6 +12,34 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
+    // Content Inset 새로운 속성 추가
+    var topInset = CGFloat(0.0)
+    
+    // view의 배치가 완료된 다음 호출
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // lifecycle동안 반복적으로 호출되기 때문에 topInset이라는 속성에
+        // 0.0이 저장되어있을때 한번만 구현하도록 설정
+        if topInset == 0.0 {
+            
+            // 첫번째 셀에 해당하는 IndexPath를 만들고 셀을 가져오기
+            let firstIndexPath = IndexPath(row: 0, section: 0)
+            // 셀을 가지고 올때 테이블 뷰에게 요청
+            if let cell = listTableView.cellForRow(at: firstIndexPath) {
+                // tableview가 첫번째 셀을 리턴해주면 topInset을 계산
+                // tableview의 전체 높이에서 셀의 높이를 뺀 값을 위쪽 여백 topInset으로 지정
+                topInset = listTableView.frame.height - cell.frame.height
+                
+                // tableview에 실제로 topInset을 추가
+                // 현재 지정되어있는 Inset을 가져오고 내용 여백은 contentInset 속성으로 가져오기
+                // top 속성에 topInset 값을 추가 후 다시 contentInset 속성에 저장하면 topInset 값이 저장됨
+                var inset = listTableView.contentInset
+                inset.top = topInset
+                listTableView.contentInset = inset
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
