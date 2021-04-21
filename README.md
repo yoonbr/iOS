@@ -1,7 +1,6 @@
 # Swift
 :iphone: iOS Study :iphone:
 
-[:seedling: NOTION :seedling:](https://www.notion.so/Study-98a1fde5d4724d50adc576f0ed06600b)
 
 ## 날짜별 공부 내용
 
