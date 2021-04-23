@@ -27,6 +27,9 @@ class LocationManager: NSObject {
     // 속성으로 manager 추가 :CLLocationManager
     let manager: CLLocationManager
     
+    // parsing된 주소를 저장하는 속성 추가
+    var currentLocationTitle: String?
+    
     func updateLocation() {
         // corelocation에서 허가상태를 나타내는 형식 - CLAuthorizationStatus
         let status: CLAuthorizationStatus
@@ -70,6 +73,31 @@ extension LocationManager: CLLocationManagerDelegate {
         manager.requestLocation()
     }
     
+    private func updateAddress(from location: CLLocation) {
+        // parameter로 전달된 좌표를 주소 문자열로 변환 - Geocoding
+        // 주소를 좌표로 변경 - forwardGeocoding, 좌표를 주소로 바꾸는 것 - reverseGeocoding
+        // geocoding을 자동으로 처리해주는 객체를 이용 - CLGeocoder
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
+            if let error = error {
+                print(error)
+                self?.currentLocationTitle = "unknown"
+                return
+            }
+            // placemarks 출력할 때는 반드시 내가 원하는 값이 저장되어있는 속성인지 확인
+            if let placemark = placemarks?.first {
+                if let gu = placemark.locality, let dong = placemark.subLocality {
+                    self?.currentLocationTitle = "\(gu) \(dong)"
+                } else {
+                    self?.currentLocationTitle = placemark.name ?? "Unknown"
+                }
+            }
+            
+            print(self?.currentLocationTitle)
+        }
+        
+    }
+    
     // 허가상태가 바뀌면 호출되는 메소드 추가
     // iOS 14.0 이상이 설치된 경우에만 locationManagerDidChangeAuthorization 메소드 호출
     @available(iOS 14.0, *)
@@ -103,7 +131,12 @@ extension LocationManager: CLLocationManagerDelegate {
     
     // didUpdateLocations - 새로운 위치정보가 전달되면 반복적으로 호출
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.last)
+        // print(locations.last)
+        
+        // 배열에 있는 마지막 좌표를 바인딩
+        if let location = locations.last {
+            updateAddress(from: location)
+        }
     }
     
     // didFailWithError - 에러발생시 호출되는 메소드
