@@ -13,12 +13,101 @@ import CoreLocation
 class LocationManager: NSObject {
     static let shared = LocationManager()
     private override init() {
+        
+        // manager 초기화
         manager = CLLocationManager()
+        // 정확도 설정 = 3km 설정
         manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         
         super.init()
+        
+        manager.delegate = self
     }
     
+    // 속성으로 manager 추가 :CLLocationManager
     let manager: CLLocationManager
+    
+    func updateLocation() {
+        // corelocation에서 허가상태를 나타내는 형식 - CLAuthorizationStatus
+        let status: CLAuthorizationStatus
+        
+        // 허가상태 확인 - 버전마다 다름
+        if #available(iOS 14.0, *) {
+            status = manager.authorizationStatus
+        } else {
+            status = CLLocationManager.authorizationStatus()
+        }
+        
+        switch status {
+        case .notDetermined:
+            requestAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            requestCurrentLocation()
+        case .denied, .restricted:
+            print("not available")
+        default:
+            print("unknown")
+        }
+    }
 }
 
+// CLLocationManagerDelegate를 채용한 extension 생성
+extension LocationManager: CLLocationManagerDelegate {
+    // 사용허가 요청, 현재 위치 요청 메소드 추가
+    // 외부에서 호출하지 못하도록 private
+    private func requestAuthorization() {
+        // 권한 요청 코드 구현 - 매니저가 제공하는 메소드를 호출
+        // background에서도 위치정보가 필요할때 사용
+        // manager.requestAlwaysAuthorization()
+        // 앱을 실행하는 동안에만 위치정보가 필요할때 사용
+        manager.requestWhenInUseAuthorization()
+    }
+    
+    private func requestCurrentLocation() {
+        // 현재위치를 반복적으로 받을 때
+        // manager.startUpdatingLocation()
+        // 현재위치 일회성 요청
+        manager.requestLocation()
+    }
+    
+    // 허가상태가 바뀌면 호출되는 메소드 추가
+    // iOS 14.0 이상이 설치된 경우에만 locationManagerDidChangeAuthorization 메소드 호출
+    @available(iOS 14.0, *)
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        // authorizationStatus - 14.0 에 새롭게 추가됨
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            // 사용자가 위치정보를 사용할 수 있게 허가한 상태라면 requestCurrentLocation 호출
+            requestCurrentLocation()
+        case .notDetermined, .denied, .restricted:
+            // 위치정보 사용을 허가하지 않은 상태인 경우 print로 경고를 출력
+            print("not available")
+        default:
+            print("unknown")
+        }
+    }
+    
+    // 14버전 이전에서 사용하던 delegate method 호출
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            // 사용자가 위치정보를 사용할 수 있게 허가한 상태라면 requestCurrentLocation 호출
+            requestCurrentLocation()
+        case .notDetermined, .denied, .restricted:
+            // 위치정보 사용을 허가하지 않은 상태인 경우 print로 경고를 출력
+            print("not available")
+        default:
+            print("unknown")
+        }
+    }
+    
+    // didUpdateLocations - 새로운 위치정보가 전달되면 반복적으로 호출
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations.last)
+    }
+    
+    // didFailWithError - 에러발생시 호출되는 메소드
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+}
