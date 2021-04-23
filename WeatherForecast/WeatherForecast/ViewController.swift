@@ -10,6 +10,8 @@ import CoreLocation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    
     @IBOutlet weak var listTableView: UITableView!
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -46,6 +48,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 시작시점에는 테이블뷰를 숨기고 로더를 표시
+        listTableView.alpha = 0.0
+        loader.alpha = 1.0
+        
         // 테이블 뷰의 background 색 변경
         listTableView.backgroundColor = .clear
         // separator 표시 안함
@@ -65,6 +71,13 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: WeatherDataSource.weatherInfoDidUpdate, object: nil, queue: .main) { (noti) in
             self.listTableView.reloadData()
             self.locationLabel.text = LocationManager.shared.currentLocationTitle
+            
+            // 날씨정보가 업데이트되면 테이블뷰를 표시하고 로더를 숨기기
+            UIView.animate(withDuration: 0.3) {
+                self.listTableView.alpha = 1.0
+                self.loader.alpha = 0.0
+            }
+    
         }
     }
 }

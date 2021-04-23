@@ -173,6 +173,10 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="p0j-37-j6T"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bSF-Ep-JVl">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,7 +190,9 @@
                             <constraint firstItem="X3J-iW-mlJ" firstAttribute="leading" secondItem="vtw-8X-nqh" secondAttribute="leading" id="Sf2-3I-YR8"/>
                             <constraint firstItem="9gi-W4-QSF" firstAttribute="top" secondItem="HeX-Kl-7By" secondAttribute="bottom" id="VdD-6v-YTh"/>
                             <constraint firstItem="X3J-iW-mlJ" firstAttribute="top" secondItem="vtw-8X-nqh" secondAttribute="top" id="ZPJ-pE-kFV"/>
+                            <constraint firstItem="bSF-Ep-JVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjJ-ze-Zfs"/>
                             <constraint firstAttribute="bottom" secondItem="vtw-8X-nqh" secondAttribute="bottom" id="cR3-cM-HrH"/>
+                            <constraint firstItem="bSF-Ep-JVl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eMX-p0-LZn"/>
                             <constraint firstItem="HeX-Kl-7By" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="egz-dK-dPa"/>
                             <constraint firstItem="HeX-Kl-7By" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iNQ-Lb-AXF"/>
                             <constraint firstItem="X3J-iW-mlJ" firstAttribute="trailing" secondItem="vtw-8X-nqh" secondAttribute="trailing" id="o3b-A8-Qr2"/>
@@ -196,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="9gi-W4-QSF" id="D8t-mg-3rZ"/>
+                        <outlet property="loader" destination="bSF-Ep-JVl" id="AqU-ut-7yO"/>
                         <outlet property="locationLabel" destination="YbH-L8-RMf" id="ZYx-3A-NWQ"/>
                     </connections>
                 </viewController>
