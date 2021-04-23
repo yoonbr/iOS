@@ -12,7 +12,21 @@ import CoreLocation
 // 하나의 인스턴스를 싱글톤으로 공유하도록 구현
 class WeatherDataSource {
     static let shared = WeatherDataSource()
-    private init() { }
+    private init() {
+        // 로케이션 메니저가 전달하는 노티피케이션에 대한 옵저버를 추가하고 노티피케이션에 전달되면 Api를 요청
+        NotificationCenter.default.addObserver(forName: LocationManager.currentLocationDidUpdated, object: nil, queue: .main) { (noti) in
+            // userInfo에 저장되어있는 location 빼내기
+            if let location = noti.userInfo?["location"] as? CLLocation {
+                self.fetch(location: location) {
+                    NotificationCenter.default.post(name: Self.weatherInfoDidUpdate, object: nil)
+                }
+            }
+        }
+    }
+    
+    // 또다른 notification posting - 날씨 업데이트 notification
+    static let weatherInfoDidUpdate = Notification.Name(rawValue: "weatherInfoDidUpdate")
+    
     
     // 4. 클래스 선언 부분에 필요한 속성 추가
     var summary: CurrentWeather?

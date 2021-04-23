@@ -28,7 +28,24 @@ class LocationManager: NSObject {
     let manager: CLLocationManager
     
     // parsing된 주소를 저장하는 속성 추가
-    var currentLocationTitle: String?
+    var currentLocationTitle: String? {
+        // property observer 추가
+        didSet {
+            // 좌표를 담을 Dictionary 선언
+            var userInfo = [AnyHashable: Any]()
+            if let location = currentLocation {
+                userInfo["location"] = location
+            }
+            
+            NotificationCenter.default.post(name: Self.currentLocationDidUpdated, object: nil, userInfo: userInfo)
+        }
+    }
+    
+    var currentLocation: CLLocation?
+    
+    // 새로운 Notification 추가
+    static let currentLocationDidUpdated = Notification.Name(rawValue: "currentLocationDidUpdated")
+    
     
     func updateLocation() {
         // corelocation에서 허가상태를 나타내는 형식 - CLAuthorizationStatus
@@ -135,7 +152,11 @@ extension LocationManager: CLLocationManagerDelegate {
         
         // 배열에 있는 마지막 좌표를 바인딩
         if let location = locations.last {
+            currentLocation = location
             updateAddress(from: location)
+            // 좌표를 얻은 후 Api 요청을 전달 - 새로운 좌표가 전달되면 속성에 저장하고 Notification을 포스팅
+            // weather datasource에서 노티피케이션 옵저버를 추가하고 좌표가 전달되면 Api를 요청하는 방식을 구현
+            
         }
     }
     

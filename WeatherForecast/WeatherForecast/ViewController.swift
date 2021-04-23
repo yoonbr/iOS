@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     // Content Inset 새로운 속성 추가
     var topInset = CGFloat(0.0)
     
@@ -51,12 +53,19 @@ class ViewController: UIViewController {
         // 스크롤바 표시 안함
         listTableView.showsVerticalScrollIndicator = false
         
-        // fetch 메소드 호출 (강남역 좌표)
-        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
-        WeatherDataSource.shared.fetch(location: location) {
-            self.listTableView.reloadData()
-        }
+//        // fetch 메소드 호출 (강남역 좌표)
+//        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+//        WeatherDataSource.shared.fetch(location: location) {
+//            self.listTableView.reloadData()
+//        }
+        
         LocationManager.shared.updateLocation()
+        
+        // 새로운 옵저버 추가
+        NotificationCenter.default.addObserver(forName: WeatherDataSource.weatherInfoDidUpdate, object: nil, queue: .main) { (noti) in
+            self.listTableView.reloadData()
+            self.locationLabel.text = LocationManager.shared.currentLocationTitle
+        }
     }
 }
 
