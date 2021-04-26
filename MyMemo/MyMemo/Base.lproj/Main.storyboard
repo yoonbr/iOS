@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +49,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MyMemo" id="Enh-5E-44t">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1G-V8-Wni"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1G-V8-Wni">
+                            <connections>
+                                <segue destination="hpt-z8-uww" kind="presentation" id="NMZ-3L-JQE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pro-iT-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,8 +76,64 @@
             </objects>
             <point key="canvasLocation" x="-375" y="548"/>
         </scene>
+        <!--New Memo-->
+        <scene sceneID="9wT-DA-03u">
+            <objects>
+                <viewController id="SRZ-q6-90z" customClass="ComposeViewController" customModule="MyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7q-Uy-HpY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mcf-8a-Dzs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="718-U4-K0Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mcf-8a-Dzs" firstAttribute="trailing" secondItem="718-U4-K0Y" secondAttribute="trailing" id="7sf-Iu-Kbp"/>
+                            <constraint firstItem="Mcf-8a-Dzs" firstAttribute="top" secondItem="M7q-Uy-HpY" secondAttribute="top" id="89G-ZY-ljd"/>
+                            <constraint firstItem="Mcf-8a-Dzs" firstAttribute="leading" secondItem="718-U4-K0Y" secondAttribute="leading" id="IFJ-kN-Tpi"/>
+                            <constraint firstAttribute="bottom" secondItem="Mcf-8a-Dzs" secondAttribute="bottom" id="cEQ-NT-81a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Memo" id="l2X-fL-wbg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sxN-vi-hhm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RhD-KH-pGs"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRA-GW-Nc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="-64"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RrB-db-AId">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hpt-z8-uww" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KwD-CB-3xj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SRZ-q6-90z" kind="relationship" relationship="rootViewController" id="5mi-QS-Fqi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ciL-Az-4SE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.521739130435" y="-64.285714285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

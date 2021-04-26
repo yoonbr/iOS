@@ -15,6 +15,7 @@
 		5537783026370019007B0511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5537782E26370019007B0511 /* LaunchScreen.storyboard */; };
 		5537783C26370A25007B0511 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537783B26370A25007B0511 /* Model.swift */; };
 		5537784026370C35007B0511 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537783F26370C35007B0511 /* MemoListTableViewController.swift */; };
+		553778482637151B007B0511 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553778472637151B007B0511 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5537783126370019007B0511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5537783B26370A25007B0511 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5537783F26370C35007B0511 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		553778472637151B007B0511 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5537783126370019007B0511 /* Info.plist */,
 				5537782926370017007B0511 /* MyMemo.xcdatamodeld */,
 				5537783F26370C35007B0511 /* MemoListTableViewController.swift */,
+				553778472637151B007B0511 /* ComposeViewController.swift */,
 			);
 			path = MyMemo;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				5537782126370017007B0511 /* AppDelegate.swift in Sources */,
 				5537782326370017007B0511 /* SceneDelegate.swift in Sources */,
 				5537784026370C35007B0511 /* MemoListTableViewController.swift in Sources */,
+				553778482637151B007B0511 /* ComposeViewController.swift in Sources */,
 				5537782B26370017007B0511 /* MyMemo.xcdatamodeld in Sources */,
 				5537783C26370A25007B0511 /* Model.swift in Sources */,
 			);
