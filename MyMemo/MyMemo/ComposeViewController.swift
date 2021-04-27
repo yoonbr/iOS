@@ -8,7 +8,12 @@
 import UIKit
 
 class ComposeViewController: UIViewController {
-
+    
+    @IBAction func close(_ sender: Any) {
+        // modal 방식을 닫을 때는 dismiss 메소드 사용
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
