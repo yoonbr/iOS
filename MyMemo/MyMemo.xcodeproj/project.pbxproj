@@ -16,6 +16,7 @@
 		5537783C26370A25007B0511 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537783B26370A25007B0511 /* Model.swift */; };
 		5537784026370C35007B0511 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537783F26370C35007B0511 /* MemoListTableViewController.swift */; };
 		553778482637151B007B0511 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553778472637151B007B0511 /* ComposeViewController.swift */; };
+		5537784B263859ED007B0511 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537784A263859ED007B0511 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5537783B26370A25007B0511 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5537783F26370C35007B0511 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		553778472637151B007B0511 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		5537784A263859ED007B0511 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				5537782926370017007B0511 /* MyMemo.xcdatamodeld */,
 				5537783F26370C35007B0511 /* MemoListTableViewController.swift */,
 				553778472637151B007B0511 /* ComposeViewController.swift */,
+				5537784A263859ED007B0511 /* UIViewController+Alert.swift */,
 			);
 			path = MyMemo;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				553778482637151B007B0511 /* ComposeViewController.swift in Sources */,
 				5537782B26370017007B0511 /* MyMemo.xcdatamodeld in Sources */,
 				5537783C26370A25007B0511 /* Model.swift in Sources */,
+				5537784B263859ED007B0511 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
