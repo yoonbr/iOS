@@ -29,8 +29,8 @@ class ComposeViewController: UIViewController {
         }
         
         // 새로운 메모 인스턴스를 생성한 후 배열에 저장
-        let newMemo = Memo(content: memo)
-        Memo.dummyMemoList.append(newMemo)
+//        let newMemo = Memo(content: memo)
+//        Memo.dummyMemoList.append(newMemo)
         
         // 화면을 닫기 전에 notification 전달
         NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)

@@ -26,6 +26,11 @@ class MemoListTableViewController: UITableViewController {
         
         // 실제 업데이트 되었는지 확인하는 로그 추가
         // print(#function)
+        
+        // 배열이 데이터로 채워짐
+        DataManager.shared.fetchMemo()
+        // 배열에 저장된 데이터를 기반으로 테이블 뷰가 업데이트 
+        tableView.reloadData()
     }
     
     // 토큰 저장 속성 추가
@@ -43,7 +48,7 @@ class MemoListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
-                vc.memo = Memo.dummyMemoList[indexPath.row]
+                vc.memo = DataManager.shared.memoList[indexPath.row]
             }
         }
     }
@@ -71,7 +76,7 @@ class MemoListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // 더미데이터 개수 출력
-        return Memo.dummyMemoList.count
+        return DataManager.shared.memoList.count
     }
 
     // 중요 메소드 (필수)
@@ -83,11 +88,11 @@ class MemoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // row 속성을 통해서 표시할 데이터를 가져옴
-        let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         // subtitle
         cell.textLabel?.text = target.content
         // fomatter에서 string from insertdate 호출
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         
         // 이 메소드에서 셀을 가져온 다음 실제 데이터를 채워 return
         return cell
