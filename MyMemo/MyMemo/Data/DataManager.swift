@@ -43,6 +43,23 @@ class DataManager {
         }
     }
     
+    func addNewMemo(_ memo: String?) {
+        // 새로운 메모 인스턴스 생성
+        // context 전달 - 데이터베이스에 메모를 저장하는데 필요한 비어있는 인스턴스 생성
+        let newMemo = Memo(context: mainContext)
+        newMemo.content = memo
+        newMemo.insertDate = Date()
+        
+        // 메모를 메모리스트 베열에 바로 저장
+        // append는 가장 뒷부분에 추가되므로 insert 메소드로 추가
+        // 배열 가장 앞부분에 새로운 메소드를 추가하면 fetchMemo 메소드를 다시 호출한 것과
+        // 동일한 효과를 얻음
+        memoList.insert(newMemo, at: 0)
+        
+        // context 저장 메소드 그대로 호출
+        saveContext()
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
