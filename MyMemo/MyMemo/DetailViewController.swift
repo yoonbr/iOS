@@ -9,6 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var memoTableView: UITableView!
+    
     // 이전화면에서 전달한 메모를 저장할 속성 추가
     // 초기화 되는 시점에는 값이 없기때문에 optional로 선언
     var memo: Memo?
@@ -20,11 +22,30 @@ class DetailViewController: UIViewController {
         f.locale = Locale(identifier: "ko_kr")
         return f
     }()
-
+    
+    // 속성 추가
+    // 네비게이션 컨트롤러가 관리하는 첫번째 뷰 컨트롤러로 메모를 전달 - 컴포즈 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination.children.first as? ComposeViewController {
+            vc.editTarget = memo
+        }
+    }
+    
+    // Notification Token 저장
+    var token: NSObjectProtocol?
+    
+    // 옵저버 해제
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 옵저버 추가 
+        token = NotificationCenter.default.addObserver(forName: ComposeViewController.memoDidChange, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in self?.memoTableView.reloadData()
+        })
     }
     
 

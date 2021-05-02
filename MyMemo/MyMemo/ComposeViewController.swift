@@ -9,6 +9,9 @@ import UIKit
 
 class ComposeViewController: UIViewController {
     
+    // 새로운 속성 추가 - 보기화면에서 전달한 메모를 저장 
+    var editTarget: Memo?
+    
     @IBAction func close(_ sender: Any) {
         // modal 방식을 닫을 때는 dismiss 메소드 사용
         dismiss(animated: true, completion: nil)
@@ -32,11 +35,23 @@ class ComposeViewController: UIViewController {
 //        let newMemo = Memo(content: memo)
 //        Memo.dummyMemoList.append(newMemo)
         
-        // addNewMemo 메소드 호출
-        DataManager.shared.addNewMemo(memo)
+        // 편집모드 처리
+        if let target = editTarget {
+            // 텍스트뷰에 입력되어있는 값으로 메모를 변경한 후 saveContext 호출
+            target.content = memo
+            DataManager.shared.saveContext()
+            NotificationCenter.default.post(name: ComposeViewController.memoDidChange, object: nil)
+        } else {
+            // 반대로 쓰기 모드라면 이전 코드 그대로 작성
+            DataManager.shared.addNewMemo(memo)
+            NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        }
+        
+        // addNewMemo 메소드 호출 - 데이터 저장
+        // DataManager.shared.addNewMemo(memo)
         
         // 화면을 닫기 전에 notification 전달
-        NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        
         
         // 새 메모화면 닫기
         dismiss(animated: true, completion: nil)
@@ -47,7 +62,16 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // 뷰 컨트롤러가 생성된 다음에 호출
+        if let memo = editTarget {
+            // 메모가 저장되어 있다면 타이틀을 메모 편집으로 설정하고, 텍스트뷰에 편집할 메모 표시
+            navigationItem.title = "Edit Memo"
+            memoTextView.text = memo.content
+        } else {
+            // 전달된 메모가 없다면 타이틀을 새 메모로 설정하고, 텍스트뷰는 빈 문자열로 초기화
+            navigationItem.title = "New Memo"
+            memoTextView.text = ""
+        }
     }
     
 
@@ -66,4 +90,5 @@ class ComposeViewController: UIViewController {
 extension ComposeViewController {
     // notification 선언
     static let newMemoDidInsert = Notification.Name(rawValue: "newMemoDidInsert")
+    static let memoDidChange = Notification.Name(rawValue: "memoDidChange")
 }
