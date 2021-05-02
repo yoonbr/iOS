@@ -11,6 +11,8 @@ class ComposeViewController: UIViewController {
     
     // 새로운 속성 추가 - 보기화면에서 전달한 메모를 저장 
     var editTarget: Memo?
+    // 편집 이전의 메모 내용 저장
+    var originalMemoContent: String?
     
     @IBAction func close(_ sender: Any) {
         // modal 방식을 닫을 때는 dismiss 메소드 사용
@@ -67,13 +69,30 @@ class ComposeViewController: UIViewController {
             // 메모가 저장되어 있다면 타이틀을 메모 편집으로 설정하고, 텍스트뷰에 편집할 메모 표시
             navigationItem.title = "Edit Memo"
             memoTextView.text = memo.content
+            // 전달된 메모 내용 저장
+            originalMemoContent = memo.content
         } else {
             // 전달된 메모가 없다면 타이틀을 새 메모로 설정하고, 텍스트뷰는 빈 문자열로 초기화
             navigationItem.title = "New Memo"
             memoTextView.text = ""
         }
+        // 뷰 컨트롤러를 텍스트뷰의 델리게이트로 지정
+        memoTextView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 프레젠테이션 컨트롤러 델리게이트 추가로 설정
+        navigationController?.presentationController?.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 편집화면이 표시되기 직전에 델리게이트로 설정되었다가 편집화면이 사라지기 직전에 델리게이트 해제
+        navigationController?.presentationController?.delegate = nil
+    }
 
     /*
     // MARK: - Navigation
@@ -87,6 +106,48 @@ class ComposeViewController: UIViewController {
 
 }
 
+extension ComposeViewController: UITextViewDelegate {
+    // textview에서 text를 편집할 때 마다 반복적으로 재생
+    func textViewDidChange(_ textView: UITextView) {
+        // 원본, 편집 메모를 상수에 저장
+        if let original = originalMemoContent, let edited = textView.text {
+            if #available(iOS 13.0, *) {
+                // isModalInPresentation - 메모를 편집할 때 마다 원본과 다르면 메모가 편집된 것으로 판단
+                isModalInPresentation = original != edited
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+}
+
+extension ComposeViewController: UIAdaptivePresentationControllerDelegate {
+    // 메모가 원본과 다를 경우 아래 메소드가 호출되고, 화면을 아래로 못 내림
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        
+        // 경고창 추가
+        let alert = UIAlertController(title: "notice", message: "편집한 내용을 저장할까요?", preferredStyle: .alert)
+        
+        // 버튼 추가
+        let okAction = UIAlertAction(title: "확인", style: .default) { [weak self] (action) in
+            // save 메소드 호출
+            self?.save(action)
+        }
+        
+        // action 추가
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel) { [weak self] (action) in
+            self?.close(action)
+        }
+        
+        alert.addAction(cancelAction)
+        
+        // 경고창 표시
+        present(alert, animated: true, completion: nil)
+        
+    }
+}
 extension ComposeViewController {
     // notification 선언
     static let newMemoDidInsert = Notification.Name(rawValue: "newMemoDidInsert")
