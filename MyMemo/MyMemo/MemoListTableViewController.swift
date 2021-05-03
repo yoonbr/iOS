@@ -99,25 +99,42 @@ class MemoListTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
+        // 편집기능 활성화
         return true
     }
-    */
+    
+    // 편집 스타일 지정
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        // 원하는 편집 스타일 리턴
+        return .delete
+    }
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            // 메모 삭제 코드 구현
+            // 삭제할 메모를 상수에 저장
+            let target = DataManager.shared.memoList[indexPath.row]
+            // deleteMemo 호출 후 파라미터로 target 지정 
+            DataManager.shared.deleteMemo(target)
+            
+            // 배열에서도 삭제 필수
+            DataManager.shared.memoList.remove(at: indexPath.row)
+            
+            // tabelView에서 셀을 삭제하는 코드가 구현되어있음
+            // 테이블 뷰의 셀 숫자와 배열에 저장되어있는 데이터 숫자가 달라져서 크래쉬 발생
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

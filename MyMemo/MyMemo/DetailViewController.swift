@@ -23,6 +23,33 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    // 메모 삭제 구현
+    @IBAction func deleteMemo(_ sender: Any) {
+        // UIAlertController 생성
+        let alert = UIAlertController(title: "delete check", message: "메모를 삭제하시겠습니까?", preferredStyle: .alert)
+        
+        // destructive - red color text
+        let okAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] (action) in
+            // 현재 화면에 표시되어 있는 메모를 파라미터로 전달
+            DataManager.shared.deleteMemo(self?.memo)
+            
+            // 메모를 삭제 한 후 이전화면으로 돌아가기 - 네비게이션 컨트롤러에 접근한 후 pop
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(okAction)
+        
+        // handler 직접 구현하지 않고 nil 전달
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        
+        // 경고창 화면에 표시 
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     // 속성 추가
     // 네비게이션 컨트롤러가 관리하는 첫번째 뷰 컨트롤러로 메모를 전달 - 컴포즈 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
