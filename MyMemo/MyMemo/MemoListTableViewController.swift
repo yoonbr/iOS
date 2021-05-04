@@ -94,6 +94,13 @@ class MemoListTableViewController: UITableViewController {
         // fomatter에서 string from insertdate 호출
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         
+        // lable text color 변경
+        if #available(iOS 11.0, *) {
+            cell.detailTextLabel?.textColor = UIColor(named: "NoteColor")
+        } else {
+            cell.detailTextLabel?.textColor = UIColor.lightGray
+        }
+        
         // 이 메소드에서 셀을 가져온 다음 실제 데이터를 채워 return
         return cell
     }
