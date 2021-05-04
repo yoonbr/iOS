@@ -160,9 +160,15 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9aa-Ga-kwb"/>
-                                    <barButtonItem systemItem="edit" id="yuf-OD-fdc">
+                                    <barButtonItem systemItem="compose" id="yuf-OD-fdc">
                                         <connections>
                                             <segue destination="hpt-z8-uww" kind="presentation" id="ubW-5d-2Se"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="42k-9H-izw"/>
+                                    <barButtonItem systemItem="action" id="KhG-dn-a3Q">
+                                        <connections>
+                                            <action selector="share:" destination="Mtz-Mx-2fC" id="roW-k0-Mrb"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -234,7 +240,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NMZ-3L-JQE"/>
+        <segue reference="ubW-5d-2Se"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

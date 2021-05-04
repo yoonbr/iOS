@@ -23,6 +23,15 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    // 공유기능 생성
+    @IBAction func share(_ sender: Any) {
+        // UIActivityView
+        guard let memo = memo?.content else { return }
+        
+        let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+    }
+    
     // 메모 삭제 구현
     @IBAction func deleteMemo(_ sender: Any) {
         // UIAlertController 생성
