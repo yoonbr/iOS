@@ -31,6 +31,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fqJ-Ac-BCN">
                                             <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
@@ -240,7 +243,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ubW-5d-2Se"/>
+        <segue reference="NMZ-3L-JQE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

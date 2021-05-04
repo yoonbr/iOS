@@ -23,12 +23,18 @@ class DetailViewController: UIViewController {
         return f
     }()
     
-    // 공유기능 생성
-    @IBAction func share(_ sender: Any) {
+    // 공유기능 생성 - sender UIBarButtonItem 으로 바꾸기
+    @IBAction func share(_ sender: UIBarButtonItem) {
         // UIActivityView
         guard let memo = memo?.content else { return }
         
         let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        
+        // ipad popover
+        if let pc = vc.popoverPresentationController {
+            pc.barButtonItem = sender
+        }
+        
         present(vc, animated: true, completion: nil)
     }
     
