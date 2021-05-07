@@ -10,6 +10,7 @@ import Alamofire
 
 class WineViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     // 다운로드 받은 데이터를 저장할 프로퍼티 - wineListCV
@@ -23,8 +24,8 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // 데이터를 가져올 URL
-        let listUrl = "http://172.30.1.27/wine/all"
-        let updateUrl = "http://172.30.1.27/item/updatedate"
+        let listUrl = "http://172.30.1.5/wine/all"
+        let updateUrl = "http://172.30.1.5/item/updatedate"
         
         if appDelegate.updatedate == nil {
             // get 방식으로 데이터 가져오기
@@ -50,7 +51,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                         wine.updatedate = wineDict["updatedate"] as? String
                         
                         // 이미지 가져오기
-                        let imageurl = URL(string: "http://172.30.1.27/img/\(wine.wineimg!)")
+                        let imageurl = URL(string: "http://172.30.1.5/img/\(wine.wineimg!)")
                         let imageData = try!Data(contentsOf: imageurl!)
                         wine.image = UIImage(data: imageData)
                         self.wineListCV.append(wine)
@@ -60,7 +61,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
             
             // 컬렉션 뷰 다시 출력
-            self.collectionView.reloadData()
+            self.collectionView?.reloadData()
             // 현재 가져온 데이터가 언제 데이터인지 기록
             
             // update 시간 받아오는 요청
@@ -84,7 +85,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                     let result = jsonObject["result"] as? String
                     // 내 업데이트 시간과 서버의 업데이트 시간이 같은 경우 현재 데이터만 다시 출력
                     if appDelegate.updatedate == result {
-                        self.collectionView.reloadData()
+                        self.collectionView?.reloadData()
                     }
                     // 아닐 경우 서버의 데이터를 읽어서 출력
                     else {
@@ -111,7 +112,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     wine.updatedate = wineDict["updatedate"] as? String
                                 
                                     // 이미지 가져오기
-                                    let imageurl = URL(string: "http://172.30.1.27/img/\(wine.wineimg!)")
+                                    let imageurl = URL(string: "http://172.30.1.5/img/\(wine.wineimg!)")
                                     let imageData = try!Data(contentsOf: imageurl!)
                                     wine.image = UIImage(data: imageData)
                                     self.wineListCV.append(wine)
@@ -124,7 +125,7 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
                             // 컬렉션 뷰 다시 출력
                             self.collectionView.reloadData()
                             
-                            // update 한 시간을 받아오기 위한 요청을 생성
+                            // update한 시간을 받아오기 위한 요청을 생성
                             let updaterequest = AF.request(updateUrl, method: .get, encoding: JSONEncoding.default, headers: [:])
                             updaterequest.responseJSON{
                                 response in
@@ -147,23 +148,22 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.title = "sampleMain"
         
         // collectionview에 delegate, datasource 설정
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.reloadData()
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
+        self.collectionView?.reloadData()
         
         // 네비게이션 바의 왼쪽에 삭제 버튼을 추가
         self.navigationItem.leftBarButtonItem = self.editButtonItem
          
     }
-
-
+        
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     //셀의 개수를 설정하는 메소드
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return wineListCV.count
     }
     
     //셀의 모양을 설정하는 메소드
@@ -171,11 +171,19 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WineCVC", for: indexPath) as? WineCVC
 
-        // let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
+        let img = UIImage(named: "\(wineListCV[indexPath.row]).png")
 
-        // cell?.imageView.image = img
-
+        cell?.imageView.image = img
+        
+        // 하나의 데이터 가져오기
+        let wine = wineListCV[indexPath.row]
+        
+        // 데이터를 출력
+//        cell?.imageView!.image = wine.image
+//        cell?.lblWineName?.text = wine.winename
+        
         return cell!
+    
     }
 }
 

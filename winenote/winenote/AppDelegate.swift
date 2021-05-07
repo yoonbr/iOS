@@ -12,7 +12,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // 데이터 업데이트 날짜를 저장할 프로퍼티를 생성
-        var updatedate : String! = nil
+    var updatedate : String! = nil
     
     var shareDate : String = "초기값"
 

@@ -56,8 +56,8 @@ class WineListVC: UITableViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
             //데이터를 가져올 URL
-             let listUrl = "http://172.30.1.27/wine/all"
-             let updateUrl = "http://172.30.1.27/item/updatedate"
+             let listUrl = "http://172.30.1.5/wine/all"
+             let updateUrl = "http://172.30.1.5/item/updatedate"
             
             if appDelegate.updatedate == nil{
                 //get 방식으로 데이터 가져오기
@@ -80,12 +80,11 @@ class WineListVC: UITableViewController {
                             wine.winename = wineDict["winename"] as? String
                             wine.varieties = wineDict["varieties"] as? String
                             wine.country = wineDict["country"] as? String
-                            wine.category = wineDict["category"] as? String
                             wine.wineimg = wineDict["wineimg"] as? String
                             wine.updatedate = wineDict["updatedate"] as? String
                             
                             //이미지 가져오기
-                            let imageurl = URL(string:"http://172.30.1.27/img/\(wine.wineimg!)")
+                            let imageurl = URL(string:"http://172.30.1.5/img/\(wine.wineimg!)")
                             let imageData = try!Data(contentsOf: imageurl!)
                             wine.image = UIImage(data: imageData)
                             self.wineList.append(wine)
@@ -148,12 +147,11 @@ class WineListVC: UITableViewController {
                                         wine.winename = wineDict["winename"] as? String
                                         wine.varieties = wineDict["varieties"] as? String
                                         wine.country = wineDict["country"] as? String
-                                        wine.category = wineDict["category"] as? String
                                         wine.wineimg = wineDict["wineimg"] as? String
                                         wine.updatedate = wineDict["updatedate"] as? String
                                         
                                         //이미지 가져오기
-                                        let imageurl = URL(string:"http://http://172.30.1.27/img/\(wine.wineimg!)")
+                                        let imageurl = URL(string:"http://http://172.30.1.5/img/\(wine.wineimg!)")
                                         let imageData = try!Data(contentsOf: imageurl!)
                                         wine.image = UIImage(data: imageData)
                                         self.wineList.append(wine)
@@ -248,7 +246,7 @@ class WineListVC: UITableViewController {
         }
     
         // 셀이 보여질 때 호출되는 메소드
-        // 마지막 실이 보여질 때 업데이트를 수행
+        // 마지막 셀이 보여질 때 업데이트를 수행
         override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(flag == false && indexPath.row == self.pageno * count - 1) {
                     flag = true

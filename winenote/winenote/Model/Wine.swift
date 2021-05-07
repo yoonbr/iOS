@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 struct Wine {
-    var winenum : Int!
-    var winename : String!
-    var varieties : String!
-    var country : String!
-    var category : String!
-    var wineimg : String!
-    var updatedate : String!
+    var winenum: Int!
+    var winename: String!
+    var varieties: String!
+    var country: String!
     
-    var image : UIImage!
+    var wineimg: String!
+    var updatedate: String!
+    
+    var image: UIImage!
 }
