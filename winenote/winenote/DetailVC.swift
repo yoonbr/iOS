@@ -150,8 +150,8 @@ extension DetailVC: UITableViewDelegate, UITableViewDataSource {
         // let cell = noteView.dequeueReusableCell(withIdentifier: "NoteTableViewCell") as! NoteTableViewCell
         let oneWord = word[indexPath.row]
         
-        cell.lblWord.text = oneWord
+        // cell.lblWord.text = oneWord
     
-        return cell
+        // return cell
     }
 }
