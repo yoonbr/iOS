@@ -84,8 +84,8 @@ class MapViewController: UITableViewController {
             let detailViewController = self.storyboard?.instantiateViewController(identifier: "DetailVC") as! DetailVC
             
             // 데이터 넘겨주기
-            detailViewController.name = attractionNames[indexPath.row]
-            detailViewController.url = webAddresses[indexPath.row]
+            // detailViewController.name = attractionNames[indexPath.row]
+            // detailViewController.url = webAddresses[indexPath.row]
             
             // 화면에 출력
             navigationController?.pushViewController(detailViewController, animated: true)

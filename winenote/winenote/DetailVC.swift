@@ -39,7 +39,7 @@ class DetailVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         // 데이터 가져올 URL
-        let listUrl = "http://172.30.1.5/note/notelist/\(wine.winenum)"
+        let listUrl = "http://172.30.1.5/note/notelist/\(String(describing: wine.winenum))"
         let updateUrl = "http://172.30.1.5/wine/updatedate"
 
             if appDelegate.updatedate == nil {
@@ -71,7 +71,7 @@ class DetailVC: UIViewController {
                         NSLog("데이터 저장 성공")
                     }
 
-                    self.noteTableView.reloadData()
+                    self.noteView.reloadData()
 
                     // update 시간 받아오기
                     let updateRequest = AF.request(updateUrl, method: .get, encoding: JSONEncoding.default, headers: [:])
@@ -90,7 +90,7 @@ class DetailVC: UIViewController {
                         let result = jsonObject["result"] as? String
                         // 내가 가지고 있는 업데이트 시간과 같은 경우 현재 데이터만 다시 출력
                         if appDelegate.updatedate == result {
-                            self.noteTableView.reloadData()
+                            self.noteView.reloadData()
                         } else {
                         // else - 서버의 데이터 다시 읽어서 출력
                             let request = AF.request(listUrl, method: .get, encoding: JSONEncoding.default, headers: [:])
@@ -116,7 +116,7 @@ class DetailVC: UIViewController {
                                     }
                                     NSLog("데이터 저장 성공")
                                 }
-                                self.noteTableView.reloadData()
+                                self.noteView.reloadData()
 
                                 // update 시간 받아오기
                                 let updateRequest = AF.request(updateUrl, method: .get, encoding: JSONEncoding.default, headers: [:])
@@ -143,15 +143,12 @@ extension DetailVC: UITableViewDelegate, UITableViewDataSource {
     }
      
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return word.count
+        return noteList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // let cell = noteView.dequeueReusableCell(withIdentifier: "NoteTableViewCell") as! NoteTableViewCell
-        let oneWord = word[indexPath.row]
+        let cell = noteView.dequeueReusableCell(withIdentifier: "NoteTableViewCell") as! NoteTableViewCell
         
-        // cell.lblWord.text = oneWord
-    
-        // return cell
+        return cell
     }
 }
