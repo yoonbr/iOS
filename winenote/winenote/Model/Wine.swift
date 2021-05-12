@@ -8,14 +8,15 @@
 import Foundation
 import UIKit
 
-struct Wine {
-    var winenum: Int!
-    var winename: String!
-    var varieties: String!
-    var country: String!
+// Model - Wine으로 이동
+struct WineList: Codable {
+
+    struct List: Codable {
+        let winenum: Int
+        let price: Int
+        let wineimg: String
+        let winename: String
+    }
     
-    var wineimg: String!
-    var updatedate: String!
-    
-    var image: UIImage!
+    let list: [List]
 }

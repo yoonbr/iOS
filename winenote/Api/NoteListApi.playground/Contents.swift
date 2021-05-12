@@ -1,5 +1,6 @@
 import UIKit
 
+// Model - Note로 이동
 struct NoteList: Codable {
 
     struct List: Codable {
@@ -16,8 +17,11 @@ struct NoteList: Codable {
     
     let list: [List]
 }
+
+// Data - WineNoteDataSource로 이동
 // 에러형식 선언
 // error protocol을 채용한 열거형으로 선언
+// Model - ApiError로 이동
 enum ApiError: Error {
     case unknown
     case invalidUrl(String)
@@ -83,6 +87,7 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
     task.resume()
 }
 
+// Data - WineNoteDataSource로 이동
 // completion parameter, fetch 함수 추가
 func fetchNoteList(winenum: Int, completion: @escaping (Result<NoteList, Error>) -> ()) {
     let urlStr = "http://localhost/note/notelist/\(winenum)"

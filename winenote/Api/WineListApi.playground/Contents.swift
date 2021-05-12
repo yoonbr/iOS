@@ -1,5 +1,6 @@
 import UIKit
 
+// Model - Wine으로 이동
 struct WineList: Codable {
 
     struct List: Codable {
@@ -78,11 +79,12 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
     task.resume()
 }
 
+// Data - WineNoteDataSource로 이동
 // completion parameter, fetch 함수 추가
-func fetchWineList(completion: @escaping (Result<WineList, Error>) -> ()) {
-    let urlStr = "http://localhost/wine/all"
+func fetchWineList(winenum: Int, completion: @escaping (Result<WineList, Error>) -> ()) {
+    let urlStr = "http://localhost/wine/detail/\(winenum)"
     
     fetch(urlStr: urlStr, completion: completion)
 }
 
-fetchWineList() { _ in }
+fetchWineList(winenum: 1) { _ in }

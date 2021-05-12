@@ -8,12 +8,19 @@
 import Foundation
 import UIKit
 
-struct Note {
-    var winenum: Int!
-    var notenum: Int!
-    var nickname: String!
-    var price: Int!
-    var firstword: String!
-    var secondword: String!
-    var notedate: String!
+struct NoteList: Codable {
+
+    struct List: Codable {
+        let notenum: Int
+        let winenum: Int
+        let nickname: String
+        let notedate: String
+        let price: Int
+        let firstword: String
+        let secondword: String
+        let wineimg: String
+        let winename: String
+    }
+    
+    let list: [List]
 }
