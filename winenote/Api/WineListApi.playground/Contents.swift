@@ -1,15 +1,10 @@
 import UIKit
 
-struct NoteList: Codable {
+struct WineList: Codable {
 
     struct List: Codable {
-        let notenum: Int
         let winenum: Int
-        let nickname: String
-        let notedate: String
         let price: Int
-        let firstword: String
-        let secondword: String
         let wineimg: String
         let winename: String
     }
@@ -84,10 +79,10 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
 }
 
 // completion parameter, fetch 함수 추가
-func fetchNoteList(winenum: Int, completion: @escaping (Result<NoteList, Error>) -> ()) {
-    let urlStr = "http://localhost/note/notelist/\(winenum)"
+func fetchWineList(completion: @escaping (Result<WineList, Error>) -> ()) {
+    let urlStr = "http://localhost/wine/all"
     
     fetch(urlStr: urlStr, completion: completion)
 }
 
-fetchNoteList(winenum: 1) { _ in }
+fetchWineList() { _ in }

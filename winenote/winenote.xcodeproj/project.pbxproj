@@ -49,6 +49,7 @@
 		55AC24AC2649801700BE5621 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		55C0B963264BBC3D00618EF8 /* NoteListApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NoteListApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		55C0B967264BBF2300618EF8 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		55C0B974264C315B00618EF8 /* WineListApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WineListApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A52CC81FEE2522E13B5286DC /* Pods-winenote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-winenote.release.xcconfig"; path = "Target Support Files/Pods-winenote/Pods-winenote.release.xcconfig"; sourceTree = "<group>"; };
 		B033E6988785C1497C783239 /* Pods-winenote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-winenote.debug.xcconfig"; path = "Target Support Files/Pods-winenote/Pods-winenote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				55C0B963264BBC3D00618EF8 /* NoteListApi.playground */,
+				55C0B974264C315B00618EF8 /* WineListApi.playground */,
 			);
 			path = Api;
 			sourceTree = "<group>";
