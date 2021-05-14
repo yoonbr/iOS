@@ -18,7 +18,7 @@ class WineNoteDataSource {
     // 와인 리스트 저장
     var winelist: WineList?
     // 노트 리스트 저장
-    var notelist: NoteList?
+    var notelist = [NoteListData]()
     // api 요청시 사용할 Dispatchqueue
     // component 옵션을 추가하여 최대한 많은 작업을 동시에 처리
     let apiQueue = DispatchQueue(label: "ApiQueue", attributes: .concurrent)
@@ -32,9 +32,17 @@ class WineNoteDataSource {
             self.fetchNoteList(winenum: winenum) { (result) in
                 switch result {
                 case .success(let data):
-                    self.notelist = data
+                    self.notelist = data.list.map {
+                        let nickname = $0.nickname ?? "알 수 없음"
+                        let price = $0.price ?? 0
+                        let firstword = $0.firstword ?? "null"
+                        let secondword = $0.secondword ?? "null"
+                        let notedate = $0.notedate ?? "0000-00-00"
+                        
+                        return NoteListData(nickname: nickname, notedate: notedate, price: price, firstword: firstword, secondword: secondword)
+                    }
                 default:
-                    self.notelist = nil
+                    self.notelist = []
                 }
                 self.group.leave()
             }

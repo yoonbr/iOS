@@ -24,3 +24,13 @@ struct NoteList: Codable {
     
     let list: [List]
 }
+
+struct NoteListData {
+    
+    let nickname: String
+    let notedate: String
+    let price: Int
+    let firstword: String
+    let secondword: String
+    
+}

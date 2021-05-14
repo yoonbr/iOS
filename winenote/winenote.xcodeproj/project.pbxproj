@@ -71,6 +71,7 @@
 		5591D10D25FFB24B007A6701 = {
 			isa = PBXGroup;
 			children = (
+				55A46324264424A500AA7DE0 /* Model */,
 				55C0B976264C335400618EF8 /* Data */,
 				55C0B962264BBC1D00618EF8 /* Api */,
 				5591D11825FFB24B007A6701 /* winenote */,
@@ -91,7 +92,6 @@
 		5591D11825FFB24B007A6701 /* winenote */ = {
 			isa = PBXGroup;
 			children = (
-				55A46324264424A500AA7DE0 /* Model */,
 				5591D11925FFB24B007A6701 /* AppDelegate.swift */,
 				5591D11B25FFB24B007A6701 /* SceneDelegate.swift */,
 				55A9936F25FFB66900280DAB /* Assets.xcassets */,

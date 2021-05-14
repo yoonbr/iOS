@@ -24,8 +24,8 @@ class WineViewController: UIViewController, UICollectionViewDataSource, UICollec
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // 데이터를 가져올 URL
-        let listUrl = "http://172.30.1.5/wine/all"
-        let updateUrl = "http://172.30.1.5/item/updatedate"
+        let listUrl = "http://localhost/wine/all"
+        let updateUrl = "http://localhostitem/updatedate"
         
         if appDelegate.updatedate == nil {
             // get 방식으로 데이터 가져오기
