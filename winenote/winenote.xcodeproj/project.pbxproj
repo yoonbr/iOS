@@ -23,6 +23,7 @@
 		55A9938725FFD43900280DAB /* WineListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9938625FFD43900280DAB /* WineListVC.swift */; };
 		55AC248826457AA400BE5621 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC248726457AA400BE5621 /* Note.swift */; };
 		55AC24AD2649801700BE5621 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC24AC2649801700BE5621 /* NoteTableViewCell.swift */; };
+		55C0B9172651518F00AC6E67 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0B9162651518F00AC6E67 /* MapDetailViewController.swift */; };
 		55C0B968264BBF2300618EF8 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0B967264BBF2300618EF8 /* NoteListViewController.swift */; };
 		55C0B978264C336A00618EF8 /* WineNoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0B977264C336A00618EF8 /* WineNoteDataSource.swift */; };
 		D3F6200F1C65BB74D9ADCE8E /* Pods_winenote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077FCCC2617A0146EF6FDB81 /* Pods_winenote.framework */; };
@@ -48,6 +49,7 @@
 		55A9938625FFD43900280DAB /* WineListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineListVC.swift; sourceTree = "<group>"; };
 		55AC248726457AA400BE5621 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		55AC24AC2649801700BE5621 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		55C0B9162651518F00AC6E67 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		55C0B963264BBC3D00618EF8 /* NoteListApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NoteListApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		55C0B967264BBF2300618EF8 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		55C0B974264C315B00618EF8 /* WineListApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WineListApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -100,6 +102,7 @@
 				55A9937325FFBABD00280DAB /* WineCVC.swift */,
 				55A9937925FFBD6400280DAB /* WineViewController.swift */,
 				55A9937C25FFCA4700280DAB /* MapViewController.swift */,
+				55C0B9162651518F00AC6E67 /* MapDetailViewController.swift */,
 				55A9937F25FFCC0C00280DAB /* AttractionTVC.swift */,
 				55A9938225FFCF9400280DAB /* DetailVC.swift */,
 				55A9938625FFD43900280DAB /* WineListVC.swift */,
@@ -277,6 +280,7 @@
 				55A9937725FFBC3A00280DAB /* Wine.swift in Sources */,
 				55AC248826457AA400BE5621 /* Note.swift in Sources */,
 				55A463262644254E00AA7DE0 /* ApiError.swift in Sources */,
+				55C0B9172651518F00AC6E67 /* MapDetailViewController.swift in Sources */,
 				5591D11A25FFB24B007A6701 /* AppDelegate.swift in Sources */,
 				55C0B968264BBF2300618EF8 /* NoteListViewController.swift in Sources */,
 				55A9938325FFCF9400280DAB /* DetailVC.swift in Sources */,

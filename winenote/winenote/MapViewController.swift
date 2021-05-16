@@ -21,7 +21,7 @@ class MapViewController: UITableViewController {
         // 데이터 초기화
         attractionImgs = ["wineBar.png", "wineShop.png"]
         attractionNames = ["와인바 검색", "와인샵 검색"]
-        // webAddresses = ["http://kko.to/pLchULeDM", "http://kko.to/E4SIURADo"]
+        webAddresses = ["http://kko.to/pLchULeDM", "http://kko.to/E4SIURADo"]
         
         self.title = "wine map"
         

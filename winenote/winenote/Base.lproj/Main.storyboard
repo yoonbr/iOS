@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1922" y="1292"/>
         </scene>
-        <!--DetailVC-->
+        <!--Map Detail View Controller-->
         <scene sceneID="MWK-jg-gSF">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" id="RUw-eD-4UP" customClass="DetailVC" customModule="winenote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapDetailViewController" id="RUw-eD-4UP" customClass="MapDetailViewController" customModule="winenote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7n-cw-1to">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,7 +209,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RI0-sK-1SE"/>
                     <connections>
-                        <outlet property="webView" destination="GqV-d6-sTS" id="c26-sA-N6r"/>
+                        <outlet property="webView" destination="GqV-d6-sTS" id="OK7-ep-yyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gd-rJ-jVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
