@@ -12,7 +12,7 @@ class WineViewController: UIViewController {
     
 // , UICollectionViewDataSource, UICollectionViewDelegate
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    // @IBOutlet weak var collectionView: UICollectionView!
     
 //    // 다운로드 받은 데이터를 저장할 프로퍼티 - wineListCV
 //    var wineListCV = Array<Wine>()
