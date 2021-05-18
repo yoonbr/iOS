@@ -29,7 +29,7 @@ class ItemInsertViewController: UIViewController {
             multipart.append(Data(price!.utf8), withName: "price")
             multipart.append(Data(description!.utf8), withName: "description")
             multipart.append(imageData!, withName: "pictureurl", fileName: "snowball.png", mimeType: "image/png")
-        }, to: "http://192.168.10.98:9393/item/insert").responseJSON{ response in
+        }, to: "http://localhost/item/insert").responseJSON{ response in
             if let jsonObject = response.value as? [String:Any]{
                 let result = jsonObject["result"] as! Bool
                 if result == true {
