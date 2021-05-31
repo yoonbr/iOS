@@ -160,9 +160,7 @@
 * LocalSave
 * SQLite
 
-### :apple: [kxcoding](https://www.notion.so/iOS-kxcoding-2de60d924ebc479299ac80e599aaff9b)
-
-
-
 </details>
+
+### :apple: [kxcoding](https://www.notion.so/iOS-kxcoding-2de60d924ebc479299ac80e599aaff9b)
 
