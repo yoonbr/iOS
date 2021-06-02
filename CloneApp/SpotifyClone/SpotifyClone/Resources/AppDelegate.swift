@@ -16,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
+        // 회원 가입 유무로 시작 페이지 설정
         if AuthManager.shared.isSignedIn {
             window.rootViewController = TabBarViewController()
         }
         else {
-            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+            let navVC = UINavigationController(rootViewController: WelcomeViewController())
+            navVC.navigationBar.prefersLargeTitles = true
+            navVC.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
+            window.rootViewController = navVC
         }
 
         window.makeKeyAndVisible()
