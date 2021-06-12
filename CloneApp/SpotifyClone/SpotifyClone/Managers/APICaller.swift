@@ -34,13 +34,14 @@ final class APICaller {
                 }
                 
                 do {
-                    let result = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                     print(result)
                 }
                 catch {
                     completion(.failure(error))
                 }
             }
+            task.resume()
         }
     }
     
