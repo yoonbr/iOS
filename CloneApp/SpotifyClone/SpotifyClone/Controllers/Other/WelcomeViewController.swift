@@ -57,7 +57,7 @@ class WelcomeViewController: UIViewController {
         guard success else {
             let alert = UIAlertController(title: "Oops", message: "문제가 발생하였습니다.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
-            present(alert, animated: true)
+            present(alert, animated: true) 
             return
         }
         

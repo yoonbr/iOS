@@ -7,4 +7,6 @@
 
 import Foundation
 
-struct UserProfile {}
+struct UserProfile {
+    
+}

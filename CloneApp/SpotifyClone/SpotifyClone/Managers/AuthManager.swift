@@ -17,19 +17,17 @@ final class AuthManager {
         static let clientID = "8d17827c076743938bb129ea0a1849eb"
         static let clientSecret = "94a6ed62b5424b14ab91901f4d3c9b70"
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
-        static let redirectURI = "https://localhost/callback/"
+        static let redirectURI = "http://localhost/"
         static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
     }
     
     private init() {}
     
     public var signInURL: URL? {
-
-
         let base = "https://accounts.spotify.com/authorize"
         let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE"
         return URL(string: string)
-    }
+    } 
     
     var isSignedIn: Bool {
         return accessToken != nil
@@ -48,13 +46,13 @@ final class AuthManager {
     }
     
     private var shouldRefreshToken: Bool {
-        guard let experationDate = tokenExpirationDate else {
+        guard let expirationDate = tokenExpirationDate else {
             return false
         }
         let currentDate = Date()
         // 5minute
         let fiveMinutes: TimeInterval = 300
-        return currentDate.addingTimeInterval(fiveMinutes) >= experationDate
+        return currentDate.addingTimeInterval(fiveMinutes) >= expirationDate
     }
     
     public func exchangeCodeForToken(
@@ -104,7 +102,6 @@ final class AuthManager {
             
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
-                
                 self?.cacheToken(result: result)
                 completion(true)
                 
@@ -195,7 +192,7 @@ final class AuthManager {
             
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
-                self?.onRefreshBlocks.forEach { $0(result.access_token)}
+                self?.onRefreshBlocks.forEach { $0(result.access_token) }
                 self?.onRefreshBlocks.removeAll()
                 self?.cacheToken(result: result)
                 completion(true)
@@ -208,14 +205,16 @@ final class AuthManager {
         }
         // fix of api call
         task.resume()
-        
     }
     
     private func cacheToken(result: AuthResponse) {
-        UserDefaults.standard.setValue(result.access_token, forKey: "access_token")
+        UserDefaults.standard.setValue(result.access_token,
+                                       forKey: "access_token")
         if let refresh_token = result.refresh_token {
-        UserDefaults.standard.setValue(refresh_token, forKey: "refresh_token")
+             UserDefaults.standard.setValue(refresh_token,
+                                       forKey: "refresh_token")
         }
-        UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in )), forKey: "experationDate")
+        UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)),
+                                       forKey: "experationDate")
     }
 }
