@@ -19,8 +19,8 @@ class HomeViewController: UIViewController {
     
     // @objc: 각각의 변수, 함수 등에 적용하여 ObjectiveC의 접근을 가능하게 해줌
     @objc func didTapSettings() {
-        let vc = ProfileViewController()
-        vc.title = "Profile"
+        let vc = SettingsViewController()
+        vc.title = "Setting"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }

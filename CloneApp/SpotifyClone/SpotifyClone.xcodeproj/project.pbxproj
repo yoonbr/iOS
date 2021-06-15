@@ -29,6 +29,7 @@
 		553091B12665092100D63271 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553091B02665092100D63271 /* AudioTrack.swift */; };
 		553091B42665092C00D63271 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553091B32665092C00D63271 /* Artist.swift */; };
 		553091B72665093500D63271 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553091B62665093500D63271 /* UserProfile.swift */; };
+		554E59A9267895C5008BBB60 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E59A8267895C5008BBB60 /* SettingsModels.swift */; };
 		55944DD22666589600137A82 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55944DD12666589600137A82 /* Extensions.swift */; };
 		559B3DEE266B55D10098676E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559B3DED266B55D10098676E /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		553091B02665092100D63271 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		553091B32665092C00D63271 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		553091B62665093500D63271 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		554E59A8267895C5008BBB60 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		55944DD12666589600137A82 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		559B3DED266B55D10098676E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				553091B32665092C00D63271 /* Artist.swift */,
 				553091B62665093500D63271 /* UserProfile.swift */,
 				559B3DED266B55D10098676E /* AuthResponse.swift */,
+				554E59A8267895C5008BBB60 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				55944DD22666589600137A82 /* Extensions.swift in Sources */,
 				5530919B266507A400D63271 /* PlaylistViewController.swift in Sources */,
 				553091B42665092C00D63271 /* Artist.swift in Sources */,
+				554E59A9267895C5008BBB60 /* SettingsModels.swift in Sources */,
 				553091612665010200D63271 /* SceneDelegate.swift in Sources */,
 				553091972665078800D63271 /* PlayerViewController.swift in Sources */,
 				5530919E266507B800D63271 /* SearchResultViewController.swift in Sources */,
