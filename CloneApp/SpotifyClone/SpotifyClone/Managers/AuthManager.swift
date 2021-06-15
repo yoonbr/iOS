@@ -145,6 +145,11 @@ final class AuthManager {
             return
         }
         
+        guard shouldRefreshToken else {
+            completion(true)
+            return
+        }
+        
         guard let refreshToken = self.refreshToken else {
             return
         }
