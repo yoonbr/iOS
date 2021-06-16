@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         })]))
         
         sections.append(Section(title: "Account", options: [Option(title: "Sign Out", handler: { [weak self] in
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 self?.signOutTapped()
             }
         })]))
