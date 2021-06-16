@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 회원 가입 유무로 시작 페이지 설정
         if AuthManager.shared.isSignedIn {
+            AuthManager.shared.refreshIfNeeded(completion: nil)
             window.rootViewController = TabBarViewController()
         }
         else {

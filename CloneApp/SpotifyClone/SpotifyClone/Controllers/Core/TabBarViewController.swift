@@ -31,6 +31,11 @@ class TabBarViewController: UITabBarController {
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
         
+        // navigationBar Color (Dark Mode)
+        nav1.navigationBar.tintColor = .label
+        nav2.navigationBar.tintColor = .label
+        nav3.navigationBar.tintColor = .label
+        
         // TabBar 아이콘 추가
         nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "music.note.house"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
