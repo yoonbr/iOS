@@ -11,11 +11,25 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = "Browse"
         view.backgroundColor = .systemBackground
         // Button Item 추가 (우측 상단 설정 버튼)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(didTapSettings))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gear"),
+            style: .done,
+            target: self,
+            action: #selector(didTapSettings)
+        )
+        fetchData()
     }
+    
+    private func fetchData() {
+        APICaller.shared.getFeaturedPlaylists { _ in
+            
+        }
+    }
+    
+   
     
     // @objc: 각각의 변수, 함수 등에 적용하여 ObjectiveC의 접근을 가능하게 해줌
     @objc func didTapSettings() {
