@@ -21,14 +21,28 @@ class HomeViewController: UIViewController {
             action: #selector(didTapSettings)
         )
         fetchData()
-    }
+    } 
     
     private func fetchData() {
-        APICaller.shared.getFeaturedPlaylists { _ in
-            
+        APICaller.shared.getRecommendedGenres { result in
+            switch result {
+            case .success(let model):
+                let genres = model.genres
+                var seeds = Set<String>()
+                while seeds.count < 5  {
+                    if let random = genres.randomElement() {
+                        seeds.insert(random)
+                    }
+                }
+                
+                APICaller.shared.getRecommendations(genres: seeds) {_ in
+                    
+                }
+                
+            case .failure(let error): break
+            }
         }
     }
-    
    
     
     // @objc: 각각의 변수, 함수 등에 적용하여 ObjectiveC의 접근을 가능하게 해줌

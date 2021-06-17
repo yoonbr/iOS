@@ -20,7 +20,8 @@ final class APICaller {
         case failedToGetData
     }
     
-    public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void) {
+    // 유저 프로필 API
+    public func getCurrentUserProfile(completion: @escaping ((Result<UserProfile, Error>) -> Void)) {
         createRequest(
             with: URL(string: Constants.baseAPIURL + "/me"),
             type: .GET
@@ -44,7 +45,8 @@ final class APICaller {
         }
     }
     
-    public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>)) -> Void) {
+    // 최신곡 API
+    public func getNewReleases(completion: @escaping ((Result<NewReleasesResponse, Error>) -> Void)) {
         createRequest(with: URL(string: Constants.baseAPIURL + "/browse/new-releases?limit=50"), type: .GET) { request in
             let task = URLSession.shared.dataTask(with: request) {data, _, error in
                 guard let data = data, error == nil else {
@@ -64,7 +66,7 @@ final class APICaller {
         }
     }
     
-    // 추천 플레이리스트 목록 생성 
+    // 특정 재생목록 API
     public func getFeaturedPlaylists(completion: @escaping ((Result<FeaturedPlaylistsResponse, Error>) -> Void)) {
         createRequest(
             with: URL(string: Constants.baseAPIURL + "/browse/featured-playlists?limit=2"),
@@ -78,7 +80,7 @@ final class APICaller {
                 do {
                     // ** json 변환 전 try 꼭 넣기
                     let result = try JSONDecoder().decode(FeaturedPlaylistsResponse.self, from: data)
-                    print(result)
+                    // print(result)
                     completion(.success(result))
                 }
                 catch {
@@ -89,7 +91,58 @@ final class APICaller {
         }
     }
     
+    // 추천 재생목록 API
+    public func getRecommendations(genres: Set<String>, completion: @escaping ((Result<RecommendationsResponse, Error>) -> Void)) {
+        let seeds = genres.joined(separator: ",")
+        createRequest(
+            with: URL(string: Constants.baseAPIURL + "/recommendations?limit=40&seed_genres=\(seeds)"),
+            type: .GET
+        ) { request in
+            // print(request.url?.absoluteString)
+            let task = URLSession.shared.dataTask(with: request) {data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.failedToGetData))
+                    return
+                }
+                do {
+                    // ** json 변환 전 try 꼭 넣기
+                    let result = try JSONDecoder().decode(RecommendationsResponse.self, from: data)
+                    // print(result) - 출력해보기
+                    completion(.success(result))
+                }
+                catch {
+                    completion(.failure(error))
+                }
+            }
+            task.resume()
+        }
+    }
     
+    // 추천 재생목록 장르 API
+    public func getRecommendedGenres(completion: @escaping ((Result<RecommendedGenresResponse, Error>) -> Void)) {
+        createRequest(
+            with: URL(string: Constants.baseAPIURL + "/recommendations/available-genre-seeds"),
+            type: .GET
+        ) { request in
+             // print("Starting recommendations api call...") - test
+                        let task = URLSession.shared.dataTask(with: request) {data, _, error in
+                            guard let data = data, error == nil else {
+                                completion(.failure(APIError.failedToGetData))
+                                return
+                            }
+                            do {
+                                // ** json 변환 전 try 꼭 넣기
+                                let result = try JSONDecoder().decode(RecommendedGenresResponse.self, from: data)
+                                // print(result)
+                                completion(.success(result))
+                            }
+                            catch {
+                                completion(.failure(error))
+                            }
+                        }
+                        task.resume()
+                    }
+                }
     // MARK: - Private
     
     enum HTTPMethod: String {
