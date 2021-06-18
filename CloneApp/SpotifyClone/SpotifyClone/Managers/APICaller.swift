@@ -107,7 +107,7 @@ final class APICaller {
                 do {
                     // ** json 변환 전 try 꼭 넣기
                     let result = try JSONDecoder().decode(RecommendationsResponse.self, from: data)
-                    // print(result) - 출력해보기
+                    // print(result) /// - 출력해보기
                     completion(.success(result))
                 }
                 catch {
@@ -152,7 +152,7 @@ final class APICaller {
     
     private func createRequest(with url: URL?,
                                type: HTTPMethod,
-                               completion: @escaping (URLRequest) -> Void){
+                               completion: @escaping ((URLRequest) -> Void)) {
         AuthManager.shared.withValidToken { token in
             guard let apiURL = url else {
                 return
