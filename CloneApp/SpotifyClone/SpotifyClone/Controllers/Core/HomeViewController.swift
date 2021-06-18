@@ -15,22 +15,20 @@ enum BrowseSectionType {
 
 class HomeViewController: UIViewController {
     
-    // CollectionView 생성
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection? in
             return HomeViewController.createSectionLayout(section: sectionIndex)
         }
     )
-    
-    // spinner 추가 
+
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
         spinner.tintColor = .label
         spinner.hidesWhenStopped = true
         return spinner
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Browse"
@@ -42,29 +40,24 @@ class HomeViewController: UIViewController {
             target: self,
             action: #selector(didTapSettings)
         )
-        
         configureCollectionView()
-        // 만들어놓은 spinner 추가
         view.addSubview(spinner)
         fetchData()
     }
     
-    // add viewDidLayoutSubviews
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
     }
     
-    // cell 속성 추가
     private func configureCollectionView() {
         view.addSubview(collectionView)
-        collectionView.register(UICollectionViewListCell.self,
-                                forCellWithReuseIdentifier: "cell")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
     }
-
+    
     // add function
     private static func createSectionLayout(section: Int) -> NSCollectionLayoutSection {
         switch section {
@@ -189,6 +182,8 @@ class HomeViewController: UIViewController {
             return section
         }
     }
+    
+
     
     private func fetchData() {
         // New Releases
