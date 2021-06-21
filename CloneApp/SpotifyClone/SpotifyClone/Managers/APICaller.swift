@@ -22,7 +22,7 @@ final class APICaller {
     
     // MARK: - Albums
     
-    public func getAlbumDetails(for album: Album, completion: @escaping (Result<String, Error>) -> Void) {
+    public func getAlbumDetails(for album: Album, completion: @escaping (Result<AlbumDetailsResponse, Error>) -> Void) {
         createRequest(with: URL(string: Constants.baseAPIURL + "/albums/" + album.id),
                       type: .GET
         ) { request in
@@ -31,12 +31,11 @@ final class APICaller {
                 completion(.failure(APIError.failedToGetData))
                 return
             }
-            
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                print(json)
+                let result = try JSONDecoder().decode(AlbumDetailsResponse.self, from: data)
+                print(result)
+                completion(.success(result))
             }
-            
             catch {
                 print(error)
                 completion(.failure(error))

@@ -15,6 +15,11 @@ enum BrowseSectionType {
 
 class HomeViewController: UIViewController {
     
+    // 빈 배열 상태로 변수 선언
+    private var newAlbums: [Album] = []
+    private var playlists: [Playlist] = []
+    private var tracks: [AudioTrack] = []
+    
     // CollectionView 생성
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
@@ -150,7 +155,7 @@ class HomeViewController: UIViewController {
                 tracks: tracks)
         }
     }
-    
+     
     private func configureModels(
         newAlbums: [Album],
         playlists: [Playlist],
@@ -160,6 +165,11 @@ class HomeViewController: UIViewController {
 //        print(newAlbums.count)
 //        print(playlists.count)
 //        print(tracks.count)
+        
+        // parameter 속성 변경
+        self.newAlbums = newAlbums
+        self.playlists = playlists
+        self.tracks = tracks
         
         //Configure Models
         sections.append(.newReleases(viewModels: newAlbums.compactMap({
@@ -183,11 +193,11 @@ class HomeViewController: UIViewController {
             return RecommendedTrackCellViewModel(
                 name: $0.name,
                 artistName: $0.artists.first?.name ?? "-",
-                artworkURL: URL(string: $0.album.images.first?.url ?? "")
+                artworkURL: URL(string: $0.album?.images.first?.url ?? "")
                 )
         })))
         
-        
+         
         collectionView.reloadData()
     }
    
@@ -259,6 +269,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             return cell
             
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let section = sections[indexPath.section]
+        switch section {
+        case .featuredPlaylists:
+            // 앨범을 선택할 때 경로 설정
+            let playlist = playlists[indexPath.row]
+            // ViewController로 가는 동작 세팅
+            let vc = PlaylistViewController(playlist: playlist)
+            vc.title = playlist.name
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case .newReleases:
+            // 앨범을 선택할 때 경로 설정
+            let album = newAlbums[indexPath.row]
+            // ViewController로 가는 동작 세팅
+            let vc = AlbumViewController(album: album)
+            vc.title = album.name
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        case .recommendedTracks:
+            break
         }
     }
     
