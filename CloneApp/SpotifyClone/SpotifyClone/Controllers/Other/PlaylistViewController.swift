@@ -23,13 +23,13 @@ class PlaylistViewController: UIViewController {
                     )
                 )
                 
-                item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 2, bottom: 1, trailing: 2)
                 
                 // Vertical Group in horizontal group
                 let group = NSCollectionLayoutGroup.vertical(
                     layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(80)
+                        heightDimension: .absolute(60 )
                     ),
                     subitem: item,
                     count: 1
@@ -37,6 +37,14 @@ class PlaylistViewController: UIViewController {
                 
                 // Section
                 let section = NSCollectionLayoutSection(group: group)
+            section.boundarySupplementaryItems = [
+                NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .fractionalWidth(1)),
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+            ]
                 return section
                 
         })
