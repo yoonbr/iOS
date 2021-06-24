@@ -29,7 +29,7 @@ class PlaylistViewController: UIViewController {
                 let group = NSCollectionLayoutGroup.vertical(
                     layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(60 )
+                        heightDimension: .absolute(60)
                     ),
                     subitem: item,
                     count: 1
@@ -72,6 +72,13 @@ class PlaylistViewController: UIViewController {
         collectionView.register(
             RecommendedTrackCollectionViewCell.self,
             forCellWithReuseIdentifier: RecommendedTrackCollectionViewCell.identifier
+        )
+        
+        // PlaylistHeaderCollectionReusableView 생성 후 register
+        collectionView.register(
+            PlaylistHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: PlaylistHeaderCollectionReusableView.identifier
         )
         collectionView.backgroundColor = .systemBackground
         collectionView.delegate = self
@@ -121,8 +128,40 @@ extension PlaylistViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
+    // playlist view
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath)
+    -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: PlaylistHeaderCollectionReusableView.identifier,
+            for: indexPath
+        ) as? PlaylistHeaderCollectionReusableView,
+         kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+        // test
+        let headerViewModel = PlaylistHeaderViewViewModel(
+            name: playlist.name,
+            ownerName: playlist.owner.display_name,
+            playlistDescription: playlist.description,
+            artworkURL: URL(string: playlist.images.first?.url ?? "")
+        )
+        
+        header.configure(with: headerViewModel)
+        header.delegate = self
+        return header
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         // play song
+    }
+}
+
+extension PlaylistViewController: PlaylistHeaderCollectionReusableViewDelegate {
+    func PlaylistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
+        // 대기열에서 리스트를 재생 
+        print("Playing all")
     }
 }
