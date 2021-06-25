@@ -101,7 +101,21 @@ class PlaylistViewController: UIViewController {
                 }
             }
         }
+        // 공유 버튼 추가
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapShare))
     }
+    
+    @objc private func didTapShare() {
+        print(playlist.external_urls)
+        let vc = UIActivityViewController(
+            activityItems: ["Foo"],
+            applicationActivities: []
+        )
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
+
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
@@ -161,7 +175,7 @@ extension PlaylistViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension PlaylistViewController: PlaylistHeaderCollectionReusableViewDelegate {
     func PlaylistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
-        // 대기열에서 리스트를 재생 
+        // 대기열에서 리스트를 재생
         print("Playing all")
     }
 }
