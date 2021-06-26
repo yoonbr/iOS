@@ -106,9 +106,12 @@ class PlaylistViewController: UIViewController {
     }
     
     @objc private func didTapShare() {
-        print(playlist.external_urls)
+        // print(playlist.external_urls)
+        guard let url = URL(string: playlist.external_urls["spotify"] ?? "") else {
+            return
+        }
         let vc = UIActivityViewController(
-            activityItems: ["Foo"],
+            activityItems: [url],
             applicationActivities: []
         )
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
