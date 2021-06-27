@@ -35,8 +35,8 @@ class PlaylistViewController: UIViewController {
                     count: 1
                 )
                 
-                // Section
-                let section = NSCollectionLayoutSection(group: group)
+            // Section
+            let section = NSCollectionLayoutSection(group: group)
             section.boundarySupplementaryItems = [
                 NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: NSCollectionLayoutSize(
@@ -45,7 +45,7 @@ class PlaylistViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
             ]
-                return section
+            return section
                 
         })
     )
