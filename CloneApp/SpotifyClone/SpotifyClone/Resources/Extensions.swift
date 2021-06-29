@@ -34,3 +34,27 @@ extension UIView {
         return top + height
     }
 }
+
+extension DateFormatter {
+    static let dateFormatter: DateFormatter = {
+        let dateForamtter = DateFormatter()
+        dateForamtter.dateFormat = "YYYY-MM-dd"
+        return dateForamtter
+    }()
+    
+    static let displaydateFormatter: DateFormatter = {
+        let dateForamtter = DateFormatter()
+        dateForamtter.dateStyle = .medium
+        return dateForamtter
+    }()
+}
+
+extension String {
+    static func formattedDate(string: String) -> String {
+        guard let date = DateFormatter.dateFormatter.date(from: string) else {
+            return string
+        }
+        return DateFormatter.displaydateFormatter.string(from: date)
+    }
+}
+
