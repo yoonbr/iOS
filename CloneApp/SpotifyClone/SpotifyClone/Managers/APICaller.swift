@@ -198,7 +198,7 @@ final class APICaller {
     
     // MARK: - Category
     
-    public func getCategories(completion: @escaping (Result<String, Error>) -> Void) {
+    public func getCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
         createRequest(
             with: URL(string: Constants.baseAPIURL + "/browse/categories?limit=2"),
             type: .GET
@@ -209,10 +209,13 @@ final class APICaller {
                     return
                 }
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                    print(json)
+                    let result = try JSONDecoder().decode(AllCategoriesResponse.self, from: data)
+                    print(result.categories.items)
+                    completion(.success(result.categories.items))
                 }
                 catch {
+                    // error 찾을때
+                    print(error.localizedDescription)
                     completion(.failure(error))
                 }
             }
