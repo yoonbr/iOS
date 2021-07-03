@@ -25,7 +25,7 @@ class GenreCollectionViewCell: UICollectionViewCell {
         label.font = .systemFont(ofSize: 22, weight: .semibold)
         return label
     }()
-    
+     
     // color array
     private let colors: [UIColor] = [
         .systemPink,
