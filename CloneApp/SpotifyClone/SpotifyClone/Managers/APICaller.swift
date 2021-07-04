@@ -200,7 +200,7 @@ final class APICaller {
     
     public func getCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
         createRequest(
-            with: URL(string: Constants.baseAPIURL + "/browse/categories?limit=2"),
+            with: URL(string: Constants.baseAPIURL + "/browse/categories?limit=50"),
             type: .GET
         ) { request in
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -210,12 +210,9 @@ final class APICaller {
                 }
                 do {
                     let result = try JSONDecoder().decode(AllCategoriesResponse.self, from: data)
-                    print(result.categories.items)
                     completion(.success(result.categories.items))
                 }
                 catch {
-                    // error 찾을때
-                    print(error.localizedDescription)
                     completion(.failure(error))
                 }
             }
@@ -223,9 +220,9 @@ final class APICaller {
         }
     }
     
-    public func getCategoryPlaylists(completion: @escaping (Result<[Playlist], Error>) -> Void) {
+    public func getCategoryPlaylists(category: Category, completion: @escaping (Result<[Playlist], Error>) -> Void) {
         createRequest(
-            with: URL(string: Constants.baseAPIURL + "/browse/categories/\("id")/?limit=2"),
+            with: URL(string: Constants.baseAPIURL + "/browse/categories/\(category.id)/playlists?limit=2"),
             type: .GET
         ) { request in
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -238,6 +235,7 @@ final class APICaller {
                     print(json)
                 }
                 catch {
+                    print(error.localizedDescription)
                     completion(.failure(error))
                 }
             }

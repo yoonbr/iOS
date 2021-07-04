@@ -57,7 +57,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         APICaller.shared.getCategories { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let model): break
+                case .success(let models):
+                    let first = models.first!
+                    APICaller.shared.getCategoryPlaylists(category: first) { FOOTPRIN in
+                        
+                    }
                 case .failure(let error): break
                 }
             }
