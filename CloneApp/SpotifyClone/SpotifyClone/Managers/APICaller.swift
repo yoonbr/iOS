@@ -234,7 +234,6 @@ final class APICaller {
                     // reuse FeaturedPlaylistsResponse
                     let result = try JSONDecoder().decode(CategoryPlaylistsResponse.self, from: data)
                     let playlists = result.playlists.items
-                    print(playlists)
                     completion(.success(playlists))
                 }
                 catch {
