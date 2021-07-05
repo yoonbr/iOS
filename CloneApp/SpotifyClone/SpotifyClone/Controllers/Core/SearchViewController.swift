@@ -51,8 +51,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         view.addSubview(collectionView)
-        collectionView.register(GenreCollectionViewCell.self,
-                                forCellWithReuseIdentifier: GenreCollectionViewCell.identifier)
+        collectionView.register(CategoryCollectionViewCell.self,
+                                forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemBackground
@@ -100,12 +100,16 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: GenreCollectionViewCell.identifier,
-                for: indexPath) as? GenreCollectionViewCell else {
+                withReuseIdentifier: CategoryCollectionViewCell.identifier,
+                for: indexPath) as? CategoryCollectionViewCell else {
             return UICollectionViewCell()
         }
         let category = categories[indexPath.row]
-        cell.configure(with: category.name)
+        cell.configure(with: CategoryCollectionViewCellViewModel(
+                        title: category.name,
+                        artworkURL: URL(string: category.icons.first?.url ?? "")
+            )
+        )
         return cell
     }
     
