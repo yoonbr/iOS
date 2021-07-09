@@ -121,6 +121,4 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

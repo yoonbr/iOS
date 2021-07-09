@@ -20,7 +20,7 @@ class CategoryViewController: UIViewController {
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(140)
+                        heightDimension: .absolute(250)
                     ),
                     subitem: item,
                     count: 2
@@ -103,5 +103,12 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
              )
         )
         return cell
+    }
+    // select playlist
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let vc = PlaylistViewController(playlist: playlists[indexPath.row])
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
