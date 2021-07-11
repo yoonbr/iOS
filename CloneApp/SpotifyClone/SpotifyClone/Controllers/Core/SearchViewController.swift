@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchResultsUpdating {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     let searchController: UISearchController = {
         let vc = UISearchController(searchResultsController: SearchResultViewController())
@@ -49,6 +49,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         view.addSubview(collectionView)
         collectionView.register(CategoryCollectionViewCell.self,
@@ -75,17 +76,16 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         collectionView.frame = view.bounds
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let resultsController = searchController.searchResultsController as? SearchResultViewController,
-              let query = searchController.searchBar.text,
+              let query = searchBar.text,
               // 공백제거
               !query.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        // resultsController.update(with: results)
-        print(query)
-        // Perform search
+        
         APICaller.shared.search(with: query) { result in
+            // thread
             DispatchQueue.main.async {
             switch result {
             case .success(let results):
@@ -95,7 +95,10 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
                 }
             }
         }
-        print(query)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
     }
 }
 
