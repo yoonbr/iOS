@@ -89,7 +89,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
             DispatchQueue.main.async {
             switch result {
             case .success(let results):
-                break
+                resultsController.update(with: results)
             case .failure(let error):
                 print(error.localizedDescription)
                 }
@@ -97,8 +97,9 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         }
     }
     
+    
     func updateSearchResults(for searchController: UISearchController) {
-        
+  
     }
 }
 
