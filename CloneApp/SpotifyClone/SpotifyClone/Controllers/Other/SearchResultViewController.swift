@@ -13,6 +13,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     
     private let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .systemBackground
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.isHidden = true
         return tableView
@@ -20,7 +21,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
+        view.backgroundColor = .red
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -33,12 +34,12 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     func update(with results: [SearchResult]) {
         self.results = results
         tableView.reloadData()
-        tableView.isHidden = !results.isEmpty
+        tableView.isHidden = false // !results.isEmpty
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        results.count
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
