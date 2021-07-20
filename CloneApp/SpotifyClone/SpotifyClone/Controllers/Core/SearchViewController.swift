@@ -106,8 +106,21 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
 }
 
 extension SearchViewController: SearchResultViewControllerDelegate {
-    func showResult(_ controller: UIViewController) {
-        navigationController?.pushViewController(controller, animated: true)
+    func didTapResult(_ result: SearchResult) {
+        switch result {
+        case .artist(let model):
+            break
+        case .album(let model):
+            let vc = AlbumViewController(album: model)
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        case .track(let model):
+            break
+        case .playlist(let model):
+            let vc = PlaylistViewController(playlist: model)
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
