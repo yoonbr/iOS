@@ -84,6 +84,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
             return
         }
         
+        resultsController.delegate = self
+        
         APICaller.shared.search(with: query) { result in
             // thread
             DispatchQueue.main.async {
@@ -100,6 +102,12 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     
     func updateSearchResults(for searchController: UISearchController) {
   
+    }
+}
+
+extension SearchViewController: SearchResultViewControllerDelegate {
+    func showResult(_ controller: UIViewController) {
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

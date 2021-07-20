@@ -12,7 +12,12 @@ struct SearchSection {
     let results: [SearchResult]
 }
 
+protocol SearchResultViewControllerDelegate: AnyObject {
+    func showResult(_ controller: UIViewController)
+}
 class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    weak var delegate: SearchResultViewControllerDelegate?
     
     private var sections: [SearchSection] = []
     
@@ -70,7 +75,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             SearchSection(title: "Songs", results: tracks),
             SearchSection(title: "Artists", results: artists),
             SearchSection(title: "Playlists", results: playlists),
-            SearchSection(title: "Albums", results: albums) 
+            SearchSection(title: "Albums", results: albums)
         ]
         
         tableView.reloadData()
@@ -101,6 +106,25 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let result = sections[indexPath.section].results[indexPath.row]
+        switch result {
+        case .artist(let model): break
+            //
+        case .album(let model):
+            let vc = AlbumViewController(album: model)
+            vc.navigationItem.largeTitleDisplayMode = .never
+            delegate?.showResult(vc)
+        case .track(let model): break
+            //
+        case .playlist (let model):
+            let vc = PlaylistViewController(playlist: model)
+            vc.navigationItem.largeTitleDisplayMode = .never
+            delegate?.showResult(vc)
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
