@@ -8,11 +8,6 @@
 import UIKit
 import SDWebImage
 
-struct SearchResultDefaultTableViewCellViewModel {
-    let title: String
-    let imageURL: URL?
-}
-
 class SearchResultDefaultTableViewCell: UITableViewCell {
     static let identifier = "SearchResultDefaultTableViewCell"
     

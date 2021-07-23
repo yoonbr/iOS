@@ -24,6 +24,8 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .systemBackground
+        tableView.register(SearchResultDefaultTableViewCell.self,
+                           forCellReuseIdentifier: SearchResultDefaultTableViewCell.identifier)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.isHidden = true
         return tableView
@@ -93,19 +95,18 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let result = sections[indexPath.section].results[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let Acell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         switch result {
         case .artist(let model):
-            cell.textLabel?.text = model.name
+            Acell.textLabel?.text = model.name
         case .album(let model):
-            cell.textLabel?.text = model.name
+            Acell.textLabel?.text = model.name
         case .track(let model):
-            cell.textLabel?.text = model.name
+            Acell.textLabel?.text = "song"
         case .playlist (let model):
-            cell.textLabel?.text = model.name
-        
+            Acell.textLabel?.text = model.name
         }
-        return cell
+        return Acell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
