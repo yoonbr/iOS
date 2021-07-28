@@ -97,8 +97,17 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         
         let Acell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         switch result {
-        case .artist(let model):
-            Acell.textLabel?.text = "artist"
+        case .artist(let artist):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultDefaultTableViewCell.identifier,
+                                                           for: indexPath) as? SearchResultDefaultTableViewCell else {
+                return UITableViewCell()
+            }
+            let viewModel = SearchResultDefaultTableViewCellViewModel(
+                title: artist.name,
+                imageURL: nil
+            )
+            cell.configure(with: viewModel)
+            return cell
         case .album(let model):
             Acell.textLabel?.text = model.name
         case .track(let model):
