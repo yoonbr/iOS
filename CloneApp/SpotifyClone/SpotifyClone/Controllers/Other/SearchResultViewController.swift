@@ -95,7 +95,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let result = sections[indexPath.section].results[indexPath.row]
         
-        let Acell = tableView.dequeueReusabl eCell(withIdentifier: "cell", for: indexPath)
+        let Acell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         switch result {
         case .artist(let artist):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultDefaultTableViewCell.identifier,
