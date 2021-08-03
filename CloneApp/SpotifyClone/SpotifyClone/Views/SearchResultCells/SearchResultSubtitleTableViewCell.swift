@@ -23,7 +23,7 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let SubtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
         label.numberOfLines = 1
@@ -39,7 +39,7 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(label)
-        contentView.addSubview(SubtitleLabel)
+        contentView.addSubview(subtitleLabel)
         contentView.addSubview(iconImageView)
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
@@ -67,7 +67,8 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
             width: contentView.width-iconImageView.right-30,
             height: labelHeight
         )
-        SubtitleLabel.frame = CGRect(
+        
+        subtitleLabel.frame = CGRect(
             x: iconImageView.right+10,
             y: label.bottom,
             width: contentView.width-iconImageView.right-30,
@@ -80,12 +81,12 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
         super.prepareForReuse()
         iconImageView.image = nil
         label.text = nil
-        SubtitleLabel.text = nil
+        subtitleLabel.text = nil
     }
     
     func configure(with viewModel: SearchResultSubtitleTableViewCellViewModel) {
         label.text = viewModel.title
-        SubtitleLabel.text = viewModel.subtitle
+        subtitleLabel.text = viewModel.subtitle
         iconImageView.sd_setImage(with: viewModel.imageURL, completed: nil)
     }
 }
