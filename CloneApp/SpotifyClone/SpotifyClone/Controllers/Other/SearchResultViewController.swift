@@ -26,7 +26,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         tableView.backgroundColor = .systemBackground
         tableView.register(SearchResultDefaultTableViewCell.self,
                            forCellReuseIdentifier: SearchResultDefaultTableViewCell.identifier)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SearchResultSubtitleTableViewCell.self, forCellReuseIdentifier: SearchResultSubtitleTableViewCell.identifier)
         tableView.isHidden = true
         return tableView
     }()
