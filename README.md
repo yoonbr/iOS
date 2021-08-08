@@ -165,8 +165,4 @@
 
 </details>
 
-### :apple: [kxcoding](https://www.notion.so/iOS-kxcoding-2de60d924ebc479299ac80e599aaff9b)
-
-### :apple: [Clone - Spotify](https://www.notion.so/CloneApp-Spotify-4cd9181f12744d19aa6605d9495484c6)
-
 
