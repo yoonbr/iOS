@@ -62,6 +62,8 @@ class PlaylistViewController: UIViewController {
     // UI 확인 후 viewModels 변수 생성
     private var viewModels = [RecommendedTrackCellViewModel]()
     
+    private var tracks = [AudioTrack]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = playlist.name
@@ -88,6 +90,7 @@ class PlaylistViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let model):
+                    self?.tracks = model.tracks.items.compactMap({ $0.track  })
                     self?.viewModels = model.tracks.items.compactMap({
                         RecommendedTrackCellViewModel(
                             name: $0.track.name,
@@ -173,6 +176,9 @@ extension PlaylistViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         // play song
+        let index = indexPath.row
+        let track = tracks[index]
+        PlaybackPresenter.startPlayback(from: self, track: track)
     }
 }
 
