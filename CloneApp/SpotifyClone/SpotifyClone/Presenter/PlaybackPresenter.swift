@@ -2,7 +2,7 @@
 //  PlaybackPresenter.swift
 //  SpotifyClone
 //
-//  Created by boreum yoon on 2021/08/12.
+//  Created by boreum yoon on 2021/08/14.
 //
 
 import Foundation
@@ -20,16 +20,9 @@ final class PlaybackPresenter {
     
     static func startPlayback(
         from viewController: UIViewController,
-        album: Album
+        tracks: [AudioTrack]
     ) {
           
     }
-    
-    static func startPlayback(
-        from viewController: UIViewController,
-        playlist: Playlist
-    ) {
-          
-    }
-    
+
 }
