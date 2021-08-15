@@ -2,7 +2,7 @@
 :iphone: iOS Study :iphone:
 
 
-## 날짜별 공부 내용
+Academy Study
 
 <details>
 <summary> 1Week (0210 ~ 0219) </summary>
