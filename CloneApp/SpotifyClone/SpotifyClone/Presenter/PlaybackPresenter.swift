@@ -15,7 +15,8 @@ final class PlaybackPresenter {
         track: AudioTrack
     ) {
         let vc = PlayerViewController()
-        viewController.present(vc, animated: true, completion: nil)
+        vc.title = track.name
+        viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
     
     static func startPlayback(
@@ -24,7 +25,7 @@ final class PlaybackPresenter {
     ) {
         // 모두 재생 버튼 누를때 화면 띄우기 
         let vc = PlayerViewController()
-        viewController.present(vc, animated: true, completion: nil)
+        viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
 
 }

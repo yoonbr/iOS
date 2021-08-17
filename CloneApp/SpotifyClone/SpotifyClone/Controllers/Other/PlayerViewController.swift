@@ -21,11 +21,25 @@ class PlayerViewController: UIViewController {
         view.backgroundColor = .systemBackground
         // add imageView
         view.addSubview(imageView)
+        configureBarButtons()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        imageView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.width)
+        // safeAreaInsets
+        imageView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: view.width)
     }
-
+    
+    private func configureBarButtons() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(didTapClose))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapAction))
+    }
+    
+    @objc private func didTapClose() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func didTapAction()  {
+         // Action
+    }
 }
