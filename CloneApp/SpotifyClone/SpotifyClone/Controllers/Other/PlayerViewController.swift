@@ -25,6 +25,7 @@ class PlayerViewController: UIViewController {
         // add imageView, controlsView
         view.addSubview(imageView)
         view.addSubview(controlsView)
+        controlsView.delegate = self
         configureBarButtons()
     }
     
@@ -51,5 +52,19 @@ class PlayerViewController: UIViewController {
     
     @objc private func didTapAction()  {
          // Action
+    }
+}
+
+extension PlayerViewController: PlayerControlsViewDelegate {
+    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
+        <#code#>
+    }
+    
+    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
+        <#code#>
+    }
+    
+    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView) {
+        <#code#>
     }
 }

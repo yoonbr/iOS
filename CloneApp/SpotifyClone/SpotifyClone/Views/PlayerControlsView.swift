@@ -8,7 +8,15 @@
 import Foundation
 import UIKit
 
+protocol PlayerControlsViewDelegate: AnyObject {
+    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView)
+    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView)
+    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView)
+}
+
 final class PlayerControlsView: UIView {
+    
+    weak var delegate: PlayerControlsViewDelegate?
     
     // slider
     private let volumeSlider: UISlider = {
@@ -73,6 +81,11 @@ final class PlayerControlsView: UIView {
         addSubview(nextButton)
         addSubview(playPauseButton)
         
+        // 버튼 실행 명령어
+        backButton.addTarget(self, action: #selector(didTapBack), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)
+        playPauseButton.addTarget(self, action: #selector(didTapPlayPause), for: .touchUpInside)
+        
         // clipsToBounds
         clipsToBounds = true
         
@@ -80,6 +93,16 @@ final class PlayerControlsView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    @objc private func didTapBack() {
+        delegate?.playerControlsViewDidTapBackwardsButton(self)
+    }
+    @objc private func didTapNext() {
+        delegate?.playerControlsViewDidTapForwardButton(self)
+    }
+    @objc private func didTapPlayPause() {
+        delegate?.playerControlsViewDidTapPlayPauseButton(self)
     }
     
     override func layoutSubviews() {
