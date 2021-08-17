@@ -15,12 +15,16 @@ class PlayerViewController: UIViewController {
         imageView.backgroundColor = .systemBlue
         return imageView
     }()
-
+    
+    // add PlayerControlsView
+    private let controlsView = PlayerControlsView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        // add imageView
+        // add imageView, controlsView
         view.addSubview(imageView)
+        view.addSubview(controlsView)
         configureBarButtons()
     }
     
@@ -28,6 +32,12 @@ class PlayerViewController: UIViewController {
         super.viewDidLayoutSubviews()
         // safeAreaInsets
         imageView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: view.width)
+        controlsView.frame = CGRect(
+            x: 10,
+            y: imageView.bottom+10,
+            width: view.width-20,
+            height: view.height-imageView.height-view.safeAreaInsets.top-view.safeAreaInsets.bottom-15
+        )
     }
     
     private func configureBarButtons() {
