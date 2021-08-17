@@ -22,6 +22,7 @@ final class PlaybackPresenter {
         from viewController: UIViewController,
         tracks: [AudioTrack]
     ) {
+        // 모두 재생 버튼 누를때 화면 띄우기 
         let vc = PlayerViewController()
         viewController.present(vc, animated: true, completion: nil)
     }

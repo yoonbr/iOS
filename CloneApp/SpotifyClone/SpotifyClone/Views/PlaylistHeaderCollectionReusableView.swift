@@ -62,7 +62,7 @@ final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // red로 테스트 후 systembackground
+        // red로 테스트 후 systembackground로 변경 
         backgroundColor = .systemBackground
         addSubview(nameLabel)
         addSubview(descriptionLabel)
