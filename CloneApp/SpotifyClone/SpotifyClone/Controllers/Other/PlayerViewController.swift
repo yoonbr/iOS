@@ -9,6 +9,8 @@ import UIKit
 
 class PlayerViewController: UIViewController {
     
+    weak var dataSource: PlayerDataSource?
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill

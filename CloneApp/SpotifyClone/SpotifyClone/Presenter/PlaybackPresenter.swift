@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+protocol PlayerDataSource: AnyObject {
+    var songName: String? { get }
+    var subtitle: String? { get }
+    var imageURL: URL? { get }
+}
+
 final class PlaybackPresenter {
     
     static let shared = PlaybackPresenter()
