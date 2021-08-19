@@ -10,7 +10,9 @@ import UIKit
 
 final class PlaybackPresenter {
     
-    static func startPlayback(
+    static let shared = PlaybackPresenter()
+    
+    func startPlayback(
         from viewController: UIViewController,
         track: AudioTrack
     ) {
@@ -19,7 +21,7 @@ final class PlaybackPresenter {
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
     
-    static func startPlayback(
+     func startPlayback(
         from viewController: UIViewController,
         tracks: [AudioTrack]
     ) {
