@@ -18,12 +18,28 @@ final class PlaybackPresenter {
     
     static let shared = PlaybackPresenter()
     
+    private var track: AudioTrack?
+    private var tracks = [AudioTrack]()
+    
+    var currentTrack: AudioTrack? {
+        if let track = track, tracks.isEmpty {
+            return track
+        }
+        else if !tracks.isEmpty {
+            return tracks.first
+        }
+        return nil
+    }
+    
     func startPlayback(
         from viewController: UIViewController,
         track: AudioTrack
     ) {
+        self.track = track
+        self.tracks = []
         let vc = PlayerViewController()
         vc.title = track.name
+        vc.dataSource = self
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
     
@@ -36,4 +52,20 @@ final class PlaybackPresenter {
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
 
+}
+
+extension PlaybackPresenter: PlayerDataSource {
+    var songName: String? {
+        return nil
+    }
+    
+    var subtitle: String? {
+        return nil
+    }
+    
+    var imageURL: URL? {
+        return nil
+    }
+    
+       
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PlayerViewController: UIViewController {
     
@@ -27,8 +28,9 @@ class PlayerViewController: UIViewController {
         // add imageView, controlsView
         view.addSubview(imageView)
         view.addSubview(controlsView)
-        controlsView.delegate = self
+        // controlsView.delegate = self
         configureBarButtons()
+        configure()
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,6 +43,10 @@ class PlayerViewController: UIViewController {
             width: view.width-20,
             height: view.height-imageView.height-view.safeAreaInsets.top-view.safeAreaInsets.bottom-15
         )
+    }
+    
+    private func configure() {
+        imageView.sd_setImage(with: dataSource?.imageURL, completed: nil)
     }
     
     private func configureBarButtons() {
@@ -57,16 +63,18 @@ class PlayerViewController: UIViewController {
     }
 }
 
-extension PlayerViewController: PlayerControlsViewDelegate {
-    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
-        
-    }
+//extension PlayerViewController: PlayerControlsViewDelegate {
+//    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
+//        <#code#>
+//    }
+//
+//    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
+//        <#code#>
+//    }
+//
+//    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView) {
+//        <#code#>
+//    }
+//
     
-    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
-        <#code#>
-    }
-    
-    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView) {
-        <#code#>
-    }
 }

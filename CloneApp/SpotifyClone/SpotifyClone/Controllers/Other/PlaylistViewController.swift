@@ -45,7 +45,7 @@ class PlaylistViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
             ]
-            return section
+            return section 
                 
         })
     )
