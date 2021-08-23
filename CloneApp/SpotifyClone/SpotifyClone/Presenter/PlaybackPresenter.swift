@@ -15,7 +15,6 @@ protocol PlayerDataSource: AnyObject {
 }
 
 final class PlaybackPresenter {
-    
     static let shared = PlaybackPresenter()
     
     private var track: AudioTrack?
@@ -47,6 +46,8 @@ final class PlaybackPresenter {
         from viewController: UIViewController,
         tracks: [AudioTrack]
     ) {
+        self.tracks = tracks
+        self.track = nil
         // 모두 재생 버튼 누를때 화면 띄우기 
         let vc = PlayerViewController()
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
@@ -56,15 +57,15 @@ final class PlaybackPresenter {
 
 extension PlaybackPresenter: PlayerDataSource {
     var songName: String? {
-        return nil
+        return currentTrack?.name
     }
     
     var subtitle: String? {
-        return nil
+        return currentTrack?.artists.first?.name
     }
     
     var imageURL: URL? {
-        return nil
+        return URL(string: currentTrack?.album?.images.first?.url ?? "")
     }
     
        
