@@ -68,18 +68,16 @@ class PlayerViewController: UIViewController {
     }
 }
 
-//extension PlayerViewController: PlayerControlsViewDelegate {
-//    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
-//        <#code#>
-//    }
-//
-//    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
-//        <#code#>
-//    }
-//
-//    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView) {
-//        <#code#>
-//    }
-//
-    
-// }
+extension PlayerViewController: PlayerControlsViewDelegate {
+    func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView) {
+        
+    }
+
+    func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView) {
+        
+    }
+
+    func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView) {
+        
+    }
+ }
