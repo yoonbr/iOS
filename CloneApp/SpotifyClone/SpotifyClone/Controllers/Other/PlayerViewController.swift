@@ -35,7 +35,7 @@ class PlayerViewController: UIViewController {
         // add imageView, controlsView
         view.addSubview(imageView)
         view.addSubview(controlsView)
-        // controlsView.delegate = self
+        controlsView.delegate = self
         configureBarButtons()
         configure()
     }

@@ -30,7 +30,7 @@ final class PlaybackPresenter {
         }
         return nil
     }
-    
+     
     var player: AVPlayer?
     
     func startPlayback(
@@ -48,6 +48,7 @@ final class PlaybackPresenter {
         let vc = PlayerViewController()
         vc.title = track.name
         vc.dataSource = self
+        vc.delegate = self
         viewController.present(UINavigationController(rootViewController: vc), animated: true) { [weak self] in
             self?.player?.play()
         }
@@ -64,6 +65,40 @@ final class PlaybackPresenter {
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
 
+}
+
+extension PlaybackPresenter: PlayerViewControllerDelegate {
+    func didTapPlayPause() {
+        if let player = player {
+            if player.timeControlStatus == .playing {
+                player.pause()
+            }
+            else if player.timeControlStatus == .paused {
+                player.play()
+            }
+        }
+    }
+    
+    func didTapForward() {
+        if tracks.isEmpty {
+            // 재생목록이나 앨범이 없는 경우
+            player?.pause()
+        }
+        else {
+            
+        }
+    }
+    
+    func didTapBackward() {
+        if tracks.isEmpty {
+            // 재생목록이나 앨범이 없는 경우
+            player?.pause()
+            player?.play()
+        }
+        else {
+            
+        }
+    }
 }
 
 extension PlaybackPresenter: PlayerDataSource {
