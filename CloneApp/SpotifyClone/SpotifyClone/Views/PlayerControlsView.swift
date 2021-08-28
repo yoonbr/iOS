@@ -21,6 +21,8 @@ struct PlayerControlsViewViewModel {
 
 final class PlayerControlsView: UIView {
     
+    private var isPlaying = true
+    
     weak var delegate: PlayerControlsViewDelegate?
     
     // slider
@@ -68,8 +70,6 @@ final class PlayerControlsView: UIView {
     private let playPauseButton: UIButton = {
         let button = UIButton()
         button.tintColor = .label
-        let image = UIImage(systemName: "pause.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
-        button.setImage(image, for: .normal)
         return button
     }()
     
@@ -107,7 +107,14 @@ final class PlayerControlsView: UIView {
         delegate?.playerControlsViewDidTapForwardButton(self)
     }
     @objc private func didTapPlayPause() {
+        self.isPlaying = !isPlaying
         delegate?.playerControlsViewDidTapPlayPauseButton(self)
+        
+        // Update icon
+        let pause = UIImage(systemName: "pause.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        let play = UIImage(systemName: "play.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        
+        playPauseButton.setImage(isPlaying ? pause : play, for: .normal)
     }
     
     override func layoutSubviews() {
