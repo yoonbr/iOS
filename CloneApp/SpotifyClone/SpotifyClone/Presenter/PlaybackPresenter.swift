@@ -33,6 +33,7 @@ final class PlaybackPresenter {
             }
             return tracks[index]
         }
+        
         return nil
     }
      
@@ -145,6 +146,7 @@ extension PlaybackPresenter: PlayerDataSource {
     }
     
     var imageURL: URL? {
+        print(currentTrack)
         return URL(string: currentTrack?.album?.images.first?.url ?? "")
     }
     
