@@ -14,7 +14,7 @@ protocol PlayerDataSource: AnyObject {
     var subtitle: String? { get }
     var imageURL: URL? { get }
 }
-
+ 
 final class PlaybackPresenter {
     static let shared = PlaybackPresenter()
     
@@ -44,7 +44,7 @@ final class PlaybackPresenter {
         from viewController: UIViewController,
         track: AudioTrack
     ) {
-        guard let url = URL(string: track.preview_url ?? "") else {
+        guard let url = URL(string:  track.preview_url ?? "") else {
             return
         }
         
@@ -146,9 +146,7 @@ extension PlaybackPresenter: PlayerDataSource {
     }
     
     var imageURL: URL? {
-        print(currentTrack)
+        // print(currentTrack)
         return URL(string: currentTrack?.album?.images.first?.url ?? "")
     }
-    
-       
 }

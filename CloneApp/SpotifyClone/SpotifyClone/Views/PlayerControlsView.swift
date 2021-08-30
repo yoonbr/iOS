@@ -71,6 +71,8 @@ final class PlayerControlsView: UIView {
     private let playPauseButton: UIButton = {
         let button = UIButton()
         button.tintColor = .label
+        let image = UIImage(systemName: "pause.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        button.setImage(image, for: .normal)
         return button
     }()
     
