@@ -33,7 +33,6 @@ final class PlaybackPresenter {
             }
             return tracks[index]
         }
-        
         return nil
     }
      
@@ -81,6 +80,9 @@ final class PlaybackPresenter {
         
         // 모두 재생 버튼 누를때 화면 띄우기 
         let vc = PlayerViewController()
+        // Featured Playlists 재생할 때 데이터 가져오기
+        vc.dataSource = self
+        vc.delegate = self
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
 

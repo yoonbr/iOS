@@ -99,7 +99,7 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
 
     }
     
-    override  func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         albumNameLabel.text = nil
         artistNameLabel.text = nil

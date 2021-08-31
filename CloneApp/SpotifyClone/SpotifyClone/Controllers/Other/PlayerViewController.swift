@@ -12,7 +12,7 @@ protocol PlayerViewControllerDelegate: AnyObject {
     func didTapPlayPause()
     func didTapForward()
     func didTapBackward()
-    func didSlideSlider(_ value: Float )
+    func didSlideSlider(_ value: Float)
 }
 
 class PlayerViewController: UIViewController {

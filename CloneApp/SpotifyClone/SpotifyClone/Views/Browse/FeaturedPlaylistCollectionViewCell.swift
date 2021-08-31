@@ -80,7 +80,7 @@ class FeaturedPlaylistCollectionViewCell: UICollectionViewCell {
 
     }
     
-    override  func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         playlistNameLabel.text = nil
         creatorNameLabel.text = nil

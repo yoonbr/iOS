@@ -12,7 +12,7 @@ protocol PlayerControlsViewDelegate: AnyObject {
     func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView)
     func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView)
     func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView)
-    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value:Float)
+    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float)
 }
 
 struct PlayerControlsViewViewModel {
