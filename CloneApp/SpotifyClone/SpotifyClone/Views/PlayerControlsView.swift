@@ -39,6 +39,7 @@ final class PlayerControlsView: UIView {
         label.text = "Song"
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 20, weight: .semibold)
+        label.backgroundColor = .systemPink
         return label
     }()
     
@@ -48,6 +49,7 @@ final class PlayerControlsView: UIView {
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.textColor = .secondaryLabel
+        label.backgroundColor = .systemPink
         return label
     }()
     
