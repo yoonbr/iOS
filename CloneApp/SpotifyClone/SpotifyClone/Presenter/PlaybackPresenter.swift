@@ -148,7 +148,7 @@ extension PlaybackPresenter: PlayerDataSource {
     }
     
     var imageURL: URL? {
-        print(currentTrack)
+        print("Images: \(currentTrack?.album?.images.first)")
         return URL(string: currentTrack?.album?.images.first?.url ?? "")
     }
 }

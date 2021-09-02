@@ -79,7 +79,9 @@ class FeaturedPlaylistCollectionViewCell: UICollectionViewCell {
         )
 
     }
+     
     
+    // git error - amend our reason
     override func prepareForReuse() {
         super.prepareForReuse()
         playlistNameLabel.text = nil
