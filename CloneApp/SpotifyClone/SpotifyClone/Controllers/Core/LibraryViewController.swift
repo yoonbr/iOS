@@ -23,14 +23,17 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
         // toggleView 추가
         view.addSubview(toggleView)
         toggleView.delegate = self
-        scrollView.delegate = self
+        
         view.addSubview(scrollView)
         // scrollView.backgroundColor = .yellow
         // 한 면은 앨범뷰, 한 면은 플레이리스트 뷰로 나누기
         scrollView.contentSize = CGSize(width: view.width*2, height: scrollView.height)
+        scrollView.delegate = self
+        
         addChildren()
     }
     
@@ -67,8 +70,14 @@ class LibraryViewController: UIViewController {
 }
 
 extension LibraryViewController: UIScrollViewDelegate {
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // print(scrollView.contentOffset.x)
+        if scrollView.contentOffset.x >= (view.width-100) {
+            toggleView.update(for: .album)
+        }
+        else {
+            toggleView.update(for: .playlist)
+        }
     }
 }
 
