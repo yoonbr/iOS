@@ -18,10 +18,13 @@ class LibraryViewController: UIViewController {
         return scrollView
     }()
     
+    private let toggleView = LibraryToggleView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        // toggleView 추가
+        view.addSubview(toggleView)
         scrollView.delegate = self
         view.addSubview(scrollView)
         // scrollView.backgroundColor = .yellow
@@ -37,6 +40,12 @@ class LibraryViewController: UIViewController {
             y: view.safeAreaInsets.top+55,
             width: view.width,
             height: view.height-view.safeAreaInsets.top-view.safeAreaInsets.bottom-55
+        )
+        toggleView.frame = CGRect(
+            x: 0,
+            y: view.safeAreaInsets.top,
+            width: 200,
+            height: 55
         )
     }
     
