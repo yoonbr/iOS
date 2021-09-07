@@ -12,7 +12,7 @@ struct ActionLabelViewViewModel {
     let actionTitle: String
 }
 
-public protocol ActionLabelViewDelegate: AnyObject {
+protocol ActionLabelViewDelegate: AnyObject {
     func actionLabelViewDidTapButton(_ actionView: ActionLabelView)
 }
 
@@ -35,9 +35,12 @@ class ActionLabelView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .red
         // clipsToBounds : 내 영역 외의 subView는 Draw 하지 않음
         // Don't draw subviews outside of my territory
         clipsToBounds = true
+        
+        isHidden = true
 
         // label, button 선언 후 추가
         addSubview(button)
