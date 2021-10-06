@@ -16,8 +16,7 @@ class LibraryPlaylistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        view.addSubview(noPlaylistsView)
-        noPlaylistsView.configure(with: ActionLabelViewViewModel(text: "You don't have any playlists yet.", actionTitle: "Create"))
+        setUpNoPlaylistsView()
         
         APICaller.shared.getCurrentUserPlaylists { [weak self] result in
             DispatchQueue.main.async {
@@ -38,14 +37,25 @@ class LibraryPlaylistViewController: UIViewController {
         noPlaylistsView.center = view.center
     }
     
+    private func setUpNoPlaylistsView() {
+        view.addSubview(noPlaylistsView)
+        // 플레이리스트가 없을 경우 Create 버튼을 클릭해서 만들 수 있도록 진행 - 함수 지정
+        noPlaylistsView.configure(
+            with: ActionLabelViewViewModel(
+                text: "You don't have any playlists yet.", actionTitle: "Create"
+            )
+        )
+    }
+    
     private func updateUI() {
         if playlists.isEmpty {
             // Show label
             noPlaylistsView.isHidden = false
-            
         }
         else {
             // Show table
+            noPlaylistsView.isHidden = true
+            
         }
     }
 }

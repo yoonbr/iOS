@@ -24,6 +24,8 @@ class ActionLabelView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 0
+        //
+        label.textColor = .secondaryLabel
         return label
     }()
     
@@ -35,7 +37,8 @@ class ActionLabelView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
+        backgroundColor = .systemBackground
+        
         // clipsToBounds : 내 영역 외의 subView는 Draw 하지 않음
         // Don't draw subviews outside of my territory
         clipsToBounds = true
