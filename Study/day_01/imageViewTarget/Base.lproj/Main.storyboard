@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wine01.png" translatesAutoresizingMaskIntoConstraints="NO" id="s6E-fH-1tX">
-                                <rect key="frame" x="60" y="104" width="141" height="325"/>
+                                <rect key="frame" x="60" y="104" width="200" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDS-wP-a2Y">
@@ -45,6 +45,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnResize" destination="dDS-wP-a2Y" id="urs-zt-Dbe"/>
                         <outlet property="myImg" destination="s6E-fH-1tX" id="hRp-Zi-ahI"/>
                     </connections>
                 </viewController>
