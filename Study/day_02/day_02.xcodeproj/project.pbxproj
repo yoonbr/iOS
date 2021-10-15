@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552FAC2F2716EEDF00509BA5 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC292716EEDE00509BA5 /* 1.png */; };
+		552FAC302716EEDF00509BA5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC2A2716EEDF00509BA5 /* 5.png */; };
+		552FAC312716EEDF00509BA5 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC2B2716EEDF00509BA5 /* 4.png */; };
+		552FAC322716EEDF00509BA5 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC2C2716EEDF00509BA5 /* 6.png */; };
+		552FAC332716EEDF00509BA5 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC2D2716EEDF00509BA5 /* 3.png */; };
+		552FAC342716EEDF00509BA5 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FAC2E2716EEDF00509BA5 /* 2.png */; };
 		55D4611E27106F5700126D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4611D27106F5700126D0F /* AppDelegate.swift */; };
 		55D4612027106F5700126D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4611F27106F5700126D0F /* SceneDelegate.swift */; };
 		55D4612227106F5700126D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4612127106F5700126D0F /* ViewController.swift */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552FAC292716EEDE00509BA5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		552FAC2A2716EEDF00509BA5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		552FAC2B2716EEDF00509BA5 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		552FAC2C2716EEDF00509BA5 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		552FAC2D2716EEDF00509BA5 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		552FAC2E2716EEDF00509BA5 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		55D4611A27106F5700126D0F /* day_02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = day_02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D4611D27106F5700126D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D4611F27106F5700126D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +91,12 @@
 		55D46132271070B800126D0F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				552FAC292716EEDE00509BA5 /* 1.png */,
+				552FAC2E2716EEDF00509BA5 /* 2.png */,
+				552FAC2D2716EEDF00509BA5 /* 3.png */,
+				552FAC2B2716EEDF00509BA5 /* 4.png */,
+				552FAC2A2716EEDF00509BA5 /* 5.png */,
+				552FAC2C2716EEDF00509BA5 /* 6.png */,
 				55D46135271070EF00126D0F /* wine01.png */,
 				55D46137271070EF00126D0F /* wine02.png */,
 				55D46134271070EF00126D0F /* wine03.png */,
@@ -144,12 +162,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552FAC342716EEDF00509BA5 /* 2.png in Resources */,
+				552FAC322716EEDF00509BA5 /* 6.png in Resources */,
 				55D4613B271070EF00126D0F /* wine02.png in Resources */,
+				552FAC2F2716EEDF00509BA5 /* 1.png in Resources */,
+				552FAC332716EEDF00509BA5 /* 3.png in Resources */,
 				55D4612A27106F5800126D0F /* LaunchScreen.storyboard in Resources */,
 				55D4612727106F5800126D0F /* Assets.xcassets in Resources */,
 				55D46139271070EF00126D0F /* wine01.png in Resources */,
 				55D4612527106F5700126D0F /* Main.storyboard in Resources */,
+				552FAC302716EEDF00509BA5 /* 5.png in Resources */,
 				55D4613A271070EF00126D0F /* wine04.png in Resources */,
+				552FAC312716EEDF00509BA5 /* 4.png in Resources */,
 				55D46138271070EF00126D0F /* wine03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
