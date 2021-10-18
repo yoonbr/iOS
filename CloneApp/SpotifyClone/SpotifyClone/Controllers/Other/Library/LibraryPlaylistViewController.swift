@@ -70,9 +70,38 @@ class LibraryPlaylistViewController: UIViewController {
 
 extension LibraryPlaylistViewController: ActionLabelViewDelegate {
     
-    // S how creation UI
+    // Show creation UI
     func actionLabelViewDidTapButton(_ actionView: ActionLabelView) {
-        <#code#>
+        let alert = UIAlertController (
+            title: "New Playlist",
+            message: "Enter playlist name",
+            preferredStyle: .alert
+        )
+    
+        // alert 창 playlist 추가
+        alert.addTextField { textField in
+            textField.placeholder = "Playlist..."
+        }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
+            guard let field = alert.textFields?.first,
+                  let text = field.text,
+                  !text.trimmingCharacters(in: .whitespaces).isEmpty else {
+                return
+            }
+            
+            APICaller.shared.createPlaylist(with: text) { success in
+                if success {
+                    return
+                }
+                else {
+                    print("Failed to create playlist")
+                }
+            }
+        }))
+        
+        present(alert, animated: true)
     }
     
     

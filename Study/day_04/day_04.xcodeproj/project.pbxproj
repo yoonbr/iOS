@@ -23,6 +23,22 @@
 		55C0EC152719923B00548AA8 /* wine01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0B2719923B00548AA8 /* wine01.png */; };
 		55C0EC162719923B00548AA8 /* wine09.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0C2719923B00548AA8 /* wine09.png */; };
 		55C0EC172719923B00548AA8 /* wine04.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0D2719923B00548AA8 /* wine04.png */; };
+		55C0EC202719AD6A00548AA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EC1F2719AD6A00548AA8 /* AppDelegate.swift */; };
+		55C0EC222719AD6A00548AA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EC212719AD6A00548AA8 /* SceneDelegate.swift */; };
+		55C0EC242719AD6A00548AA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EC232719AD6A00548AA8 /* ViewController.swift */; };
+		55C0EC272719AD6A00548AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC252719AD6A00548AA8 /* Main.storyboard */; };
+		55C0EC292719AD6B00548AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC282719AD6B00548AA8 /* Assets.xcassets */; };
+		55C0EC2C2719AD6B00548AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC2A2719AD6B00548AA8 /* LaunchScreen.storyboard */; };
+		55C0EC332719AE1200548AA8 /* wine01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0B2719923B00548AA8 /* wine01.png */; };
+		55C0EC362719AE1500548AA8 /* wine02.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0A2719923B00548AA8 /* wine02.png */; };
+		55C0EC392719AE1800548AA8 /* wine03.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC082719923B00548AA8 /* wine03.png */; };
+		55C0EC3C2719AE1A00548AA8 /* wine04.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0D2719923B00548AA8 /* wine04.png */; };
+		55C0EC3F2719AE1D00548AA8 /* wine05.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC042719923B00548AA8 /* wine05.png */; };
+		55C0EC422719AE2800548AA8 /* wine09.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC0C2719923B00548AA8 /* wine09.png */; };
+		55C0EC432719AE2800548AA8 /* wine10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC072719923B00548AA8 /* wine10.png */; };
+		55C0EC442719AE2800548AA8 /* wine07.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC062719923B00548AA8 /* wine07.png */; };
+		55C0EC452719AE2800548AA8 /* wine06.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC092719923B00548AA8 /* wine06.png */; };
+		55C0EC462719AE2800548AA8 /* wine08.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EC052719923B00548AA8 /* wine08.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +60,25 @@
 		55C0EC0B2719923B00548AA8 /* wine01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine01.png; sourceTree = "<group>"; };
 		55C0EC0C2719923B00548AA8 /* wine09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine09.png; sourceTree = "<group>"; };
 		55C0EC0D2719923B00548AA8 /* wine04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine04.png; sourceTree = "<group>"; };
+		55C0EC1D2719AD6A00548AA8 /* dualTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dualTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C0EC1F2719AD6A00548AA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55C0EC212719AD6A00548AA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55C0EC232719AD6A00548AA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55C0EC262719AD6A00548AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55C0EC282719AD6B00548AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55C0EC2B2719AD6B00548AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55C0EC2D2719AD6B00548AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		55C0EBE8271990BB00548AA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C0EC1A2719AD6A00548AA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +93,7 @@
 			children = (
 				55C0EC032719920F00548AA8 /* img */,
 				55C0EBED271990BB00548AA8 /* day_04 */,
+				55C0EC1E2719AD6A00548AA8 /* dualTT */,
 				55C0EBEC271990BB00548AA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				55C0EBEB271990BB00548AA8 /* day_04.app */,
+				55C0EC1D2719AD6A00548AA8 /* dualTT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +138,20 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		55C0EC1E2719AD6A00548AA8 /* dualTT */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EC1F2719AD6A00548AA8 /* AppDelegate.swift */,
+				55C0EC212719AD6A00548AA8 /* SceneDelegate.swift */,
+				55C0EC232719AD6A00548AA8 /* ViewController.swift */,
+				55C0EC252719AD6A00548AA8 /* Main.storyboard */,
+				55C0EC282719AD6B00548AA8 /* Assets.xcassets */,
+				55C0EC2A2719AD6B00548AA8 /* LaunchScreen.storyboard */,
+				55C0EC2D2719AD6B00548AA8 /* Info.plist */,
+			);
+			path = dualTT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +172,23 @@
 			productReference = 55C0EBEB271990BB00548AA8 /* day_04.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55C0EC1C2719AD6A00548AA8 /* dualTT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C0EC2E2719AD6B00548AA8 /* Build configuration list for PBXNativeTarget "dualTT" */;
+			buildPhases = (
+				55C0EC192719AD6A00548AA8 /* Sources */,
+				55C0EC1A2719AD6A00548AA8 /* Frameworks */,
+				55C0EC1B2719AD6A00548AA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dualTT;
+			productName = dualTT;
+			productReference = 55C0EC1D2719AD6A00548AA8 /* dualTT.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -135,6 +199,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					55C0EBEA271990BB00548AA8 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					55C0EC1C2719AD6A00548AA8 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -153,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				55C0EBEA271990BB00548AA8 /* day_04 */,
+				55C0EC1C2719AD6A00548AA8 /* dualTT */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +246,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55C0EC1B2719AD6A00548AA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C0EC2C2719AD6B00548AA8 /* LaunchScreen.storyboard in Resources */,
+				55C0EC332719AE1200548AA8 /* wine01.png in Resources */,
+				55C0EC452719AE2800548AA8 /* wine06.png in Resources */,
+				55C0EC422719AE2800548AA8 /* wine09.png in Resources */,
+				55C0EC362719AE1500548AA8 /* wine02.png in Resources */,
+				55C0EC292719AD6B00548AA8 /* Assets.xcassets in Resources */,
+				55C0EC272719AD6A00548AA8 /* Main.storyboard in Resources */,
+				55C0EC3F2719AE1D00548AA8 /* wine05.png in Resources */,
+				55C0EC432719AE2800548AA8 /* wine10.png in Resources */,
+				55C0EC3C2719AE1A00548AA8 /* wine04.png in Resources */,
+				55C0EC462719AE2800548AA8 /* wine08.png in Resources */,
+				55C0EC392719AE1800548AA8 /* wine03.png in Resources */,
+				55C0EC442719AE2800548AA8 /* wine07.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,6 +276,16 @@
 				55C0EBF3271990BB00548AA8 /* ViewController.swift in Sources */,
 				55C0EBEF271990BB00548AA8 /* AppDelegate.swift in Sources */,
 				55C0EBF1271990BB00548AA8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C0EC192719AD6A00548AA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C0EC242719AD6A00548AA8 /* ViewController.swift in Sources */,
+				55C0EC202719AD6A00548AA8 /* AppDelegate.swift in Sources */,
+				55C0EC222719AD6A00548AA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +304,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				55C0EBFA271990BC00548AA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		55C0EC252719AD6A00548AA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C0EC262719AD6A00548AA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55C0EC2A2719AD6B00548AA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C0EC2B2719AD6B00548AA8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -367,6 +481,44 @@
 			};
 			name = Release;
 		};
+		55C0EC2F2719AD6B00548AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				INFOPLIST_FILE = dualTT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.dualTT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55C0EC302719AD6B00548AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				INFOPLIST_FILE = dualTT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.dualTT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -384,6 +536,15 @@
 			buildConfigurations = (
 				55C0EC00271990BC00548AA8 /* Debug */,
 				55C0EC01271990BC00548AA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55C0EC2E2719AD6B00548AA8 /* Build configuration list for PBXNativeTarget "dualTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C0EC2F2719AD6B00548AA8 /* Debug */,
+				55C0EC302719AD6B00548AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
