@@ -16,8 +16,31 @@ class LibraryPlaylistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        // 함수 실행
         setUpNoPlaylistsView()
-        
+        fetchData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        noPlaylistsView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        noPlaylistsView.center = view.center
+    }
+    
+    // viewDidLoad에서 빠져나옴
+    private func setUpNoPlaylistsView() {
+        view.addSubview(noPlaylistsView)
+        noPlaylistsView.delegate = self
+        // 플레이리스트가 없을 경우 Create 버튼을 클릭해서 만들 수 있도록 진행 - 함수 지정
+        noPlaylistsView.configure(
+            with: ActionLabelViewViewModel(
+                text: "You don't have any playlists yet.", actionTitle: "Create"
+            )
+        )
+    }
+    
+    // viewDidLoad에서 빠져나옴
+    private func fetchData() {
         APICaller.shared.getCurrentUserPlaylists { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
@@ -31,22 +54,7 @@ class LibraryPlaylistViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        noPlaylistsView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-        noPlaylistsView.center = view.center
-    }
-    
-    private func setUpNoPlaylistsView() {
-        view.addSubview(noPlaylistsView)
-        // 플레이리스트가 없을 경우 Create 버튼을 클릭해서 만들 수 있도록 진행 - 함수 지정
-        noPlaylistsView.configure(
-            with: ActionLabelViewViewModel(
-                text: "You don't have any playlists yet.", actionTitle: "Create"
-            )
-        )
-    }
-    
+     
     private func updateUI() {
         if playlists.isEmpty {
             // Show label
@@ -60,4 +68,13 @@ class LibraryPlaylistViewController: UIViewController {
     }
 }
 
+extension LibraryPlaylistViewController: ActionLabelViewDelegate {
+    
+    // S how creation UI
+    func actionLabelViewDidTapButton(_ actionView: ActionLabelView) {
+        <#code#>
+    }
+    
+    
+}
 
