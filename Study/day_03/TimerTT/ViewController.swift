@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         if tf <= 0 {
             tt?.invalidate() // 초기화
             tt = nil // 객체를 없애버림
+            
+            // 1018 - add alert
+            let alert = UIAlertController(title: "Notice", message: "타이머 종료", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "종료", style: .cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -49,6 +55,15 @@ class ViewController: UIViewController {
     @IBAction func startBtn(_ sender: UIButton) {
         tf = Int(countLbl.text!)!
         
+        // 1018 - add alert
+        if tf <= 0 {
+            let alert = UIAlertController(title: "알림", message: "0 이상의 숫자를 입력하세요.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
+            
+        } else {
+        
         // * 찍어보기 - int 형변환
         // tf에 넣은 값 출력
         // print(Int(countLbl.text!))
@@ -62,6 +77,7 @@ class ViewController: UIViewController {
             userInfo: nil, // 사용자 정보
             repeats: true // 반복
             )
+        }
     }
 }
 
