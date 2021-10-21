@@ -40,6 +40,7 @@
 		555A220F2720421D00DD31FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555A22122720421D00DD31FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555A22142720421D00DD31FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555A221C27211C9800DD31FB /* mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		555A22012720421B00DD31FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555A221927211C9800DD31FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,6 +83,7 @@
 			children = (
 				555A21E52720283D00DD31FB /* day_06.app */,
 				555A22042720421B00DD31FB /* webViewTT.app */,
+				555A221C27211C9800DD31FB /* mission.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +153,23 @@
 			productReference = 555A22042720421B00DD31FB /* webViewTT.app */;
 			productType = "com.apple.product-type.application";
 		};
+		555A221B27211C9800DD31FB /* mission */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555A222F27211C9A00DD31FB /* Build configuration list for PBXNativeTarget "mission" */;
+			buildPhases = (
+				555A221827211C9800DD31FB /* Sources */,
+				555A221927211C9800DD31FB /* Frameworks */,
+				555A221A27211C9800DD31FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mission;
+			productName = mission;
+			productReference = 555A221C27211C9800DD31FB /* mission.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +183,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					555A22032720421B00DD31FB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					555A221B27211C9800DD31FB = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -176,6 +205,7 @@
 			targets = (
 				555A21E42720283D00DD31FB /* day_06 */,
 				555A22032720421B00DD31FB /* webViewTT */,
+				555A221B27211C9800DD31FB /* mission */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +232,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		555A221A27211C9800DD31FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,6 +259,13 @@
 				555A220B2720421B00DD31FB /* ViewController.swift in Sources */,
 				555A22072720421B00DD31FB /* AppDelegate.swift in Sources */,
 				555A22092720421B00DD31FB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555A221827211C9800DD31FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +499,44 @@
 			};
 			name = Release;
 		};
+		555A222D27211C9A00DD31FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				INFOPLIST_FILE = mission/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.mission;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		555A222E27211C9A00DD31FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				INFOPLIST_FILE = mission/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.mission;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,6 +563,15 @@
 			buildConfigurations = (
 				555A22162720421D00DD31FB /* Debug */,
 				555A22172720421D00DD31FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555A222F27211C9A00DD31FB /* Build configuration list for PBXNativeTarget "mission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555A222D27211C9A00DD31FB /* Debug */,
+				555A222E27211C9A00DD31FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

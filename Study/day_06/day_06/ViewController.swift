@@ -19,6 +19,17 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     var newAddr = ""
     
+    // 4. 3번의 메소드를 빼서 함수로 선언
+    func goToWeb(_ addr:String) {
+        
+        let url = URL(string: addr)!
+        let req = URLRequest(url: url)
+        myWeb.load(req)
+        
+        urlText.text = addr
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,22 +75,24 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myActivityIndicator.isHidden = true
     }
     
-    // 4. 3번의 메소드를 빼서 함수로 선언
-    func goToWeb(_ addr:String) {
-        
-        let url = URL(string: addr)!
-        let req = URLRequest(url: url)
-        myWeb.load(req)
-        
-        urlText.text = addr
-        
+    // 8. 'https://' 문자열 자동 삽입 기능 구현
+    func checkUrl(_ url:String) -> String {
+        var strUrl = url // 입력받은 url 스트링을 임시변수에 넣기
+        let flag = strUrl.hasPrefix("https://") // "https://"를 가지고 있는지 확인 한 값을 flag에 넣기
+        if !flag {
+            strUrl = "https://" + strUrl
+        } // "https://"를 가지고 있지 않다면 !flag일 때 변수 strUrl에 "https://"를 추가하고 리턴
+        return strUrl
     }
     
     // 2. 1번 제외한 모든 버튼 액션으로 선언
     // 5. go, naver, google, string, file 에 해당하는 액션 선언
     @IBAction func goBtn(_ sender: UIButton) {
         // url text에 대한 내용을 가져오기 - 검색창이 아닌 브라우저 이므로 url을 정확히 입력해야 함
-        goToWeb(urlText.text!)
+        // goToWeb(urlText.text!)
+        let myUrl = checkUrl(urlText.text!)
+        urlText.text = ""
+        goToWeb(myUrl)
     }
     
     @IBAction func naverBtn(_ sender: UIButton) {
