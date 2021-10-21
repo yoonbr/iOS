@@ -119,11 +119,16 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="CHe-z3-mEg"/>
                                 </items>
                             </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-R2-irC">
+                                <rect key="frame" x="172" y="430" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="myActivityIndicator" destination="dmx-R2-irC" id="Gu2-vy-Lrh"/>
                         <outlet property="myWeb" destination="y7Y-dc-9JP" id="NPO-G6-UmC"/>
                         <outlet property="urlText" destination="ahC-4u-S34" id="Xsa-Rr-DAE"/>
                     </connections>

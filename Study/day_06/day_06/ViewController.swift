@@ -8,17 +8,22 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     // 1. 텍스트필드, 웹킷뷰 아웃렛 선언
     @IBOutlet var urlText: UITextField!
     
     @IBOutlet var myWeb: WKWebView!
     
+    @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
+    
     var newAddr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 7. WKNavigationDelegate 추가
+        myWeb.navigationDelegate = self
         
         // 3. webView 미리 불러오기 (https://www.apple.com)
         /*
@@ -39,6 +44,24 @@ class ViewController: UIViewController {
         // 4-1. 함수 선언(매개변수)
         goToWeb("https://www.apple.com")
         
+    }
+    
+    // 7-1. 로딩 중일 때 인디케이터를 실행, 화면에 나타나게 함
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    
+    // 7-2. 로딩이 완료되었을 때 동작 - 인디케이터 중지, 숨김
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    
+    // 7-3. 로딩이 실패했을 때 동작 - 인디케이터 중지, 숨김
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
     
     // 4. 3번의 메소드를 빼서 함수로 선언
@@ -116,7 +139,4 @@ class ViewController: UIViewController {
         myWeb.goForward()
         urlText.text = "\(myWeb.url!)"
     }
-    
-    
 }
-

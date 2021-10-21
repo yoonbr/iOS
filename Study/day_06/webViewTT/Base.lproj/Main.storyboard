@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="734" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Pky-Ew-haH"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PL8-el-Dq5"/>
                                     <barButtonItem style="plain" systemItem="stop" id="gTg-Wl-ciU">
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>
@@ -36,7 +36,7 @@
                                     <barButtonItem style="plain" systemItem="fastForward" id="N8K-Jr-F9i">
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="v1X-I9-CTn"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UmP-2e-mmg"/>
                                 </items>
                             </toolbar>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jjv-Kq-0Gf">
