@@ -17,8 +17,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
     
-    var newAddr = ""
-    
     // 4. 3번의 메소드를 빼서 함수로 선언
     func goToWeb(_ addr:String) {
         
