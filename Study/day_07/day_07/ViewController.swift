@@ -19,6 +19,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // 6-1. 지역정보 받아올 변수 선언
     let myLoc = CLLocationManager() // 위치 정보 받을 변수
     
+    // 8. 좌표 1초 간격 갱신 - 안쓰면 멈출 수 있는 변수 생성 , 셀렉터 생성
+    var tt:Timer?
+    let sc = #selector(timerTT)
+    
+    // 8-1. 1초마다 실행 시킬 함수 생성
+    @objc func timerTT() {
+        // 현위치를 찍을 때 하는 곳 - 0번
+        myLoc.startUpdatingLocation() // 내 위치 정보 받기
+        // print("timer run")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // findMap(37.74731, 126.48717) // 임시 좌표로 처음 뜨는 지도 표시 
         myLoc.startUpdatingLocation()
+        
         
         // 6-2. CLLocationManagerDelegate delegate self 처리 - myLoc가 대신 위임
         myLoc.delegate = self
@@ -88,7 +100,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         titleLB.text = title
         
+        if title != "현위치" {
         setPoint(title: title, subtitle: "Test?", pLoc: cc2d)
+        }
     }
     
     // 7-2. 함수 생성
@@ -107,6 +121,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // 2. action 연결 (segmented control)
     @IBAction func segChange(_ sender: UISegmentedControl) {
         
+        // 8-2. 타이머 stop
+        tt?.invalidate()  // 타이머 초기화 (1초마다 현위치 화면 갱신 멈춤)
+        tt = nil
+        
         // 5. segmented control 선택된 번호를 출력
         print(sender.selectedSegmentIndex) // 선택한 세그먼트 인덱스 출력
         
@@ -124,7 +142,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
         } else if addr == 0 { // 현위치 선택
             // 6-3
-            myLoc.startUpdatingLocation() // 내 위치 정보 받기
+            // myLoc.startUpdatingLocation() // 내 위치 정보 받기
+            
+            // 8-3. 1초마다 selector 실행
+            tt = Timer.scheduledTimer(
+                timeInterval: 1,
+                target: self,
+                selector: sc,
+                userInfo: nil,
+                repeats: true
+            )
         }
     }
     
