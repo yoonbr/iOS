@@ -14,10 +14,23 @@
 		55FBB3A827296B86007C3A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3A727296B86007C3A00 /* Assets.xcassets */; };
 		55FBB3AB27296B86007C3A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3A927296B86007C3A00 /* LaunchScreen.storyboard */; };
 		55FBB3B327297160007C3A00 /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB3B227297160007C3A00 /* LampController.swift */; };
-		55FBB3B7272971DF007C3A00 /* wine02.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3B5272971DF007C3A00 /* wine02.png */; };
-		55FBB3B8272971DF007C3A00 /* wine01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3B6272971DF007C3A00 /* wine01.png */; };
 		55FBB3BA272974A8007C3A00 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB3B9272974A8007C3A00 /* TimerController.swift */; };
 		55FBB3BC272978FB007C3A00 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3BB272978FB007C3A00 /* unnamed.jpg */; };
+		55FBB3C027298049007C3A00 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB3BF27298049007C3A00 /* PickerController.swift */; };
+		55FBB3CB272980CD007C3A00 /* wine09.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C1272980CD007C3A00 /* wine09.png */; };
+		55FBB3CC272980CD007C3A00 /* wine06.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C2272980CD007C3A00 /* wine06.png */; };
+		55FBB3CD272980CD007C3A00 /* wine02.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C3272980CD007C3A00 /* wine02.png */; };
+		55FBB3CE272980CD007C3A00 /* wine01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C4272980CD007C3A00 /* wine01.png */; };
+		55FBB3CF272980CD007C3A00 /* wine03.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C5272980CD007C3A00 /* wine03.png */; };
+		55FBB3D0272980CD007C3A00 /* wine05.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C6272980CD007C3A00 /* wine05.png */; };
+		55FBB3D1272980CD007C3A00 /* wine04.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C7272980CD007C3A00 /* wine04.png */; };
+		55FBB3D2272980CD007C3A00 /* wine07.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C8272980CD007C3A00 /* wine07.png */; };
+		55FBB3D3272980CD007C3A00 /* wine10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3C9272980CD007C3A00 /* wine10.png */; };
+		55FBB3D4272980CD007C3A00 /* wine08.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3CA272980CD007C3A00 /* wine08.png */; };
+		55FBB3D627298243007C3A00 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB3D527298243007C3A00 /* AlertController.swift */; };
+		55FBB3DA2729824F007C3A00 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3D72729824E007C3A00 /* lamp_on.png */; };
+		55FBB3DB2729824F007C3A00 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3D82729824E007C3A00 /* lamp_off.png */; };
+		55FBB3DC2729824F007C3A00 /* lamp_remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB3D92729824F007C3A00 /* lamp_remove.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +43,23 @@
 		55FBB3AA27296B86007C3A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55FBB3AC27296B86007C3A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FBB3B227297160007C3A00 /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LampController.swift; path = ../../day_01/imageViewTarget/LampController.swift; sourceTree = "<group>"; };
-		55FBB3B5272971DF007C3A00 /* wine02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine02.png; sourceTree = "<group>"; };
-		55FBB3B6272971DF007C3A00 /* wine01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine01.png; sourceTree = "<group>"; };
 		55FBB3B9272974A8007C3A00 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerController.swift; path = ../../day_03/day_03/TimerController.swift; sourceTree = "<group>"; };
 		55FBB3BB272978FB007C3A00 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
+		55FBB3BF27298049007C3A00 /* PickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerController.swift; path = ../../day_04/day_04/PickerController.swift; sourceTree = "<group>"; };
+		55FBB3C1272980CD007C3A00 /* wine09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine09.png; path = ../../day_04/img/wine09.png; sourceTree = "<group>"; };
+		55FBB3C2272980CD007C3A00 /* wine06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine06.png; path = ../../day_04/img/wine06.png; sourceTree = "<group>"; };
+		55FBB3C3272980CD007C3A00 /* wine02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine02.png; path = ../../day_04/img/wine02.png; sourceTree = "<group>"; };
+		55FBB3C4272980CD007C3A00 /* wine01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine01.png; path = ../../day_04/img/wine01.png; sourceTree = "<group>"; };
+		55FBB3C5272980CD007C3A00 /* wine03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine03.png; path = ../../day_04/img/wine03.png; sourceTree = "<group>"; };
+		55FBB3C6272980CD007C3A00 /* wine05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine05.png; path = ../../day_04/img/wine05.png; sourceTree = "<group>"; };
+		55FBB3C7272980CD007C3A00 /* wine04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine04.png; path = ../../day_04/img/wine04.png; sourceTree = "<group>"; };
+		55FBB3C8272980CD007C3A00 /* wine07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine07.png; path = ../../day_04/img/wine07.png; sourceTree = "<group>"; };
+		55FBB3C9272980CD007C3A00 /* wine10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine10.png; path = ../../day_04/img/wine10.png; sourceTree = "<group>"; };
+		55FBB3CA272980CD007C3A00 /* wine08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wine08.png; path = ../../day_04/img/wine08.png; sourceTree = "<group>"; };
+		55FBB3D527298243007C3A00 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = ../../day_05/day_05/AlertController.swift; sourceTree = "<group>"; };
+		55FBB3D72729824E007C3A00 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
+		55FBB3D82729824E007C3A00 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		55FBB3D92729824F007C3A00 /* lamp_remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_remove.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +93,8 @@
 		55FBB39D27296B83007C3A00 /* day_08 */ = {
 			isa = PBXGroup;
 			children = (
+				55FBB3D527298243007C3A00 /* AlertController.swift */,
+				55FBB3BF27298049007C3A00 /* PickerController.swift */,
 				55FBB3B9272974A8007C3A00 /* TimerController.swift */,
 				55FBB39E27296B83007C3A00 /* AppDelegate.swift */,
 				55FBB3A027296B83007C3A00 /* SceneDelegate.swift */,
@@ -83,9 +111,20 @@
 		55FBB3B4272971DF007C3A00 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				55FBB3D82729824E007C3A00 /* lamp_off.png */,
+				55FBB3D72729824E007C3A00 /* lamp_on.png */,
+				55FBB3D92729824F007C3A00 /* lamp_remove.png */,
+				55FBB3C4272980CD007C3A00 /* wine01.png */,
+				55FBB3C3272980CD007C3A00 /* wine02.png */,
+				55FBB3C5272980CD007C3A00 /* wine03.png */,
+				55FBB3C7272980CD007C3A00 /* wine04.png */,
+				55FBB3C6272980CD007C3A00 /* wine05.png */,
+				55FBB3C2272980CD007C3A00 /* wine06.png */,
+				55FBB3C8272980CD007C3A00 /* wine07.png */,
+				55FBB3CA272980CD007C3A00 /* wine08.png */,
+				55FBB3C1272980CD007C3A00 /* wine09.png */,
+				55FBB3C9272980CD007C3A00 /* wine10.png */,
 				55FBB3BB272978FB007C3A00 /* unnamed.jpg */,
-				55FBB3B5272971DF007C3A00 /* wine02.png */,
-				55FBB3B6272971DF007C3A00 /* wine01.png */,
 			);
 			name = img;
 			path = ../day_01/img;
@@ -149,11 +188,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FBB3CB272980CD007C3A00 /* wine09.png in Resources */,
 				55FBB3AB27296B86007C3A00 /* LaunchScreen.storyboard in Resources */,
+				55FBB3DA2729824F007C3A00 /* lamp_on.png in Resources */,
+				55FBB3DC2729824F007C3A00 /* lamp_remove.png in Resources */,
+				55FBB3DB2729824F007C3A00 /* lamp_off.png in Resources */,
 				55FBB3A827296B86007C3A00 /* Assets.xcassets in Resources */,
+				55FBB3CD272980CD007C3A00 /* wine02.png in Resources */,
 				55FBB3BC272978FB007C3A00 /* unnamed.jpg in Resources */,
-				55FBB3B8272971DF007C3A00 /* wine01.png in Resources */,
-				55FBB3B7272971DF007C3A00 /* wine02.png in Resources */,
+				55FBB3CE272980CD007C3A00 /* wine01.png in Resources */,
+				55FBB3D4272980CD007C3A00 /* wine08.png in Resources */,
+				55FBB3D1272980CD007C3A00 /* wine04.png in Resources */,
+				55FBB3D2272980CD007C3A00 /* wine07.png in Resources */,
+				55FBB3CF272980CD007C3A00 /* wine03.png in Resources */,
+				55FBB3D0272980CD007C3A00 /* wine05.png in Resources */,
+				55FBB3D3272980CD007C3A00 /* wine10.png in Resources */,
+				55FBB3CC272980CD007C3A00 /* wine06.png in Resources */,
 				55FBB3A627296B83007C3A00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,9 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FBB3C027298049007C3A00 /* PickerController.swift in Sources */,
 				55FBB3A327296B83007C3A00 /* ViewController.swift in Sources */,
 				55FBB3B327297160007C3A00 /* LampController.swift in Sources */,
 				55FBB3BA272974A8007C3A00 /* TimerController.swift in Sources */,
+				55FBB3D627298243007C3A00 /* AlertController.swift in Sources */,
 				55FBB39F27296B83007C3A00 /* AppDelegate.swift in Sources */,
 				55FBB3A127296B83007C3A00 /* SceneDelegate.swift in Sources */,
 			);
