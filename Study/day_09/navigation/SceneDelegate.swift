@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  navigationTT
+//  navigation
 //
 //  Created by boreum yoon on 2021/10/29.
 //
