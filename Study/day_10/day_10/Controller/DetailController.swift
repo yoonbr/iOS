@@ -8,12 +8,33 @@
 import UIKit
 
 class DetailController: UIViewController {
+    
+    // 번호를 넘기기 위해 Int로 선언
+    var detailLbNum = 0
+    
+    // 2-5. detailLB outlet으로 선언
+    @IBOutlet var detailTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 2-2. 선언한 detailLB 변수에 넘어가는 데이터 확인
+        // print("detailLB: \(detailTF)")
+        
+        // 2-6. detailLB로 값을 넣어줌
+        // 전역변수이므로 호출이 가능
+        detailTF.text = txtArr[detailLbNum]
     }
+    
+    @IBAction func goBtn(_ sender: UIButton) {
+        
+        print("edit")
+        
+        txtArr.append(detailTF.text!)
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
     
 
     /*

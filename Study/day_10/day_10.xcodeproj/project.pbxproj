@@ -15,9 +15,10 @@
 		5523D3B7273010E300D699A0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523D3B6273010E300D699A0 /* MainController.swift */; };
 		5523D3B9273010F500D699A0 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523D3B8273010F500D699A0 /* AddController.swift */; };
 		5523D3BB2730110500D699A0 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523D3BA2730110500D699A0 /* DetailController.swift */; };
-		5523D3C0273017AA00D699A0 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5523D3BD273017A900D699A0 /* cart.png */; };
-		5523D3C1273017AA00D699A0 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5523D3BE273017AA00D699A0 /* pencil.png */; };
-		5523D3C2273017AA00D699A0 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5523D3BF273017AA00D699A0 /* clock.png */; };
+		5537728A2732B36D000B27E4 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772862732B36C000B27E4 /* 3.png */; };
+		5537728B2732B36D000B27E4 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772872732B36C000B27E4 /* 0.png */; };
+		5537728C2732B36D000B27E4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772882732B36D000B27E4 /* 1.png */; };
+		5537728D2732B36D000B27E4 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772892732B36D000B27E4 /* 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		5523D3B6273010E300D699A0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		5523D3B8273010F500D699A0 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 		5523D3BA2730110500D699A0 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		5523D3BD273017A900D699A0 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
-		5523D3BE273017AA00D699A0 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
-		5523D3BF273017AA00D699A0 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		553772862732B36C000B27E4 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../../../../../Downloads/3.png; sourceTree = "<group>"; };
+		553772872732B36C000B27E4 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		553772882732B36D000B27E4 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		553772892732B36D000B27E4 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../../../../../Downloads/2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,10 @@
 		5523D3BC2730176700D699A0 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				5523D3BD273017A900D699A0 /* cart.png */,
-				5523D3BF273017AA00D699A0 /* clock.png */,
-				5523D3BE273017AA00D699A0 /* pencil.png */,
+				553772872732B36C000B27E4 /* 0.png */,
+				553772882732B36D000B27E4 /* 1.png */,
+				553772892732B36D000B27E4 /* 2.png */,
+				553772862732B36C000B27E4 /* 3.png */,
 			);
 			path = img;
 			sourceTree = "<group>";
@@ -156,10 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5523D3C2273017AA00D699A0 /* clock.png in Resources */,
-				5523D3C1273017AA00D699A0 /* pencil.png in Resources */,
+				5537728B2732B36D000B27E4 /* 0.png in Resources */,
+				5537728C2732B36D000B27E4 /* 1.png in Resources */,
+				5537728A2732B36D000B27E4 /* 3.png in Resources */,
 				5523D3AE27300BED00D699A0 /* LaunchScreen.storyboard in Resources */,
-				5523D3C0273017AA00D699A0 /* cart.png in Resources */,
+				5537728D2732B36D000B27E4 /* 2.png in Resources */,
 				5523D3AB27300BED00D699A0 /* Assets.xcassets in Resources */,
 				5523D3A927300BEC00D699A0 /* Main.storyboard in Resources */,
 			);
