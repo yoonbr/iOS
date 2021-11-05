@@ -13,6 +13,7 @@ class DetailController: UIViewController {
     var detailLbNum = 0
     
     // 2-5. detailLB outlet으로 선언
+    // **-1. textField outlet으로 바꿔서 선언
     @IBOutlet var detailTF: UITextField!
 
     override func viewDidLoad() {
@@ -26,12 +27,13 @@ class DetailController: UIViewController {
         detailTF.text = txtArr[detailLbNum]
     }
     
+    // **-2. 수정 버튼 액션 추가
     @IBAction func goBtn(_ sender: UIButton) {
         
-        print("edit")
+        // **-4. 텍스트필드의 글자를 txt배열에 바꿔서 선언 
+        txtArr[detailLbNum] = detailTF.text!
         
-        txtArr.append(detailTF.text!)
-        
+        // **-3. 닫는 기능 추가
         navigationController?.popViewController(animated: true)
     }
     

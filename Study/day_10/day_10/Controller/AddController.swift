@@ -12,6 +12,7 @@ class AddController: UIViewController {
     // 3. add 기능 추가
     @IBOutlet var addTF: UITextField!
     
+    // *-2. 세그먼트 컨트롤 아웃렛 가져오기
     @IBOutlet var sg: UISegmentedControl!
     
     var mainCon: MainController?
@@ -30,7 +31,8 @@ class AddController: UIViewController {
         txtArr.append(addTF.text!)
         
         // 3-2. 이미지 고정 추가
-        imgArr.append(UIImage(named: "\(sg.selectedSegmentIndex).png"))
+        // *-3. 이미지 새로운 배열의 index에 추가
+        imgArr.append(newImgArr[sg.selectedSegmentIndex])
 
         // 3-3. 창 닫게 하기
         navigationController?.popViewController(animated: true)

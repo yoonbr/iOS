@@ -14,6 +14,12 @@ var imgArr = [UIImage(named: "0.png"),
               UIImage(named: "1.png"),
               UIImage(named: "2.png")]
 
+// *-1. 새로운 이미지 전역변수 배열 선언
+var newImgArr = [UIImage(named: "apple.png"),
+                 UIImage(named: "book.png"),
+                 UIImage(named: "beer.png"),
+                 UIImage(named: "book.png")]
+
 class MainController: UITableViewController {
     
     
