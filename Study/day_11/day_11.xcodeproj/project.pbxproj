@@ -17,6 +17,18 @@
 		553772D4273544F6000B27E4 /* jeju1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 553772D1273544F6000B27E4 /* jeju1.jpeg */; };
 		553772D5273544F6000B27E4 /* jeju3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 553772D2273544F6000B27E4 /* jeju3.jpeg */; };
 		553772D6273544F6000B27E4 /* jeju2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 553772D3273544F6000B27E4 /* jeju2.jpeg */; };
+		553772DE27354F68000B27E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553772DD27354F68000B27E4 /* AppDelegate.swift */; };
+		553772E027354F68000B27E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553772DF27354F68000B27E4 /* SceneDelegate.swift */; };
+		553772E227354F68000B27E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553772E127354F68000B27E4 /* ViewController.swift */; };
+		553772E527354F68000B27E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553772E327354F68000B27E4 /* Main.storyboard */; };
+		553772E727354F69000B27E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553772E627354F69000B27E4 /* Assets.xcassets */; };
+		553772EA27354F69000B27E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553772E827354F69000B27E4 /* LaunchScreen.storyboard */; };
+		553772F527354FAD000B27E4 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772F027354FAC000B27E4 /* stop.png */; };
+		553772F627354FAD000B27E4 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772F127354FAC000B27E4 /* record.png */; };
+		553772F727354FAD000B27E4 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772F227354FAC000B27E4 /* pause.png */; };
+		553772F827354FAD000B27E4 /* Sicilian_Breeze.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 553772F327354FAD000B27E4 /* Sicilian_Breeze.mp3 */; };
+		553772F927354FAD000B27E4 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772F427354FAD000B27E4 /* play.png */; };
+		553772FB27355923000B27E4 /* albumCover.png in Resources */ = {isa = PBXBuildFile; fileRef = 553772FA27355923000B27E4 /* albumCover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +44,31 @@
 		553772D1273544F6000B27E4 /* jeju1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeju1.jpeg; sourceTree = "<group>"; };
 		553772D2273544F6000B27E4 /* jeju3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeju3.jpeg; sourceTree = "<group>"; };
 		553772D3273544F6000B27E4 /* jeju2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeju2.jpeg; sourceTree = "<group>"; };
+		553772DB27354F68000B27E4 /* AudioTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		553772DD27354F68000B27E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		553772DF27354F68000B27E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		553772E127354F68000B27E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		553772E427354F68000B27E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		553772E627354F69000B27E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		553772E927354F69000B27E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		553772EB27354F69000B27E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553772F027354FAC000B27E4 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		553772F127354FAC000B27E4 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		553772F227354FAC000B27E4 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		553772F327354FAD000B27E4 /* Sicilian_Breeze.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sicilian_Breeze.mp3; sourceTree = "<group>"; };
+		553772F427354FAD000B27E4 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		553772FA27355923000B27E4 /* albumCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albumCover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		553772B427353FFC000B27E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553772D827354F68000B27E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,8 +81,10 @@
 		553772AE27353FFC000B27E4 = {
 			isa = PBXGroup;
 			children = (
+				553772EF27354F9C000B27E4 /* resource */,
 				553772CE273541C3000B27E4 /* img */,
 				553772B927353FFC000B27E4 /* day_11 */,
+				553772DC27354F68000B27E4 /* AudioTT */,
 				553772B827353FFC000B27E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				553772B727353FFC000B27E4 /* day_11.app */,
+				553772DB27354F68000B27E4 /* AudioTT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +123,33 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		553772DC27354F68000B27E4 /* AudioTT */ = {
+			isa = PBXGroup;
+			children = (
+				553772DD27354F68000B27E4 /* AppDelegate.swift */,
+				553772DF27354F68000B27E4 /* SceneDelegate.swift */,
+				553772E127354F68000B27E4 /* ViewController.swift */,
+				553772E327354F68000B27E4 /* Main.storyboard */,
+				553772E627354F69000B27E4 /* Assets.xcassets */,
+				553772E827354F69000B27E4 /* LaunchScreen.storyboard */,
+				553772EB27354F69000B27E4 /* Info.plist */,
+			);
+			path = AudioTT;
+			sourceTree = "<group>";
+		};
+		553772EF27354F9C000B27E4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				553772FA27355923000B27E4 /* albumCover.png */,
+				553772F227354FAC000B27E4 /* pause.png */,
+				553772F427354FAD000B27E4 /* play.png */,
+				553772F127354FAC000B27E4 /* record.png */,
+				553772F327354FAD000B27E4 /* Sicilian_Breeze.mp3 */,
+				553772F027354FAC000B27E4 /* stop.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,6 +170,23 @@
 			productReference = 553772B727353FFC000B27E4 /* day_11.app */;
 			productType = "com.apple.product-type.application";
 		};
+		553772DA27354F68000B27E4 /* AudioTT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553772EE27354F69000B27E4 /* Build configuration list for PBXNativeTarget "AudioTT" */;
+			buildPhases = (
+				553772D727354F68000B27E4 /* Sources */,
+				553772D827354F68000B27E4 /* Frameworks */,
+				553772D927354F68000B27E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioTT;
+			productName = AudioTT;
+			productReference = 553772DB27354F68000B27E4 /* AudioTT.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -118,6 +198,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					553772B627353FFC000B27E4 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					553772DA27354F68000B27E4 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -136,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				553772B627353FFC000B27E4 /* day_11 */,
+				553772DA27354F68000B27E4 /* AudioTT */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		553772D927354F68000B27E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				553772FB27355923000B27E4 /* albumCover.png in Resources */,
+				553772F827354FAD000B27E4 /* Sicilian_Breeze.mp3 in Resources */,
+				553772F927354FAD000B27E4 /* play.png in Resources */,
+				553772F627354FAD000B27E4 /* record.png in Resources */,
+				553772EA27354F69000B27E4 /* LaunchScreen.storyboard in Resources */,
+				553772F727354FAD000B27E4 /* pause.png in Resources */,
+				553772F527354FAD000B27E4 /* stop.png in Resources */,
+				553772E727354F69000B27E4 /* Assets.xcassets in Resources */,
+				553772E527354F68000B27E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -165,6 +265,16 @@
 				553772BF27353FFC000B27E4 /* ViewController.swift in Sources */,
 				553772BB27353FFC000B27E4 /* AppDelegate.swift in Sources */,
 				553772BD27353FFC000B27E4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553772D727354F68000B27E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				553772E227354F68000B27E4 /* ViewController.swift in Sources */,
+				553772DE27354F68000B27E4 /* AppDelegate.swift in Sources */,
+				553772E027354F68000B27E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +293,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				553772C627353FFF000B27E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		553772E327354F68000B27E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				553772E427354F68000B27E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		553772E827354F69000B27E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				553772E927354F69000B27E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -362,6 +488,62 @@
 			};
 			name = Release;
 		};
+		553772EC27354F69000B27E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioTT/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.AudioTT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		553772ED27354F69000B27E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8545YBZ2T8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioTT/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonnie.AudioTT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -379,6 +561,15 @@
 			buildConfigurations = (
 				553772CC27353FFF000B27E4 /* Debug */,
 				553772CD27353FFF000B27E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		553772EE27354F69000B27E4 /* Build configuration list for PBXNativeTarget "AudioTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553772EC27354F69000B27E4 /* Debug */,
+				553772ED27354F69000B27E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
