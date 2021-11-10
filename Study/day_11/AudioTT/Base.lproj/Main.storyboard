@@ -80,8 +80,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="agk-SR-247">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="agk-SR-247">
                                                 <rect key="frame" x="140.66666666666663" y="0.0" width="136.33333333333337" height="21.333333333333332"/>
+                                                <connections>
+                                                    <action selector="volumeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="4eV-XR-7Bh"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -96,6 +99,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-TX-HQa">
                                                 <rect key="frame" x="142.66666666666663" y="0.0" width="134.33333333333337" height="20.333333333333332"/>
+                                                <connections>
+                                                    <action selector="soundChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="bOs-4U-aP9"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -106,6 +112,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="20.333333333333332"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="record.circle.fill" catalog="system" title="record"/>
+                                                <connections>
+                                                    <action selector="recordGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSB-GU-750"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-jJ-0uF">
                                                 <rect key="frame" x="142.66666666666663" y="0.0" width="132.33333333333337" height="20.333333333333332"/>
@@ -131,7 +140,9 @@
                         <outlet property="currLB" destination="egc-mz-DSK" id="BH6-ua-dKt"/>
                         <outlet property="endLB" destination="6AE-QT-Weo" id="IVF-Lm-8gX"/>
                         <outlet property="myImg" destination="pTG-kw-OQA" id="MpJ-zL-aCA"/>
-                        <outlet property="myProgress" destination="g2c-s9-CDD" id="2EK-b6-gDq"/>
+                        <outlet property="myProgress" destination="YlH-ve-oCO" id="dMN-rP-rfH"/>
+                        <outlet property="recordLB" destination="Xd9-jJ-0uF" id="bqD-y4-LSg"/>
+                        <outlet property="statusLB" destination="sBf-RA-fgM" id="I8N-qc-Cbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
