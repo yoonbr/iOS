@@ -9,6 +9,8 @@ import UIKit
 
 class SeguePushViewController: UIViewController {
 
+    @IBOutlet var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
