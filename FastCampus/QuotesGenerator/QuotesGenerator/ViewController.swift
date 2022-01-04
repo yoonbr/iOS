@@ -33,6 +33,8 @@ class ViewController: UIViewController {
         self.quoteLabel.text = quote.contents
         self.nameLabel.text = quote.name
     }
+  
     
 }
+
 
