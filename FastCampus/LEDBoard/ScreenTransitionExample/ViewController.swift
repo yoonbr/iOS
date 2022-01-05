@@ -36,7 +36,15 @@ class ViewController: UIViewController, SendDataDelegate {
         // 프로퍼티에 접근해서 값 넘겨주기
         viewController.name = "Bonnie"
         self.navigationController?.pushViewController(viewController, animated: true)
-        
+    }
+    
+    // prepare method override
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueway를 실행하기 직전에 시스템에 의해 오버라이드된 프리페어 메소드가 자동으로 호출
+        // 전환하려는 뷰 컨트롤러의 인스턴스 가져오기 - destination
+        if let viewController = segue.destination as? SeguePushViewController {
+            viewController.name = "Bonnie"
+        }
     }
     
     // 프로토콜 준수 위해 sendData 메소드 정의

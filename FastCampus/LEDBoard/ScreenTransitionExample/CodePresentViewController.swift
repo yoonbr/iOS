@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// 프로토콜 정의
+// 이전화면에 데이터를 넘겨줄 프로토콜 정의
 protocol SendDataDelegate: AnyObject {
     func sendData(name: String)
 }

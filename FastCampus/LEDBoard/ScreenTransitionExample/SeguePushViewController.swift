@@ -10,10 +10,13 @@ import UIKit
 class SeguePushViewController: UIViewController {
 
     @IBOutlet var nameLabel: UILabel!
+    var name: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // 전달 받은 데이터를 표시
+        self.nameLabel.text = name
+        self.nameLabel.sizeToFit()
     }
     
     // 이전화면으로 돌아가기 - popViewController
@@ -23,3 +26,5 @@ class SeguePushViewController: UIViewController {
         // self.navigationController?.popToRootViewController(animated: true)
     }
 }
+
+ 
