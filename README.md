@@ -166,7 +166,8 @@ Academy Study
 </details>
 
 ## Study - kxcoding, youtube(clone)
-** FastCampus (2022. 01 ~
+
+** FastCampus (2022. 01 ~ )
 ** Clone app - Spotify (2021)
 ** KXcoding (2021)
 
